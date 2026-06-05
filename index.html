@@ -415,7 +415,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <button id="cart-btn" onclick="toggleCart()">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
         Your Order
-        <span id="cart-badge" style="display: none;">0</span>
+        <span id="cart-badge" style="display: flex;">4</span>
       </button>
     </div>
   </div>
@@ -450,8 +450,8 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
   <div id="catalog"><div class="cat-section">
         <div class="cat-head">
           <span class="cat-title">Niche Fragrances</span>
-          <span class="cat-note">✦ 2ml sample decants available — priced at half the 5ml rate</span>
-          <span class="cat-count">35 available</span>
+          
+          <span class="cat-count">34 available</span>
         </div>
         
           <div class="brand-group">
@@ -463,13 +463,6 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     </div>
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(1,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(1,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(1,'10ml',55)"><span>10ml</span>$55</button></div>
-  </div><div class="item-row">
-    <div class="item-info">
-      <div class="item-name">Outlands</div>
-      
-    </div>
-    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(4,'2ml',19)"><span>2ml</span>$19</button><button class="sz-btn " onclick="toggleSize(4,'5ml',38)"><span>5ml</span>$38</button><button class="sz-btn " onclick="toggleSize(4,'10ml',70)"><span>10ml</span>$70</button></div>
   </div><div class="item-row">
     <div class="item-info">
       <div class="item-name">Epic Man</div>
@@ -484,6 +477,13 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     </div>
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(3,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(3,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(3,'10ml',55)"><span>10ml</span>$55</button></div>
+  </div><div class="item-row">
+    <div class="item-info">
+      <div class="item-name">Outlands</div>
+      
+    </div>
+    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(4,'2ml',19)"><span>2ml</span>$19</button><button class="sz-btn " onclick="toggleSize(4,'5ml',38)"><span>5ml</span>$38</button><button class="sz-btn " onclick="toggleSize(4,'10ml',70)"><span>10ml</span>$70</button></div>
   </div><div class="item-row">
     <div class="item-info">
       <div class="item-name">Purpose</div>
@@ -605,8 +605,8 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <div class="item-name">Hibiscus Mahajad</div>
       
     </div>
-    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(16,'2ml',20)"><span>2ml</span>$20</button><button class="sz-btn " onclick="toggleSize(16,'5ml',40)"><span>5ml</span>$40</button><button class="sz-btn " onclick="toggleSize(16,'10ml',75)"><span>10ml</span>$75</button></div>
+    <div class="item-badges"><span class="badge badge-sold">SOLD OUT</span></div>
+    <div class="sizes"><span class="sz-soldout">Sold Out</span></div>
   </div><div class="item-row">
     <div class="item-info">
       <div class="item-name">Oud Maracujá</div>
@@ -699,7 +699,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       
     </div>
     
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(26,'2ml',13)"><span>2ml</span>$13</button><button class="sz-btn " onclick="toggleSize(26,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(26,'10ml',45)"><span>10ml</span>$45</button></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(26,'2ml',13)"><span>2ml</span>$13</button><button class="sz-btn selected" onclick="toggleSize(26,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(26,'10ml',45)"><span>10ml</span>$45</button></div>
   </div>
           </div>
           <div class="brand-group">
@@ -818,7 +818,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       
     </div>
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(33,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(33,'10ml',45)"><span>10ml</span>$45</button></div>
+    <div class="sizes"><button class="sz-btn selected" onclick="toggleSize(33,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(33,'10ml',45)"><span>10ml</span>$45</button></div>
   </div>
           </div>
           <div class="brand-group">
@@ -958,7 +958,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       
     </div>
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(49,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(49,'10ml',25)"><span>10ml</span>$25</button></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(49,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn selected" onclick="toggleSize(49,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
     <div class="item-info">
       <div class="item-name">Invictus Victory Elixir</div>
@@ -1083,7 +1083,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       
     </div>
     
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(64,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(64,'10ml',25)"><span>10ml</span>$25</button></div>
+    <div class="sizes"><button class="sz-btn selected" onclick="toggleSize(64,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(64,'10ml',25)"><span>10ml</span>$25</button></div>
   </div>
           </div>
           <div class="brand-group">
@@ -1547,22 +1547,82 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
   <aside class="cart-panel" id="cart-panel">
     <div class="cart-head">
       <div><h2>Your Order</h2><div class="sub">Select sizes from the list</div></div>
-      <span id="cart-count-txt">0 items</span>
+      <span id="cart-count-txt">4 items</span>
     </div>
     <div class="cart-scroll" id="cart-scroll">
-      <div class="cart-empty" id="cart-empty" style="">
+      <div class="cart-empty" id="cart-empty" style="display: none;">
         <div class="big-icon">🧴</div>
         <strong>Your cart is empty</strong>
         <p>Browse the fragrances and tap a size to add it to your order.</p>
       </div>
-      <div id="cart-items-list"></div>
+      <div id="cart-items-list"><div class="cart-item">
+      <div class="ci-info">
+        <div class="ci-name">Y EDP</div>
+        <div class="ci-brand">Yves Saint Laurent</div>
+        <div class="ci-size">5ml</div>
+      </div>
+      <div class="ci-right">
+        <div class="ci-price">$14</div>
+        <div class="ci-qty">
+          <button onclick="changeQty(64,'5ml',-1)">−</button>
+          <span>1</span>
+          <button onclick="changeQty(64,'5ml',1)">+</button>
+        </div>
+        <button class="ci-rm" onclick="removeItem(64,'5ml')">✕</button>
+      </div>
+    </div><div class="cart-item">
+      <div class="ci-info">
+        <div class="ci-name">Invictus Victory Absolu</div>
+        <div class="ci-brand">Paco Rabanne</div>
+        <div class="ci-size">10ml</div>
+      </div>
+      <div class="ci-right">
+        <div class="ci-price">$25</div>
+        <div class="ci-qty">
+          <button onclick="changeQty(49,'10ml',-1)">−</button>
+          <span>1</span>
+          <button onclick="changeQty(49,'10ml',1)">+</button>
+        </div>
+        <button class="ci-rm" onclick="removeItem(49,'10ml')">✕</button>
+      </div>
+    </div><div class="cart-item">
+      <div class="ci-info">
+        <div class="ci-name">Sauvage Elixir</div>
+        <div class="ci-brand">Dior</div>
+        <div class="ci-size">5ml</div>
+      </div>
+      <div class="ci-right">
+        <div class="ci-price">$25</div>
+        <div class="ci-qty">
+          <button onclick="changeQty(33,'5ml',-1)">−</button>
+          <span>1</span>
+          <button onclick="changeQty(33,'5ml',1)">+</button>
+        </div>
+        <button class="ci-rm" onclick="removeItem(33,'5ml')">✕</button>
+      </div>
+    </div><div class="cart-item">
+      <div class="ci-info">
+        <div class="ci-name">Vibrato</div>
+        <div class="ci-brand">Sospiro</div>
+        <div class="ci-size">5ml</div>
+      </div>
+      <div class="ci-right">
+        <div class="ci-price">$25</div>
+        <div class="ci-qty">
+          <button onclick="changeQty(26,'5ml',-1)">−</button>
+          <span>1</span>
+          <button onclick="changeQty(26,'5ml',1)">+</button>
+        </div>
+        <button class="ci-rm" onclick="removeItem(26,'5ml')">✕</button>
+      </div>
+    </div></div>
     </div>
-    <div class="cart-footer" id="cart-footer" style="display: none;">
-      <div class="min-warn" id="min-warn" style="display: none;"></div>
-      <div id="min-progress-wrap" style="display: none;">
+    <div class="cart-footer" id="cart-footer" style="">
+      <div class="min-warn" id="min-warn" style="display: none;">⚠ Minimum $25 of fragrance — add $11 more</div>
+      <div id="min-progress-wrap" style="display: block;">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <span style="font-size:10.5px;color:var(--muted)">Minimum order</span>
-          <span id="min-progress-lbl">$141 / $25</span>
+          <span id="min-progress-lbl">$89 / $25</span>
         </div>
         <div id="min-progress-track"><div id="min-progress-bar" class="met" style="width: 100%;"></div></div>
       </div>
@@ -1573,13 +1633,13 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
         <div class="d-opt active" data-delivery="tracked" onclick="setDelivery('tracked')"><div class="d-name">Tracked ★</div><div class="d-cost">+$10</div></div>
       </div>
       <div class="totals">
-        <div class="total-row"><span>Subtotal</span><span id="t-sub">$0</span></div>
+        <div class="total-row"><span>Subtotal</span><span id="t-sub">$89</span></div>
         <div class="total-row"><span id="t-dlabel">Pickup (Mill Park 3082)</span><span id="t-dcost">FREE</span></div>
-        <div class="total-row main"><span>Total</span><span id="t-total">$0</span></div>
+        <div class="total-row main"><span>Total</span><span id="t-total">$89</span></div>
       </div>
 
       <div class="cart-actions">
-        <button class="btn-copy" id="btn-copy" onclick="copyOrder()" disabled="">
+        <button class="btn-copy" id="btn-copy" onclick="copyOrder()">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           Copy your order list
         </button>
@@ -1588,7 +1648,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <span style="font-size:10.5px;color:var(--muted);white-space:nowrap">or send directly</span>
           <div style="flex:1;height:1px;background:var(--line)"></div>
         </div>
-        <button class="btn-send" id="btn-send" onclick="sendOrder()" disabled="">
+        <button class="btn-send" id="btn-send" onclick="sendOrder()">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"></path><path d="M22 2 11 13"></path></svg>
           Send via WhatsApp
         </button>
@@ -1599,7 +1659,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 
 <button class="fab" id="fab" onclick="toggleCart()" aria-label="View your order">
   <svg width="22" height="22" fill="none" stroke="#0a0810" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-  <span class="fab-badge" id="fab-badge" style="display: none;">0</span>
+  <span class="fab-badge" id="fab-badge" style="display: flex;">4</span>
 </button>
 <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
 
@@ -1625,7 +1685,16 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
   <div class="modal">
     <h3>Order Preview</h3>
     <div class="msub">Review your order before sending. Edit your cart if anything looks wrong.</div>
-    <div class="modal-text" id="modal-text"></div>
+    <div class="modal-text" id="modal-text">Hey, here's my order:
+
+1. Yves Saint Laurent – Y EDP (5ml) – $14
+2. Paco Rabanne – Invictus Victory Absolu (10ml) – $25
+3. Dior – Sauvage Elixir (5ml) – $25
+4. Sospiro – Vibrato (5ml) – $25
+
+Subtotal: $89
+Delivery: Pickup (Mill Park 3082) (FREE)
+Total: $89</div>
     <div class="modal-actions">
       <button class="btn-modal-close" onclick="document.getElementById('copy-modal').classList.remove('show')">Close</button>
       <button class="btn-modal-primary" onclick="doCopy()">📋 Copy</button>
@@ -1637,7 +1706,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
   </div>
 </div>
 
-<div id="toast" class="show">All images downloaded!</div>
+<div id="toast" class="">PDF ready — choose "Save as PDF" in the print dialog</div>
 
 <!-- Site Footer -->
 <footer class="site-footer">
@@ -1715,30 +1784,6 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(1)">🗑</button>
       </td>
     </tr>
-    <tr class="" draggable="true" data-id="4" ondragstart="rowDragStart(event,4)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,4)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Amouage</td>
-      <td class="td-name">Outlands</td>
-      <td>Niche Fragrances</td>
-      <td class="td-price">$38</td>
-      <td class="td-price">$70</td>
-      <td><span class="e-badge-hot">⭐ Popular</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(4,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(4)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(4)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(4)">🗑</button>
-      </td>
-    </tr>
     <tr class="" draggable="true" data-id="2" ondragstart="rowDragStart(event,2)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,2)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
@@ -1785,6 +1830,30 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(3)">✏ Edit</button>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(3)" title="Duplicate">⎘</button>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(3)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="4" ondragstart="rowDragStart(event,4)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,4)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Amouage</td>
+      <td class="td-name">Outlands</td>
+      <td>Niche Fragrances</td>
+      <td class="td-price">$38</td>
+      <td class="td-price">$70</td>
+      <td><span class="e-badge-hot">⭐ Popular</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(4,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(4)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(4)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(4)">🗑</button>
       </td>
     </tr>
     <tr class="" draggable="true" data-id="5" ondragstart="rowDragStart(event,5)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,5)" ondragend="rowDragEnd(event)">
@@ -2051,7 +2120,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(15)">🗑</button>
       </td>
     </tr>
-    <tr class="" draggable="true" data-id="16" ondragstart="rowDragStart(event,16)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,16)" ondragend="rowDragEnd(event)">
+    <tr class="sold-row" draggable="true" data-id="16" ondragstart="rowDragStart(event,16)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,16)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
           <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
@@ -2064,10 +2133,10 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <td class="td-brand">Maison Crivelli</td>
       <td class="td-name">Hibiscus Mahajad</td>
       <td>Niche Fragrances</td>
-      <td class="td-price">$40</td>
-      <td class="td-price">$75</td>
-      <td><span class="e-badge-hot">⭐ Popular</span></td>
+      <td class="td-price">$33</td>
+      <td class="td-price">$60</td>
       <td>—</td>
+      <td><span class="e-sold-tag">✓ SOLD OUT</span></td>
       <td class="td-note" title="Click to add a note" onclick="inlineEditNote(16,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
       <td class="td-actions">
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(16)">✏ Edit</button>
@@ -4718,7 +4787,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="e-field" style="margin-bottom:8px">
       Niche Fragrances
       <div style="display:flex;gap:6px">
-        <input type="text" value="2ml sample decants available — priced at half the 5ml rate" placeholder="Leave blank to hide" oninput="CATS[0].note=this.value;markUnsaved();renderCatalog()" style="flex:1">
+        <input type="text" value="" placeholder="Leave blank to hide" oninput="CATS[0].note=this.value;markUnsaved();renderCatalog()" style="flex:1">
         <button class="e-btn" style="padding:5px 10px;font-size:12px" title="Clear note" onclick="CATS[0].note='';renderCatNoteInputs();markUnsaved();renderCatalog()">✕</button>
       </div>
     </div>
@@ -4987,7 +5056,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 <div class="emod-wrap" id="emod">
   <div class="emod">
     <h3 id="emod-title">Edit Fragrance</h3>
-    <input type="hidden" id="emod-id" value="16">
+    <input type="hidden" id="emod-id" value="28">
     <div class="emod-grid" style="row-gap:14px">
       <div class="emod-field emod-full">
         <label>Category</label>
@@ -5211,7 +5280,7 @@ function populateSettingsInputs(){
 }
 
 //##PRODUCTS_BEGIN##
-const PRODUCTS = [{"id":1,"cat":"niche","brand":"Amouage","name":"Decision","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":4,"cat":"niche","brand":"Amouage","name":"Outlands","p5":38,"p10":70,"badge":"HOT","sold":false},{"id":2,"cat":"niche","brand":"Amouage","name":"Epic Man","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":3,"cat":"niche","brand":"Amouage","name":"Lustre","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":5,"cat":"niche","brand":"Amouage","name":"Purpose","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":6,"cat":"niche","brand":"Amouage","name":"Reflection","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":7,"cat":"niche","brand":"Bvlgari","name":"Tygar","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":8,"cat":"niche","brand":"Byredo","name":"Rouge Chaotique","p5":35,"p10":null,"badge":"LIMITED","sold":false,"note":"5ml only"},{"id":9,"cat":"niche","brand":"Creed","name":"Green Irish Tweed","p5":35,"p10":60,"badge":null,"sold":false},{"id":10,"cat":"niche","brand":"Essential Parfums","name":"Bois Impérial","p5":15,"p10":28,"badge":null,"sold":false},{"id":11,"cat":"niche","brand":"Initio","name":"Musk Therapy","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":12,"cat":"niche","brand":"Kilian","name":"Angels' Share","p5":30,"p10":55,"badge":null,"sold":false},{"id":13,"cat":"niche","brand":"LV","name":"Meteore","p5":35,"p10":65,"badge":"HOT","sold":false},{"id":14,"cat":"niche","brand":"LV","name":"Rain Tea","p5":40,"p10":75,"badge":null,"sold":false},{"id":15,"cat":"niche","brand":"Maison Crivelli","name":"Ambre Chromatique","p5":33,"p10":60,"badge":null,"sold":false},{"id":16,"cat":"niche","brand":"Maison Crivelli","name":"Hibiscus Mahajad","p5":40,"p10":75,"badge":"HOT","sold":false},{"id":17,"cat":"niche","brand":"Maison Crivelli","name":"Oud Maracujá","p5":35,"p10":65,"badge":null,"sold":false},{"id":18,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Gentle Fluidity Silver","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":19,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Grand Soir","p5":28,"p10":50,"badge":null,"sold":false},{"id":20,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Oud Satin Mood","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":21,"cat":"niche","brand":"Maison Margiela Replica","name":"Jazz Club","p5":12,"p10":20,"badge":null,"sold":false},{"id":22,"cat":"niche","brand":"Maison Margiela Replica","name":"Soul of the Forest EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":23,"cat":"niche","brand":"Mancera","name":"Aoud Lemon Mint","p5":12,"p10":20,"badge":null,"sold":false},{"id":24,"cat":"niche","brand":"Mancera","name":"Cedrat Boise EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":25,"cat":"niche","brand":"Mancera","name":"Instant Crush","p5":12,"p10":20,"badge":null,"sold":false},{"id":26,"cat":"niche","brand":"Sospiro","name":"Vibrato","p5":25,"p10":45,"badge":null,"sold":false},{"id":27,"cat":"niche","brand":"To Summer","name":"First Apple","p5":40,"p10":75,"badge":"LIMITED","sold":false},{"id":28,"cat":"niche","brand":"To Summer","name":"Osmanthus EDP","p5":20,"p10":35,"badge":"LIMITED","sold":false},{"id":29,"cat":"niche","brand":"Xerjoff","name":"Naxos","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":30,"cat":"designer","brand":"Azzaro","name":"Wanted Forever Elixir","p5":9,"p10":16,"badge":null,"sold":false},{"id":31,"cat":"designer","brand":"Chanel","name":"Bleu de Chanel L'Exclusif","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":32,"cat":"designer","brand":"Davidoff","name":"Cool Water Intense EDP","p5":6,"p10":10,"badge":null,"sold":false},{"id":33,"cat":"designer","brand":"Dior","name":"Sauvage Elixir","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":34,"cat":"designer","brand":"Dolce & Gabbana","name":"The One EDP","p5":8,"p10":14,"badge":null,"sold":false},{"id":35,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo EDP","p5":10,"p10":18,"badge":null,"sold":false},{"id":36,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo Parfum","p5":10,"p10":18,"badge":null,"sold":false},{"id":37,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Absolutely","p5":12,"p10":20,"badge":null,"sold":false},{"id":38,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Intensely","p5":12,"p10":20,"badge":null,"sold":false},{"id":39,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Powerfully","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":40,"cat":"designer","brand":"Hermès","name":"Terre d'Hermès Intense","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":41,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Absolu","p5":10,"p10":18,"badge":null,"sold":false},{"id":42,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Beyond","p5":10,"p10":18,"badge":null,"sold":false},{"id":43,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Bold Citrus","p5":7,"p10":12,"badge":null,"sold":false},{"id":44,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Elixir","p5":10,"p10":18,"badge":null,"sold":false},{"id":45,"cat":"designer","brand":"Issey Miyake","name":"Le Sel d'Issey EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":46,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Beau Le Parfum","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":47,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Elixir","p5":14,"p10":25,"badge":null,"sold":false},{"id":48,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":49,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Absolu","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":50,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Elixir","p5":12,"p10":20,"badge":null,"sold":false},{"id":51,"cat":"designer","brand":"Prada","name":"Paradigme","p5":15,"p10":28,"badge":"HOT","sold":false},{"id":52,"cat":"designer","brand":"Ralph Lauren","name":"Polo 67 EDP","p5":9,"p10":16,"badge":null,"sold":false},{"id":53,"cat":"designer","brand":"Ralph Lauren","name":"Ralph's Club","p5":8,"p10":14,"badge":null,"sold":false},{"id":54,"cat":"designer","brand":"Valentino","name":"Born in Roma Coral Fantasy","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":55,"cat":"designer","brand":"Valentino","name":"Born in Roma Donna Green Stravaganza","p5":8,"p10":14,"badge":null,"sold":false},{"id":56,"cat":"designer","brand":"Valentino","name":"Born in Roma Extradose","p5":16,"p10":28,"badge":null,"sold":false},{"id":57,"cat":"designer","brand":"Versace","name":"Eros Flame","p5":10,"p10":18,"badge":null,"sold":false},{"id":58,"cat":"designer","brand":"Yves Saint Laurent","name":"Babycat Raw Bourbon","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":59,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":60,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":61,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF Absolu","p5":20,"p10":35,"badge":"HOT","sold":false},{"id":62,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":63,"cat":"designer","brand":"Yves Saint Laurent","name":"The Yulong","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":64,"cat":"designer","brand":"Yves Saint Laurent","name":"Y EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":65,"cat":"middle","brand":"Afnan","name":"9PM Elixir","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: JPG Le Male Absolu"},{"id":66,"cat":"middle","brand":"Afnan","name":"Rare Reef","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Pacific Chill"},{"id":67,"cat":"middle","brand":"Afnan","name":"Supremacy Collector's Edition","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Absolu Aventus"},{"id":68,"cat":"middle","brand":"Afnan","name":"Supremacy Not Only Intense","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Aventus"},{"id":69,"cat":"middle","brand":"Afnan","name":"Turathi Blue","p5":8,"p10":14,"badge":"HOT","sold":false,"note":"DNA: Bvlgari Tygar"},{"id":70,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Ignite Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":71,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Kaaf","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Percival"},{"id":72,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Marj","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":73,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Oud & Roses","p5":12,"p10":20,"badge":null,"sold":false},{"id":74,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Summer Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":75,"cat":"middle","brand":"Al Haramain","name":"Aqua Dubai","p5":10,"p10":18,"badge":"HOT","sold":false,"note":"DNA: LV Imagination"},{"id":76,"cat":"middle","brand":"Al Haramain","name":"Carbon Edition","p5":10,"p10":18,"badge":null,"sold":false,"note":"DNA: Creed Irish Tweed"},{"id":77,"cat":"middle","brand":"Al Haramain","name":"Ruby Edition","p5":10,"p10":18,"badge":null,"sold":false,"note":"DNA: MFK Baccarat Rouge 540"},{"id":78,"cat":"middle","brand":"Armaf","name":"Club de Nuit Extrait","p5":10,"p10":18,"badge":"HOT","sold":false,"note":"DNA: Creed Aventus"},{"id":79,"cat":"middle","brand":"Armaf","name":"Club de Nuit Iconic","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: Bleu de Chanel"},{"id":80,"cat":"middle","brand":"French Avenue","name":"Amber Empire","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"Blonde Amber"},{"id":81,"cat":"middle","brand":"French Avenue","name":"Liquid Brun Limited Edition","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: PDM Althair"},{"id":82,"cat":"middle","brand":"French Avenue","name":"Vulcan Feu","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"God of Fire"},{"id":83,"cat":"middle","brand":"French Avenue","name":"Vulcan Sable","p5":7,"p10":12,"badge":null,"sold":false,"note":"Sand Dance"},{"id":84,"cat":"middle","brand":"Khadlaj","name":"Island Dreams","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Symphony"},{"id":85,"cat":"middle","brand":"Khadlaj","name":"Island Vanilla Dunes","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Althaïr"},{"id":86,"cat":"middle","brand":"Khadlaj","name":"Shiyaaka Snow","p5":8,"p10":14,"badge":null,"sold":false,"note":"DNA: LV Météore"},{"id":87,"cat":"middle","brand":"Lattafa","name":"Ana Abiyedh","p5":7,"p10":12,"badge":null,"sold":false,"note":"Erba Pura DNA"},{"id":88,"cat":"middle","brand":"Maison Asrar","name":"Cal Thriller 3","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: YSL 6"},{"id":89,"cat":"middle","brand":"Rasasi","name":"Hawas Black","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Hacivat"},{"id":90,"cat":"middle","brand":"Rasasi","name":"Hawas Fire","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Gissah Imperial Valley"},{"id":91,"cat":"middle","brand":"Rasasi","name":"Hawas Kobra","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: LV Imagination"},{"id":92,"cat":"middle","brand":"Rasasi","name":"Hawas Verde","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"Torino 21"},{"id":93,"cat":"middle","brand":"Rasasi","name":"Shuhrah","p5":7,"p10":12,"badge":null,"sold":false},{"id":94,"cat":"middle","brand":"Rayhaan","name":"Aquatica","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Creed Virgin Island Water"},{"id":95,"cat":"middle","brand":"Rayhaan","name":"Terra","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Outlands"},{"id":96,"cat":"bujahrami","brand":"Bujairami","name":"Executor","p5":6,"p10":null,"badge":"HOT","sold":false,"note":"Blue Talisman Extrait · 4.5ml"},{"id":97,"cat":"bujahrami","brand":"Bujairami","name":"Non Stop","p5":7,"p10":11,"badge":"HOT","sold":false,"note":"Pacific Chill inspired"},{"id":98,"cat":"bujahrami","brand":"Bujairami","name":"Psycho Symphony","p5":7,"p10":11,"badge":null,"sold":false,"note":"LV Symphony inspired"},{"id":99,"cat":"bujahrami","brand":"Bujairami","name":"Rizz Meteore","p5":7,"p10":11,"badge":null,"sold":false,"note":"LV Météore inspired"},{"id":100,"cat":"bujahrami","brand":"Bujairami","name":"Rose in Gold","p5":7,"p10":11,"badge":null,"sold":false,"note":"Delina PDM inspired"},{"id":101,"cat":"bujahrami","brand":"Bujairami","name":"Too Damn Good","p5":7,"p10":11,"badge":"HOT","sold":false,"note":"Bal d'Afrique Absolu inspired"},{"id":102,"cat":"niche","brand":"PDM","name":"Layton","p5":22,"p10":null,"badge":"LIMITED","sold":false},{"id":103,"cat":"niche","brand":"PDM","name":"Carlisle","p5":22,"p10":null,"badge":"LIMITED","sold":false},{"id":104,"cat":"niche","brand":"Goldfield & Banks","name":"Tale of Amber","p5":20,"p10":null,"badge":"LIMITED","sold":false},{"id":105,"cat":"designer","brand":"Givenchy","name":"Gentlemen Prive","p5":12,"p10":null,"badge":"LIMITED","sold":false},{"id":107,"cat":"middle","brand":"Dumont","name":"Nitro Red","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":106,"cat":"niche","brand":"Thomas Kosmala","name":"No.4","p5":10,"p10":null,"badge":"LIMITED","sold":false},{"id":108,"cat":"middle","brand":"Dumont","name":"Platinum","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":109,"cat":"middle","brand":"Ahmed Al Maghribi","name":"White Tiger","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":110,"cat":"middle","brand":"Ahmed Al Maghribi","name":"O Clock","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":111,"cat":"middle","brand":"Afnan","name":"Supremacy Oud","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"DNA: Oud for Greatness"},{"id":112,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Azzure Royal","p5":7,"p10":null,"badge":"LIMITED","sold":false,"note":"DNA: Blue Talisman"},{"id":113,"cat":"middle","brand":"Ibraheem Al Qurash","name":"Spanish Tobacc","p5":6,"p10":10,"badge":null,"sold":false,"note":"DNA: Megamare by Orto"},{"id":114,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bombay Oud","p5":10,"p10":null,"badge":"LIMITED","sold":false},{"id":115,"cat":"middle","brand":"Paris Corner","name":"Zodiac Stratos","p5":6,"p10":null,"badge":"LIMITED","sold":false,"note":"DNA: YSL Y Elixir"},{"id":116,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Aqua Oud","p5":6,"p10":null,"badge":"LIMITED","sold":false,"note":"ADG Profumo/profondo"},{"id":117,"cat":"middle","brand":"Reef","name":"33","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":118,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Hirfah","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":124,"cat":"niche","brand":"Initio","name":"Atomic Rose","p5":28,"p10":null,"badge":"LIMITED","sold":false,"note":"5mls only"},{"id":119,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Blue Oud","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":120,"cat":"middle","brand":"Al Haramain","name":"Dubai Nights","p5":7,"p10":null,"badge":"LIMITED","sold":false,"note":"4.5ml left only"},{"id":121,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bin Sheikh","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":122,"cat":"niche","brand":"Mancera","name":"Red Tobacco","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":123,"cat":"middle","brand":"Montale","name":"Arabian Tonka","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"}];
+const PRODUCTS = [{"id":1,"cat":"niche","brand":"Amouage","name":"Decision","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":2,"cat":"niche","brand":"Amouage","name":"Epic Man","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":3,"cat":"niche","brand":"Amouage","name":"Lustre","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":4,"cat":"niche","brand":"Amouage","name":"Outlands","p5":38,"p10":70,"badge":"HOT","sold":false},{"id":5,"cat":"niche","brand":"Amouage","name":"Purpose","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":6,"cat":"niche","brand":"Amouage","name":"Reflection","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":7,"cat":"niche","brand":"Bvlgari","name":"Tygar","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":8,"cat":"niche","brand":"Byredo","name":"Rouge Chaotique","p5":35,"p10":null,"badge":"LIMITED","sold":false,"note":"5ml only"},{"id":9,"cat":"niche","brand":"Creed","name":"Green Irish Tweed","p5":35,"p10":60,"badge":null,"sold":false},{"id":10,"cat":"niche","brand":"Essential Parfums","name":"Bois Impérial","p5":15,"p10":28,"badge":null,"sold":false},{"id":11,"cat":"niche","brand":"Initio","name":"Musk Therapy","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":12,"cat":"niche","brand":"Kilian","name":"Angels' Share","p5":30,"p10":55,"badge":null,"sold":false},{"id":13,"cat":"niche","brand":"LV","name":"Meteore","p5":35,"p10":65,"badge":"HOT","sold":false},{"id":14,"cat":"niche","brand":"LV","name":"Rain Tea","p5":40,"p10":75,"badge":null,"sold":false},{"id":15,"cat":"niche","brand":"Maison Crivelli","name":"Ambre Chromatique","p5":33,"p10":60,"badge":null,"sold":false},{"id":16,"cat":"niche","brand":"Maison Crivelli","name":"Hibiscus Mahajad","p5":33,"p10":60,"badge":null,"sold":true},{"id":17,"cat":"niche","brand":"Maison Crivelli","name":"Oud Maracujá","p5":35,"p10":65,"badge":null,"sold":false},{"id":18,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Gentle Fluidity Silver","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":19,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Grand Soir","p5":28,"p10":50,"badge":null,"sold":false},{"id":20,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Oud Satin Mood","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":21,"cat":"niche","brand":"Maison Margiela Replica","name":"Jazz Club","p5":12,"p10":20,"badge":null,"sold":false},{"id":22,"cat":"niche","brand":"Maison Margiela Replica","name":"Soul of the Forest EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":23,"cat":"niche","brand":"Mancera","name":"Aoud Lemon Mint","p5":12,"p10":20,"badge":null,"sold":false},{"id":24,"cat":"niche","brand":"Mancera","name":"Cedrat Boise EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":25,"cat":"niche","brand":"Mancera","name":"Instant Crush","p5":12,"p10":20,"badge":null,"sold":false},{"id":26,"cat":"niche","brand":"Sospiro","name":"Vibrato","p5":25,"p10":45,"badge":null,"sold":false},{"id":27,"cat":"niche","brand":"To Summer","name":"First Apple","p5":40,"p10":75,"badge":"LIMITED","sold":false},{"id":28,"cat":"niche","brand":"To Summer","name":"Osmanthus EDP","p5":20,"p10":35,"badge":"LIMITED","sold":false},{"id":29,"cat":"niche","brand":"Xerjoff","name":"Naxos","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":30,"cat":"designer","brand":"Azzaro","name":"Wanted Forever Elixir","p5":9,"p10":16,"badge":null,"sold":false},{"id":31,"cat":"designer","brand":"Chanel","name":"Bleu de Chanel L'Exclusif","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":32,"cat":"designer","brand":"Davidoff","name":"Cool Water Intense EDP","p5":6,"p10":10,"badge":null,"sold":false},{"id":33,"cat":"designer","brand":"Dior","name":"Sauvage Elixir","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":34,"cat":"designer","brand":"Dolce & Gabbana","name":"The One EDP","p5":8,"p10":14,"badge":null,"sold":false},{"id":35,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo EDP","p5":10,"p10":18,"badge":null,"sold":false},{"id":36,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo Parfum","p5":10,"p10":18,"badge":null,"sold":false},{"id":37,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Absolutely","p5":12,"p10":20,"badge":null,"sold":false},{"id":38,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Intensely","p5":12,"p10":20,"badge":null,"sold":false},{"id":39,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Powerfully","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":40,"cat":"designer","brand":"Hermès","name":"Terre d'Hermès Intense","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":41,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Absolu","p5":10,"p10":18,"badge":null,"sold":false},{"id":42,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Beyond","p5":10,"p10":18,"badge":null,"sold":false},{"id":43,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Bold Citrus","p5":7,"p10":12,"badge":null,"sold":false},{"id":44,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Elixir","p5":10,"p10":18,"badge":null,"sold":false},{"id":45,"cat":"designer","brand":"Issey Miyake","name":"Le Sel d'Issey EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":46,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Beau Le Parfum","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":47,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Elixir","p5":14,"p10":25,"badge":null,"sold":false},{"id":48,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":49,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Absolu","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":50,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Elixir","p5":12,"p10":20,"badge":null,"sold":false},{"id":51,"cat":"designer","brand":"Prada","name":"Paradigme","p5":15,"p10":28,"badge":"HOT","sold":false},{"id":52,"cat":"designer","brand":"Ralph Lauren","name":"Polo 67 EDP","p5":9,"p10":16,"badge":null,"sold":false},{"id":53,"cat":"designer","brand":"Ralph Lauren","name":"Ralph's Club","p5":8,"p10":14,"badge":null,"sold":false},{"id":54,"cat":"designer","brand":"Valentino","name":"Born in Roma Coral Fantasy","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":55,"cat":"designer","brand":"Valentino","name":"Born in Roma Donna Green Stravaganza","p5":8,"p10":14,"badge":null,"sold":false},{"id":56,"cat":"designer","brand":"Valentino","name":"Born in Roma Extradose","p5":16,"p10":28,"badge":null,"sold":false},{"id":57,"cat":"designer","brand":"Versace","name":"Eros Flame","p5":10,"p10":18,"badge":null,"sold":false},{"id":58,"cat":"designer","brand":"Yves Saint Laurent","name":"Babycat Raw Bourbon","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":59,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":60,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":61,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF Absolu","p5":20,"p10":35,"badge":"HOT","sold":false},{"id":62,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":63,"cat":"designer","brand":"Yves Saint Laurent","name":"The Yulong","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":64,"cat":"designer","brand":"Yves Saint Laurent","name":"Y EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":65,"cat":"middle","brand":"Afnan","name":"9PM Elixir","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: JPG Le Male Absolu"},{"id":66,"cat":"middle","brand":"Afnan","name":"Rare Reef","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Pacific Chill"},{"id":67,"cat":"middle","brand":"Afnan","name":"Supremacy Collector's Edition","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Absolu Aventus"},{"id":68,"cat":"middle","brand":"Afnan","name":"Supremacy Not Only Intense","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Aventus"},{"id":69,"cat":"middle","brand":"Afnan","name":"Turathi Blue","p5":8,"p10":14,"badge":"HOT","sold":false,"note":"DNA: Bvlgari Tygar"},{"id":70,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Ignite Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":71,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Kaaf","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Percival"},{"id":72,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Marj","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":73,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Oud & Roses","p5":12,"p10":20,"badge":null,"sold":false},{"id":74,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Summer Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":75,"cat":"middle","brand":"Al Haramain","name":"Aqua Dubai","p5":10,"p10":18,"badge":"HOT","sold":false,"note":"DNA: LV Imagination"},{"id":76,"cat":"middle","brand":"Al Haramain","name":"Carbon Edition","p5":10,"p10":18,"badge":null,"sold":false,"note":"DNA: Creed Irish Tweed"},{"id":77,"cat":"middle","brand":"Al Haramain","name":"Ruby Edition","p5":10,"p10":18,"badge":null,"sold":false,"note":"DNA: MFK Baccarat Rouge 540"},{"id":78,"cat":"middle","brand":"Armaf","name":"Club de Nuit Extrait","p5":10,"p10":18,"badge":"HOT","sold":false,"note":"DNA: Creed Aventus"},{"id":79,"cat":"middle","brand":"Armaf","name":"Club de Nuit Iconic","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: Bleu de Chanel"},{"id":80,"cat":"middle","brand":"French Avenue","name":"Amber Empire","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"Blonde Amber"},{"id":81,"cat":"middle","brand":"French Avenue","name":"Liquid Brun Limited Edition","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: PDM Althair"},{"id":82,"cat":"middle","brand":"French Avenue","name":"Vulcan Feu","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"God of Fire"},{"id":83,"cat":"middle","brand":"French Avenue","name":"Vulcan Sable","p5":7,"p10":12,"badge":null,"sold":false,"note":"Sand Dance"},{"id":84,"cat":"middle","brand":"Khadlaj","name":"Island Dreams","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Symphony"},{"id":85,"cat":"middle","brand":"Khadlaj","name":"Island Vanilla Dunes","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Althaïr"},{"id":86,"cat":"middle","brand":"Khadlaj","name":"Shiyaaka Snow","p5":8,"p10":14,"badge":null,"sold":false,"note":"DNA: LV Météore"},{"id":87,"cat":"middle","brand":"Lattafa","name":"Ana Abiyedh","p5":7,"p10":12,"badge":null,"sold":false,"note":"Erba Pura DNA"},{"id":88,"cat":"middle","brand":"Maison Asrar","name":"Cal Thriller 3","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: YSL 6"},{"id":89,"cat":"middle","brand":"Rasasi","name":"Hawas Black","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Hacivat"},{"id":90,"cat":"middle","brand":"Rasasi","name":"Hawas Fire","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Gissah Imperial Valley"},{"id":91,"cat":"middle","brand":"Rasasi","name":"Hawas Kobra","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: LV Imagination"},{"id":92,"cat":"middle","brand":"Rasasi","name":"Hawas Verde","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"Torino 21"},{"id":93,"cat":"middle","brand":"Rasasi","name":"Shuhrah","p5":7,"p10":12,"badge":null,"sold":false},{"id":94,"cat":"middle","brand":"Rayhaan","name":"Aquatica","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Creed Virgin Island Water"},{"id":95,"cat":"middle","brand":"Rayhaan","name":"Terra","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Outlands"},{"id":96,"cat":"bujahrami","brand":"Bujairami","name":"Executor","p5":6,"p10":null,"badge":"HOT","sold":false,"note":"Blue Talisman Extrait · 4.5ml"},{"id":97,"cat":"bujahrami","brand":"Bujairami","name":"Non Stop","p5":7,"p10":11,"badge":"HOT","sold":false,"note":"Pacific Chill inspired"},{"id":98,"cat":"bujahrami","brand":"Bujairami","name":"Psycho Symphony","p5":7,"p10":11,"badge":null,"sold":false,"note":"LV Symphony inspired"},{"id":99,"cat":"bujahrami","brand":"Bujairami","name":"Rizz Meteore","p5":7,"p10":11,"badge":null,"sold":false,"note":"LV Météore inspired"},{"id":100,"cat":"bujahrami","brand":"Bujairami","name":"Rose in Gold","p5":7,"p10":11,"badge":null,"sold":false,"note":"Delina PDM inspired"},{"id":101,"cat":"bujahrami","brand":"Bujairami","name":"Too Damn Good","p5":7,"p10":11,"badge":"HOT","sold":false,"note":"Bal d'Afrique Absolu inspired"},{"id":102,"cat":"niche","brand":"PDM","name":"Layton","p5":22,"p10":null,"badge":"LIMITED","sold":false},{"id":103,"cat":"niche","brand":"PDM","name":"Carlisle","p5":22,"p10":null,"badge":"LIMITED","sold":false},{"id":104,"cat":"niche","brand":"Goldfield & Banks","name":"Tale of Amber","p5":20,"p10":null,"badge":"LIMITED","sold":false},{"id":105,"cat":"designer","brand":"Givenchy","name":"Gentlemen Prive","p5":12,"p10":null,"badge":"LIMITED","sold":false},{"id":107,"cat":"middle","brand":"Dumont","name":"Nitro Red","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":106,"cat":"niche","brand":"Thomas Kosmala","name":"No.4","p5":10,"p10":null,"badge":"LIMITED","sold":false},{"id":108,"cat":"middle","brand":"Dumont","name":"Platinum","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":109,"cat":"middle","brand":"Ahmed Al Maghribi","name":"White Tiger","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":110,"cat":"middle","brand":"Ahmed Al Maghribi","name":"O Clock","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":111,"cat":"middle","brand":"Afnan","name":"Supremacy Oud","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"DNA: Oud for Greatness"},{"id":112,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Azzure Royal","p5":7,"p10":null,"badge":"LIMITED","sold":false,"note":"DNA: Blue Talisman"},{"id":113,"cat":"middle","brand":"Ibraheem Al Qurash","name":"Spanish Tobacc","p5":6,"p10":10,"badge":null,"sold":false,"note":"DNA: Megamare by Orto"},{"id":114,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bombay Oud","p5":10,"p10":null,"badge":"LIMITED","sold":false},{"id":115,"cat":"middle","brand":"Paris Corner","name":"Zodiac Stratos","p5":6,"p10":null,"badge":"LIMITED","sold":false,"note":"DNA: YSL Y Elixir"},{"id":116,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Aqua Oud","p5":6,"p10":null,"badge":"LIMITED","sold":false,"note":"ADG Profumo/profondo"},{"id":117,"cat":"middle","brand":"Reef","name":"33","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":118,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Hirfah","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":124,"cat":"niche","brand":"Initio","name":"Atomic Rose","p5":28,"p10":null,"badge":"LIMITED","sold":false,"note":"5mls only"},{"id":119,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Blue Oud","p5":6,"p10":null,"badge":"LIMITED","sold":false},{"id":120,"cat":"middle","brand":"Al Haramain","name":"Dubai Nights","p5":7,"p10":null,"badge":"LIMITED","sold":false,"note":"4.5ml left only"},{"id":121,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bin Sheikh","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":122,"cat":"niche","brand":"Mancera","name":"Red Tobacco","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":123,"cat":"middle","brand":"Montale","name":"Arabian Tonka","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"}];
 //##PRODUCTS_END##
 
 // Load saved edits from localStorage
@@ -5224,7 +5293,7 @@ const PRODUCTS = [{"id":1,"cat":"niche","brand":"Amouage","name":"Decision","p5"
 
 // ── CATALOG DATA ─────────────────────────────────────────────
 //##CATS_BEGIN##
-const CATS=[{"key":"niche","label":"Niche Fragrances","note":"2ml sample decants available — priced at half the 5ml rate"},{"key":"designer","label":"Designer Fragrances","note":"2ml sample decants available for some — priced at half the 5ml rate"},{"key":"middle","label":"Middle Eastern Fragrances","note":""},{"key":"bujahrami","label":"Bujairami Extraits","note":""}];
+const CATS=[{"key":"niche","label":"Niche Fragrances","note":""},{"key":"designer","label":"Designer Fragrances","note":"2ml sample decants available for some — priced at half the 5ml rate"},{"key":"middle","label":"Middle Eastern Fragrances","note":""},{"key":"bujahrami","label":"Bujairami Extraits","note":""}];
 //##CATS_END##
 const DELIVERY={
   pickup:    {label:'Pickup (Mill Park 3082)', cost:0,  costTxt:'FREE'},
@@ -6053,19 +6122,20 @@ function generateImages(){
       const canvas=drawCategoryCanvas(cat,prods);
       canvases.push({canvas,name:(idx+1)+'_'+cat.label.replace(/[^a-zA-Z0-9]/g,'_')+'.png'});
     });
+    if(!canvases.length){showToast('No products to export.',2500);return;}
     if(ios){
       showIOSImageModal(canvases,'Save Price List Images');
     } else {
-      let i=0;
-      function next(){
-        if(i>=canvases.length) return showToast('All images downloaded!',3000);
-        const {canvas,name}=canvases[i++];
+      let _di=0;
+      const _dlNext=()=>{
+        if(_di>=canvases.length){showToast('All images downloaded!',3000);return;}
+        const {canvas,name}=canvases[_di++];
         const a=document.createElement('a');
         a.href=canvas.toDataURL('image/png');
         a.download=name; a.click();
-        setTimeout(next,800);
-      }
-      next();
+        setTimeout(_dlNext,800);
+      };
+      _dlNext();
     }
   },400);
 }
@@ -6419,15 +6489,15 @@ function generateSquarePosts(){
     if(ios){
       showIOSImageModal(queue,'Save Square Posts');
     } else {
-      function next(i){
+      const _sqNext=(i)=>{
         if(i>=queue.length){showToast(`✓ ${queue.length} square post${queue.length!==1?'s':''} downloaded!`,3000);return;}
         const {canvas,name}=queue[i];
         const a=document.createElement('a');
         a.href=canvas.toDataURL('image/png');
         a.download=name; a.click();
-        setTimeout(()=>next(i+1),700);
-      }
-      next(0);
+        setTimeout(()=>_sqNext(i+1),700);
+      };
+      _sqNext(0);
     }
   },400);
 }
@@ -6725,6 +6795,7 @@ document.addEventListener('click',e=>{
 });
 
 // Init
+(function(){const t=document.getElementById('toast');if(t){t.textContent='';t.className='';}})();
 applySettings();
 updateAll();
 renderTabs();
