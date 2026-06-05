@@ -35,11 +35,11 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 #cart-badge{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;background:var(--gold);color:#0a0810;font-size:11px;font-weight:700;display:none;align-items:center;justify-content:center}
 
 /* INFO BAR */
-.info-bar{background:var(--glass-info);border-bottom:1px solid rgba(255,255,255,.05);padding:7px 28px}
-.info-inner{max-width:1320px;margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--muted)}
-.info-inner span{display:flex;align-items:center;gap:5px}
-.info-sep{color:rgba(255,255,255,.1);margin:0 -8px}
-.pill-min{background:rgba(138,48,80,.18);border:1px solid rgba(138,48,80,.3);color:#cc8aa0;border-radius:999px;padding:2px 10px;font-size:10.5px;font-weight:600}
+.info-bar{background:var(--glass-info);border-bottom:1px solid rgba(255,255,255,.05);padding:6px 28px}
+.info-inner{max-width:1320px;margin:0 auto;display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--muted);letter-spacing:.2px}
+.info-inner span{display:flex;align-items:center;gap:4px}
+.info-sep{color:rgba(255,255,255,.12);margin:0 -8px}
+.pill-min{background:rgba(138,48,80,.16);border:1px solid rgba(138,48,80,.28);color:#cc8aa0;border-radius:999px;padding:2px 10px;font-size:10px;font-weight:600;letter-spacing:.3px}
 
 /* FILTER BAR */
 .filter-bar{position:sticky;top:68px;z-index:90;background:var(--glass-filter);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05);padding:0 28px}
@@ -59,17 +59,17 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 @media(max-width:1080px){.main-grid{grid-template-columns:1fr}}
 
 /* CATALOG */
-.cat-section{margin-bottom:64px}
-.cat-head{display:flex;align-items:baseline;gap:14px;margin-bottom:32px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.cat-section{margin-bottom:56px}
+.cat-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06)}
 .cat-title{font-family:var(--serif);font-size:var(--cat-title-size,28px);font-weight:600;letter-spacing:.3px;color:var(--cream)}
-.cat-note{font-size:11px;color:var(--muted);letter-spacing:.3px}
-.cat-count{font-size:11.5px;color:var(--muted);margin-left:auto;font-weight:400}
-.brand-group{margin-bottom:36px}
-.brand-label{font-family:var(--serif);font-size:var(--brand-size,16px);font-weight:var(--brand-weight,600);font-style:var(--brand-style,normal);text-transform:var(--brand-transform,none);color:var(--brand-col,var(--gold));letter-spacing:.5px;padding:0 20px 12px;display:flex;align-items:center;gap:8px}
-.brand-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,114,.15),transparent);margin-left:4px}
-.item-row{display:flex;align-items:center;gap:14px;padding:12px 20px;transition:.15s ease;border-bottom:1px solid rgba(255,255,255,.04);cursor:default}
+.cat-note{font-size:10.5px;color:var(--muted);letter-spacing:.3px}
+.cat-count{font-size:11px;color:var(--muted);margin-left:auto;font-weight:400}
+.brand-group{margin-bottom:32px}
+.brand-label{font-family:var(--serif);font-size:var(--brand-size,16px);font-weight:var(--brand-weight,600);font-style:var(--brand-style,normal);text-transform:var(--brand-transform,none);color:var(--brand-col,var(--gold));letter-spacing:.5px;padding:0 20px 10px;display:flex;align-items:center;gap:8px}
+.brand-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(201,168,114,.18),transparent);margin-left:6px}
+.item-row{display:flex;align-items:center;gap:12px;padding:11px 20px;transition:.15s ease;border-bottom:1px solid rgba(255,255,255,.03);cursor:default}
 .item-row:last-child{border-bottom:none}
-.item-row:hover{background:rgba(255,255,255,.022)}
+.item-row:hover{background:rgba(255,255,255,.02)}
 .item-info{flex:1;min-width:0}
 .item-name{font-size:14px;font-weight:500;color:var(--cream);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.4}
 .item-subtext{font-size:11px;color:var(--note-color,#7a6a88);margin-top:3px;font-style:var(--note-style,italic);line-height:1.3}
@@ -79,14 +79,14 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 .badge-limited{background:rgba(138,96,48,.18);border:1px solid rgba(138,96,48,.3);color:#cca060}
 .badge-sold{background:transparent;border:1px solid rgba(255,255,255,.1);color:var(--muted)}
 .badge-hot{background:rgba(220,120,20,.18);border:1px solid rgba(220,120,20,.3);color:#e0a038}
-.sizes{display:flex;gap:5px;flex-shrink:0}
-.sz-btn{padding:5px 13px;border-radius:999px;font-size:11.5px;font-weight:600;border:1px solid rgba(255,255,255,.1);background:transparent;color:var(--cream2);cursor:pointer;transition:.15s ease;font-family:var(--sans);white-space:nowrap;display:flex;flex-direction:column;align-items:center;line-height:1.25}
-.sz-btn:hover{border-color:rgba(201,168,114,.4);color:var(--gold-l);background:rgba(201,168,114,.05)}
-.sz-btn.selected{background:rgba(201,168,114,.1);border-color:rgba(201,168,114,.45);color:var(--gold-l)}
+.sizes{display:flex;gap:4px;flex-shrink:0}
+.sz-btn{padding:4px 12px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid rgba(255,255,255,.09);background:transparent;color:var(--cream2);cursor:pointer;transition:.15s ease;font-family:var(--sans);white-space:nowrap;display:flex;flex-direction:column;align-items:center;line-height:1.25}
+.sz-btn:hover{border-color:rgba(201,168,114,.38);color:var(--gold-l);background:rgba(201,168,114,.04)}
+.sz-btn.selected{background:rgba(201,168,114,.1);border-color:rgba(201,168,114,.42);color:var(--gold-l)}
 .sz-btn.selected::after{content:'✓';font-size:9px;color:var(--gold);margin-top:1px}
-.sz-btn span{font-size:9px;font-weight:400;color:inherit;opacity:.65}
+.sz-btn span{font-size:8.5px;font-weight:400;color:inherit;opacity:.6}
 .sz-btn.selected span{opacity:1}
-.sz-soldout{padding:5px 13px;border-radius:999px;font-size:11px;border:1px solid rgba(255,255,255,.07);background:transparent;color:var(--muted);font-style:italic;pointer-events:none}
+.sz-soldout{padding:4px 12px;border-radius:999px;font-size:11px;border:1px solid rgba(255,255,255,.06);background:transparent;color:var(--muted);font-style:italic;pointer-events:none}
 .no-results{text-align:center;padding:80px 0;color:var(--muted);font-style:italic;font-size:15px}
 
 /* CART PANEL */
@@ -321,6 +321,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 .e-badge-new{color:#7de0a8;font-size:11px;font-weight:700}
 .e-badge-limited{color:#e0b87a;font-size:11px;font-weight:700}
 .e-badge-hot{color:#f4b84a;font-size:11px;font-weight:700}
+.e-badge-sale{color:#e07070;font-size:11px;font-weight:700}
 .e-sold-tag{color:#888;font-size:11px}
 .sold-row td{opacity:.45}
 
@@ -5346,7 +5347,7 @@ function renderCatalog(){
       any=true;
       const sec=document.createElement('div');
       sec.className='cat-section';
-      const brands=[...new Set(catItems.map(p=>p.brand))];
+      const brands=[...new Set(catItems.map(p=>p.brand))].sort();
       sec.innerHTML=`
         <div class="cat-head">
           <span class="cat-title">${catDef.label}</span>
@@ -5383,7 +5384,7 @@ function renderCatalog(){
         </div>
         ${prods.map(p=>renderItemFlat(p)).join('')}`;
     } else {
-      const brands=[...new Set(prods.map(p=>p.brand))];
+      const brands=[...new Set(prods.map(p=>p.brand))].sort();
       sec.innerHTML=`
         <div class="cat-head">
           <span class="cat-title">${catDef.label}</span>
@@ -5633,9 +5634,9 @@ function renderEditorTable(){
       <td class="td-brand">${p.brand}</td>
       <td class="td-name">${p.name}</td>
       <td>${catLabel}</td>
-      <td class="td-price">$${p.p5}</td>
-      <td class="td-price">${p.p10?'$'+p.p10:'—'}</td>
-      <td>${p.badge?`<span class="e-badge-${p.badge.toLowerCase()}">${badgeLabel[p.badge]||p.badge}</span>`:'—'}</td>
+      <td class="td-price">${p.saleP5&&p.saleP5>0?`<span style="text-decoration:line-through;opacity:.45;font-size:10px">$${p.p5}</span> <span style="color:#e07070;font-weight:700">$${p.saleP5}</span>`:'$'+p.p5}</td>
+      <td class="td-price">${p.p10?(p.saleP10&&p.saleP10>0?`<span style="text-decoration:line-through;opacity:.45;font-size:10px">$${p.p10}</span> <span style="color:#e07070;font-weight:700">$${p.saleP10}</span>`:'$'+p.p10):'—'}</td>
+      <td>${(p.saleP5&&p.saleP5>0)?`<span class="e-badge-sale">🏷 SALE</span>${p.badge?` <span class="e-badge-${p.badge.toLowerCase()}">${badgeLabel[p.badge]||p.badge}</span>`:''}`:(p.badge?`<span class="e-badge-${p.badge.toLowerCase()}">${badgeLabel[p.badge]||p.badge}</span>`:'—')}</td>
       <td>${p.sold?'<span class="e-sold-tag">✓ SOLD OUT</span>':'—'}</td>
       <td class="td-note" title="${p.note||'Click to add a note'}" onclick="inlineEditNote(${p.id},this)" style="cursor:pointer">${p.note||'<span style="color:var(--line2)">— add note</span>'}</td>
       <td class="td-actions">
@@ -5810,84 +5811,99 @@ function downloadHTML(){
 
 
 function generatePDF(){
-  const today=new Date().toLocaleDateString('en-AU',{day:'numeric',month:'long',year:'numeric'});
   function priceStr(p){
-    if(p.sold) return '<span style="color:#999;font-weight:400">SOLD OUT</span>';
+    if(p.sold) return '<span style="color:#aaa;font-style:italic">Sold Out</span>';
     const m=p.note&&(p.note.match(/^(\d+\.?\d*)ml\s+left/i)||p.note.match(/[·\s](\d+\.?\d*)ml\s*$/i));
-    const sep={pipe:'&nbsp;|&nbsp;',slash:'&nbsp;/&nbsp;',dot:'&nbsp;&middot;&nbsp;'}[SETTINGS.priceFormat]||'&nbsp;|&nbsp;';
     const sale5=p.saleP5&&p.saleP5>0?p.saleP5:null;
     const sale10=p.saleP10&&p.saleP10>0?p.saleP10:null;
-    const act5=sale5||p.p5;
-    const act10=sale10||(p.p10||null);
-    const was5=sale5?`<span style="text-decoration:line-through;color:#aaa;font-weight:400;font-size:6.5pt;margin-right:2px">$${p.p5}</span>`:'';
-    const was10=sale10?`<span style="text-decoration:line-through;color:#aaa;font-weight:400;font-size:6.5pt;margin-right:2px">$${p.p10}</span>`:'';
-    if(m) return `${was5}$${act5} <em style="font-weight:400;font-size:7pt">(${m[1]}ml left)</em>`;
-    if(act10) return `${was5}$${act5}${sep}${was10}$${act10}`;
-    return `${was5}$${act5}<em style="font-weight:400;font-size:7pt"> (5ml)</em>`;
+    const act5=sale5||p.p5, act10=sale10||(p.p10||null);
+    const was5=sale5?`<span style="text-decoration:line-through;opacity:.45;margin-right:1.5pt;font-weight:400">$${p.p5}</span>&thinsp;`:'';
+    const was10=sale10?`<span style="text-decoration:line-through;opacity:.45;margin-right:1.5pt;font-weight:400">$${p.p10}</span>&thinsp;`:'';
+    const c5col=sale5?'color:#b03030;':'';
+    if(m) return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span>&thinsp;<span style="opacity:.55;font-weight:400">(${m[1]}ml)</span>`;
+    if(act10) return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span><span style="opacity:.4">&nbsp;·&nbsp;</span>${was10}<span style="font-weight:700">$${act10}</span>`;
+    return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span>`;
   }
   function badgeStr(p){
-    const parts=[];
-    if(p.saleP5&&p.saleP5>0) parts.push(`<span style="font-size:6pt;font-weight:800;padding:1px 4px;border-radius:2px;margin-left:3px;vertical-align:middle;color:#c03030;background:#fdecea">SALE</span>`);
-    if(p.badge){
-      const s={NEW:'color:#1a6e3a;background:#e4f5ec',LIMITED:'color:#7a5020;background:#f5edde'};
-      parts.push(`<span style="font-size:6pt;font-weight:700;padding:1px 3px;border-radius:2px;margin-left:3px;vertical-align:middle;${s[p.badge]||''}">${p.badge}</span>`);
-    }
-    return parts.join('');
+    const out=[];
+    if(p.saleP5&&p.saleP5>0) out.push(`<span style="font-size:5.5pt;font-weight:800;padding:0.5pt 2.5pt;border-radius:2px;margin-left:2pt;vertical-align:middle;color:#b03030;background:#fdecea;letter-spacing:.3px">SALE</span>`);
+    if(p.badge==='NEW') out.push(`<span style="font-size:5.5pt;font-weight:700;padding:0.5pt 2.5pt;border-radius:2px;margin-left:2pt;vertical-align:middle;color:#1a6e3a;background:#e4f5ec">NEW</span>`);
+    if(p.badge==='LIMITED') out.push(`<span style="font-size:5.5pt;font-weight:700;padding:0.5pt 2.5pt;border-radius:2px;margin-left:2pt;vertical-align:middle;color:#7a5020;background:#f5edde">LTD</span>`);
+    return out.join('');
   }
-  const hdr=`<div style="text-align:center;margin-bottom:5mm;border-bottom:1.5px solid #c9a872;padding-bottom:4mm">
-    <div style="font-size:7.5pt;letter-spacing:3px;color:#8a7a65;font-family:'Hanken Grotesk',sans-serif;text-transform:uppercase">${SETTINGS.title.toUpperCase().split('').join(' ')}</div>
-    <div style="font-size:22pt;font-weight:600;color:#1a1510;margin:1mm 0;font-family:'Cormorant Garamond',Georgia,serif">Decant Price List</div>
-    <div style="font-size:8pt;color:#8a7a65;font-family:'Hanken Grotesk',sans-serif">5ml | 10ml decants &middot; Updated ${SETTINGS.lastUpdated}</div>
-  </div>`;
-  const info=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-bottom:5mm">
-    <div style="border:1px solid rgba(0,0,0,.12);border-radius:3px;padding:3.5mm;font-size:7.5pt;font-family:'Hanken Grotesk',sans-serif;background:rgba(200,180,140,.08)">
-      <div style="font-size:7pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5mm;color:#5a4a38">How to Order</div>
-      ${[SETTINGS.how1,SETTINGS.how2,SETTINGS.how3,SETTINGS.how4].filter(Boolean).map((s,i)=>`<p style="margin-bottom:1mm;line-height:1.5">${i+1}. ${s}</p>`).join('')}
-      <p style="font-weight:700;line-height:1.5">Minimum $${SETTINGS.minimum} of fragrance before postage.</p>
-    </div>
-    <div style="border:1px solid rgba(0,0,0,.12);border-radius:3px;padding:3.5mm;font-size:7.5pt;font-family:'Hanken Grotesk',sans-serif;background:rgba(200,180,140,.08)">
-      <div style="font-size:7pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1.5mm;color:#5a4a38">Order Notes</div>
-      <p style="margin-bottom:1.5mm;line-height:1.5">&#10022; ${SETTINGS.infoNote||'All decants in labelled glass atomiser bottles.'}</p>
-      <div style="font-size:7pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:1mm;color:#5a4a38">Pickup &amp; Postage</div>
-      <p style="margin-bottom:1mm;line-height:1.5"><strong>Pickup:</strong> ${SETTINGS.pickup}</p>
-      <p style="margin-bottom:1mm;line-height:1.5"><strong>Post:</strong> $${SETTINGS.postageUntracked} untracked / $${SETTINGS.postageTracked} tracked</p>
-      <p style="line-height:1.5">&#10022; ${SETTINGS.orderPostageNote||"Tracked post recommended. Untracked at buyer's risk."}</p>
-    </div>
-  </div>`;
+
+  // ── PAGE DIMENSIONS (A4 with 10mm/11mm margins) ──
+  // Printable height ≈ 277mm. We give content a max-height and overflow:hidden
+  // so it can never bleed past the page-break-after:always boundary.
+  const FIRST_CONTENT_H=207; // mm: 277 – header(30) – info(22) – cat-hdr(9) – gaps(9)
+  const OTHER_CONTENT_H=254; // mm: 277 – run-hdr(6) – cat-hdr(9) – gaps(8)
+
+  const mainHdr=`
+    <div style="text-align:center;padding-bottom:3.5mm;margin-bottom:3.5mm;border-bottom:1.5pt solid #c9a872">
+      <div style="font-size:6pt;letter-spacing:3.5px;color:#9a8060;font-family:'Hanken Grotesk',sans-serif;text-transform:uppercase;margin-bottom:1.5mm">${(SETTINGS.title||'Zain Abbasi').toUpperCase().split('').join(' ')}</div>
+      <div style="font-size:21pt;font-weight:600;color:#1a1510;font-family:'Cormorant Garamond',Georgia,serif;line-height:1.1;margin-bottom:1mm">Fragrance Decants</div>
+      <div style="font-size:6pt;color:#8a7a65;font-family:'Hanken Grotesk',sans-serif;letter-spacing:.4px">5ml &middot; 10ml &middot; Updated ${SETTINGS.lastUpdated}</div>
+    </div>`;
+
+  const infoSection=`
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:3.5mm">
+      <div style="border:0.5pt solid rgba(201,168,114,.5);border-radius:2pt;padding:2.5mm 3mm;background:rgba(200,180,140,.07)">
+        <div style="font-size:5.5pt;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#8a6030;margin-bottom:1.5mm;font-family:'Hanken Grotesk',sans-serif">How to Order</div>
+        ${[SETTINGS.how1,SETTINGS.how2,SETTINGS.how3,SETTINGS.how4].filter(Boolean).map((s,i)=>`<p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#1a1510">${i+1}. ${s}</p>`).join('')}
+        <p style="font-size:6pt;font-weight:700;margin-top:.5mm;color:#8a6030;font-family:'Hanken Grotesk',sans-serif">Min. $${SETTINGS.minimum} of fragrance before postage</p>
+      </div>
+      <div style="border:0.5pt solid rgba(201,168,114,.5);border-radius:2pt;padding:2.5mm 3mm;background:rgba(200,180,140,.07)">
+        <div style="font-size:5.5pt;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#8a6030;margin-bottom:1.5mm;font-family:'Hanken Grotesk',sans-serif">Pickup &amp; Postage</div>
+        <p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#1a1510">&#10022; ${SETTINGS.infoNote||'All decants in labelled glass atomiser bottles.'}</p>
+        <p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#1a1510"><b>Pickup:</b> ${SETTINGS.pickup}</p>
+        <p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#1a1510"><b>Post:</b> $${SETTINGS.postageUntracked} untracked &middot; $${SETTINGS.postageTracked} tracked</p>
+        <p style="font-size:6pt;color:#8a6030;line-height:1.4;font-family:'Hanken Grotesk',sans-serif">&#10022; ${SETTINGS.orderPostageNote||"Tracked recommended. Untracked at buyer's risk."}</p>
+      </div>
+    </div>`;
+
+  const runHdr=`
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:2mm;margin-bottom:2mm;border-bottom:0.5pt solid #c9a872">
+      <span style="font-size:7pt;font-weight:600;color:#1a1510;font-family:'Cormorant Garamond',serif">${SETTINGS.title||'Zain Abbasi'} &mdash; Fragrance Decants</span>
+      <span style="font-size:5.5pt;color:#8a7a65;font-family:'Hanken Grotesk',sans-serif">Updated ${SETTINGS.lastUpdated}</span>
+    </div>`;
 
   const pages=CATS.map((catDef,ci)=>{
     const prods=PRODUCTS.filter(p=>p.cat===catDef.key);
-    const brands=[...new Set(prods.map(p=>p.brand))];
-    const noteHtml=catDef.note?`<div style="font-size:7.5pt;color:#7a6a52;margin-bottom:3mm;font-family:'Hanken Grotesk',sans-serif;border:1px solid rgba(0,0,0,.1);padding:1.5mm 3mm;background:rgba(200,180,140,.1);border-radius:2px">&#10022; ${catDef.note}</div>`:'';
+    const brands=[...new Set(prods.map(p=>p.brand))].sort();
+    const noteHtml=catDef.note
+      ?`<div style="font-size:5.5pt;color:#7a6a52;margin-bottom:2mm;padding:1mm 2.5mm;background:rgba(200,180,140,.1);border-left:1.5pt solid #c9a872;font-family:'Hanken Grotesk',sans-serif">&#10022;&ensp;${catDef.note}</div>`
+      :'';
     const brandsHtml=brands.map(br=>{
       const items=prods.filter(p=>p.brand===br);
-      return `<div style="break-inside:avoid;margin-bottom:2.5mm">
-        <div style="font-size:10pt;font-weight:700;color:#8a3020;margin-bottom:1mm;font-family:'Cormorant Garamond',Georgia,serif">${br}</div>
-        ${items.map(p=>`<div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted #c9a872;padding:0.8mm 0;font-size:7.5pt;${p.sold?'opacity:.4':''}">
-          <span style="flex:1;color:#1a1510;font-family:'Hanken Grotesk',sans-serif">${p.name}${badgeStr(p)}</span>
-          <span style="font-weight:700;white-space:nowrap;margin-left:3mm;font-family:'Hanken Grotesk',sans-serif">${priceStr(p)}</span>
-        </div>`).join('')}
-      </div>`;
+      return `
+        <div style="margin-bottom:2mm;break-inside:avoid-column">
+          <div style="font-size:8pt;font-weight:700;color:#8a3020;margin-bottom:.6mm;font-family:'Cormorant Garamond',Georgia,serif;page-break-after:avoid;border-bottom:0.4pt solid rgba(201,168,114,.35);padding-bottom:.5mm">${br}</div>
+          ${items.map(p=>`<div style="display:flex;justify-content:space-between;align-items:baseline;padding:.35mm 0;font-size:6.5pt;border-bottom:.3pt dotted rgba(201,168,114,.4);${p.sold?'opacity:.38':''}">
+            <span style="flex:1;min-width:0;overflow:hidden;color:#1a1510;font-family:'Hanken Grotesk',sans-serif;white-space:nowrap;text-overflow:ellipsis">${p.name}${badgeStr(p)}</span>
+            <span style="white-space:nowrap;margin-left:2.5mm;font-family:'Hanken Grotesk',sans-serif">${priceStr(p)}</span>
+          </div>`).join('')}
+        </div>`;
     }).join('');
-    // First page gets cover info, rest get compact header only
-    const topContent = ci===0 ? (hdr+info) : hdr;
-    return `<div style="page-break-after:always;page-break-inside:avoid">
+    const topContent=ci===0?mainHdr+infoSection:runHdr;
+    const availH=ci===0?FIRST_CONTENT_H:OTHER_CONTENT_H;
+    return `<div style="page-break-after:always">
       ${topContent}
-      <div style="font-size:13pt;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding-bottom:2mm;border-bottom:2px solid #1a1510;margin-bottom:2.5mm;font-family:'Hanken Grotesk',sans-serif">${catDef.label}</div>
+      <div style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;padding-bottom:1.5mm;margin-bottom:2mm;border-bottom:1.2pt solid #1a1510;font-family:'Hanken Grotesk',sans-serif;color:#1a1510">${catDef.label}</div>
       ${noteHtml}
-      <div style="columns:2;column-gap:7mm;column-fill:auto">${brandsHtml}</div>
+      <div style="columns:2;column-gap:6mm;column-fill:auto;height:${availH}mm;overflow:hidden">${brandsHtml}</div>
     </div>`;
   });
   pages[pages.length-1]=pages[pages.length-1].replace('page-break-after:always','page-break-after:auto');
 
   const win=window.open('','_blank');
   if(!win){showToast('⚠ Please allow pop-ups for this page to generate PDFs.',4000);return;}
-  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Zain Abbasi &middot; Decant Price List</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${SETTINGS.title||'Zain Abbasi'} &middot; Decant Price List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-      @page{size:A4;margin:11mm 13mm}
+      @page{size:A4;margin:10mm 11mm}
       *{box-sizing:border-box;margin:0;padding:0}
-      body{font-family:'Hanken Grotesk',sans-serif;background:#f8f4ef;color:#1a1510;font-size:7.5pt;-webkit-print-color-adjust:exact;print-color-adjust:exact;line-height:1.4}
+      html,body{background:white}
+      body{font-family:'Hanken Grotesk',sans-serif;color:#1a1510;font-size:6.5pt;line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
     </style>
     </head><body>${pages.join('')}</body></html>`);
   win.document.close();
@@ -5924,7 +5940,7 @@ function drawStoryCanvas(catDef,prods){
   const PAD=64;
   const BH=22,IH=19.5;
   const sep={pipe:' | ',slash:' / ',dot:' · '}[SETTINGS.priceFormat]||' | ';
-  const brands=[...new Set(prods.map(p=>p.brand))];
+  const brands=[...new Set(prods.map(p=>p.brand))].sort();
 
   // ── BALANCE 2 COLUMNS ──
   let totalRows=brands.reduce((s,br)=>s+1+prods.filter(p=>p.brand===br).length+0.5,0);
@@ -6031,8 +6047,11 @@ function drawStoryCanvas(catDef,prods){
         c.fillText(item.name,cx,cy+IH);
         const nameW=c.measureText(item.name).width; // capture width BEFORE font changes
         const mm2=item.note&&(item.note.match(/^(\d+\.?\d*)ml\s+left/i)||item.note.match(/[·\s](\d+\.?\d*)ml\s*$/i));
-        const pt=mm2?`$${item.p5}(${mm2[1]}ml)`:item.p10?`$${item.p5}${sep}$${item.p10}`:`$${item.p5}`;
-        c.fillStyle=GOLD; c.font=`700 ${IH}px 'Hanken Grotesk',sans-serif`; c.textAlign='right';
+        const s5=item.saleP5&&item.saleP5>0?item.saleP5:null;
+        const s10=item.saleP10&&item.saleP10>0?item.saleP10:null;
+        const a5=s5||item.p5, a10=s10||(item.p10||null);
+        const pt=mm2?`$${a5}(${mm2[1]}ml)`:a10?`$${a5}${sep}$${a10}`:`$${a5}`;
+        c.fillStyle=s5?'#e09050':GOLD; c.font=`700 ${IH}px 'Hanken Grotesk',sans-serif`; c.textAlign='right';
         c.fillText(pt,cx+CW,cy+IH);
         if(item.badge==='HOT'){
           c.font=`700 13px 'Hanken Grotesk',sans-serif`; c.fillStyle='#f4b84a'; c.textAlign='left';
@@ -6121,7 +6140,7 @@ function drawCategoryCanvas(catDef,prods){
   const BRAND_GAP=14*S, BRAND_H=18*S, ITEM_H=17*S, BRAND_BOTTOM=8*S;
 
   // ── MEASURE CONTENT HEIGHT ──
-  const brands=[...new Set(prods.map(p=>p.brand))];
+  const brands=[...new Set(prods.map(p=>p.brand))].sort();
   function blockH(br){return BRAND_GAP+BRAND_H+prods.filter(p=>p.brand===br).length*ITEM_H+BRAND_BOTTOM;}
   const contentH=brands.reduce((s,br)=>s+blockH(br),0);
 
@@ -6266,12 +6285,26 @@ function drawCategoryCanvas(catDef,prods){
         cx2+=c.measureText(noteStr).width;
       }
 
-      // Price right-aligned
+      // Price right-aligned (with sale support)
       const sep={pipe:' | ',slash:' / ',dot:' \u00b7 '}[SETTINGS.priceFormat]||' | ';
-      let pTxt=item.sold?'SOLD OUT':mm?`$${item.p5} (${mm[1]}ml)`:item.p10?`$${item.p5}${sep}$${item.p10}`:`$${item.p5}`;
-      c.fillStyle=item.sold?MUTED:INK;
+      const cSale5=item.saleP5&&item.saleP5>0?item.saleP5:null;
+      const cSale10=item.saleP10&&item.saleP10>0?item.saleP10:null;
+      const act5=cSale5||item.p5, act10=cSale10||(item.p10||null);
+      let pTxt=item.sold?'SOLD OUT':mm?`$${act5} (${mm[1]}ml)`:act10?`$${act5}${sep}$${act10}`:`$${act5}`;
+      c.fillStyle=item.sold?MUTED:(cSale5?'#c03030':INK);
       c.font=`700 ${FS_PRICE}px 'Hanken Grotesk',sans-serif`;c.textAlign='right';
       c.fillText(pTxt,pad+W,y+FS_PRICE);
+      // Strike-through original price if on sale
+      if(cSale5&&!item.sold&&!mm){
+        const origTxt=item.p10?`$${item.p5}${sep}$${item.p10}`:`$${item.p5}`;
+        c.font=`400 ${FS_NOTE}px 'Hanken Grotesk',sans-serif`;
+        const origW=c.measureText(origTxt).width;
+        const saleW=c.measureText(pTxt).width;
+        c.fillStyle='rgba(150,120,80,.5)';
+        c.fillText(origTxt,pad+W-saleW-4*S,y+FS_PRICE);
+        c.strokeStyle='rgba(150,120,80,.7)';c.lineWidth=0.5*S;
+        c.beginPath();c.moveTo(pad+W-saleW-4*S-origW,y+FS_PRICE-3*S);c.lineTo(pad+W-saleW-4*S,y+FS_PRICE-3*S);c.stroke();
+      }
       const pW=c.measureText(pTxt).width;
 
       // Dotted leader
@@ -6288,12 +6321,15 @@ function drawCategoryCanvas(catDef,prods){
   });
 
   // ── FOOTER ──
-  y+=12*S;
-  c.strokeStyle=GOLD;c.lineWidth=1*S;
-  c.beginPath();c.moveTo(pad,y);c.lineTo(PW-pad,y);c.stroke();y+=14*S;
+  y+=16*S;
+  c.strokeStyle=GOLD;c.lineWidth=0.8*S;
+  c.beginPath();c.moveTo(pad,y);c.lineTo(PW-pad,y);c.stroke();y+=16*S;
   c.fillStyle=MUTED;c.textAlign='center';
-  c.font=`400 ${8*S}px 'Hanken Grotesk',sans-serif`;
-  c.fillText('DECANTS BY '+(SETTINGS.title||'ZAIN ABBASI').toUpperCase(),PW/2,y+8*S);
+  c.font=`400 ${7.5*S}px 'Hanken Grotesk',sans-serif`;
+  c.fillText('DM to order  \u00b7  Shipping across Australia  \u00b7  Pickup: '+SETTINGS.pickup,PW/2,y+7.5*S); y+=13*S;
+  c.fillStyle='rgba(201,168,114,.45)';c.textAlign='center';
+  c.font=`600 ${8*S}px 'Cormorant Garamond',serif`;
+  c.fillText((SETTINGS.title||'Zain Abbasi').toUpperCase().split('').join(' '),PW/2,y+8*S);
 
   return canvas;
 }
@@ -6471,20 +6507,21 @@ function drawSquareCanvases(catDef,prods){
   const GOLD='#c9a872',INK='#1a1510',MUTED='#8a7a65',PAPER='#f8f4ef';
   const BRAND_COL=SETTINGS.brandColor||'#8a3020';
 
-  const FS_OVER=8*S, FS_TITLE=19*S, FS_META=7.5*S;
-  const FS_CAT=11*S, FS_BRAND=11*S;
-  const FS_ITEM=9*S, FS_NOTE=7.5*S, FS_PRICE=9*S;
-  const BRAND_GAP=10*S, BRAND_H=16*S, ITEM_H=14*S, BRAND_BOTTOM=6*S;
+  // ── COMPACT FONT SIZES ──
+  const FS_OVER=7*S, FS_TITLE=17*S, FS_META=7*S;
+  const FS_CAT=10*S, FS_BRAND=10*S;
+  const FS_ITEM=8.5*S, FS_PRICE=8.5*S;
+  const BRAND_GAP=6*S, BRAND_H=13*S, ITEM_H=11.5*S, BRAND_BOTTOM=4*S;
 
   // Fixed section heights
   const hdrH=FS_OVER+4*S+FS_TITLE+4*S+FS_META+10*S+S+8*S;
-  const catNoteH=catDef.note?13*S:0;
-  const catHdrH=FS_CAT+6*S+2*S+8*S+catNoteH;
+  const catNoteH=catDef.note?12*S:0;
+  const catHdrH=FS_CAT+5*S+2*S+7*S+catNoteH;
   const footerH=32*S;
   const availH=PH-pad-hdrH-catHdrH-footerH-pad;
 
   // Split brands across pages so each page fits in availH
-  const brands=[...new Set(prods.map(p=>p.brand))];
+  const brands=[...new Set(prods.map(p=>p.brand))].sort();
   function brandH(br){return BRAND_GAP+BRAND_H+prods.filter(p=>p.brand===br).length*ITEM_H+BRAND_BOTTOM;}
 
   const pages=[];
@@ -6528,11 +6565,11 @@ function drawSquareCanvases(catDef,prods){
     c.fillText(catLabel,pad,y+FS_CAT);
     c.strokeStyle=INK; c.lineWidth=1.5*S;
     c.beginPath(); c.moveTo(pad,y+FS_CAT+4*S); c.lineTo(PW-pad,y+FS_CAT+4*S); c.stroke();
-    y+=FS_CAT+8*S;
+    y+=FS_CAT+7*S;
     if(catDef.note){
-      c.fillStyle='rgba(200,180,140,.14)'; c.fillRect(pad,y,W,12*S);
-      c.fillStyle=MUTED; c.font=`400 ${7*S}px 'Hanken Grotesk',sans-serif`;
-      c.fillText('\u2756 '+catDef.note,pad+5*S,y+9*S); y+=catNoteH;
+      c.fillStyle='rgba(200,180,140,.14)'; c.fillRect(pad,y,W,11*S);
+      c.fillStyle=MUTED; c.font=`400 ${6.5*S}px 'Hanken Grotesk',sans-serif`;
+      c.fillText('\u2756 '+catDef.note,pad+5*S,y+8.5*S); y+=catNoteH;
     }
 
     // Brands & items
@@ -6548,35 +6585,31 @@ function drawSquareCanvases(catDef,prods){
       // Trailing line after brand name
       const bnW=c.measureText(bname).width;
       c.strokeStyle='rgba(201,168,114,.18)'; c.lineWidth=0.5*S;
-      c.beginPath(); c.moveTo(pad+bnW+7*S,y+FS_BRAND*.45); c.lineTo(PW-pad,y+FS_BRAND*.45); c.stroke();
+      c.beginPath(); c.moveTo(pad+bnW+6*S,y+FS_BRAND*.45); c.lineTo(PW-pad,y+FS_BRAND*.45); c.stroke();
       y+=BRAND_H;
 
       items.forEach(item=>{
         c.globalAlpha=item.sold?.35:1;
-        // Name
+        // Name only (no inline notes — keeps rows compact)
         c.fillStyle=INK; c.font=`500 ${FS_ITEM}px 'Hanken Grotesk',sans-serif`; c.textAlign='left';
         c.fillText(item.name,pad,y+FS_ITEM);
-        let cx2=pad+c.measureText(item.name).width;
-        // Inline note
-        const mm=item.note&&(item.note.match(/^(\d+\.?\d*)ml\s+left/i)||item.note.match(/[·\s](\d+\.?\d*)ml\s*$/i));
-        if(item.note&&!mm){
-          c.fillStyle=MUTED; c.font=`italic 400 ${FS_NOTE}px 'Hanken Grotesk',sans-serif`;
-          const ns='  '+item.note;
-          c.fillText(ns,cx2,y+FS_ITEM); cx2+=c.measureText(ns).width;
-        }
+        const nameW=pad+c.measureText(item.name).width;
         // Price
         const sep={pipe:' | ',slash:' / ',dot:' \u00b7 '}[SETTINGS.priceFormat]||' | ';
-        let pTxt=item.sold?'SOLD OUT':mm?`$${item.p5} (${mm[1]}ml)`:item.p10?`$${item.p5}${sep}$${item.p10}`:`$${item.p5}`;
-        c.fillStyle=item.sold?MUTED:INK;
+        const mm=item.note&&(item.note.match(/^(\d+\.?\d*)ml\s+left/i)||item.note.match(/[·\s](\d+\.?\d*)ml\s*$/i));
+        const sale5=item.saleP5&&item.saleP5>0?item.saleP5:null;
+        const sale10=item.saleP10&&item.saleP10>0?item.saleP10:null;
+        let pTxt=item.sold?'SOLD OUT':mm?`$${sale5||item.p5} (${mm[1]}ml)`:item.p10?`$${sale5||item.p5}${sep}$${sale10||item.p10}`:`$${sale5||item.p5}`;
+        c.fillStyle=item.sold?MUTED:(sale5?'#c03030':INK);
         c.font=`700 ${FS_PRICE}px 'Hanken Grotesk',sans-serif`; c.textAlign='right';
         c.fillText(pTxt,pad+W,y+FS_PRICE);
         const pW=c.measureText(pTxt).width;
         // Dotted leader
-        c.setLineDash([S,2.5*S]); c.strokeStyle=GOLD; c.lineWidth=0.5*S; c.globalAlpha=.25;
-        c.beginPath(); c.moveTo(cx2+4*S,y+FS_ITEM-2*S); c.lineTo(pad+W-pW-4*S,y+FS_ITEM-2*S); c.stroke();
+        c.setLineDash([S,2.5*S]); c.strokeStyle=GOLD; c.lineWidth=0.5*S; c.globalAlpha=.22;
+        c.beginPath(); c.moveTo(nameW+4*S,y+FS_ITEM-2*S); c.lineTo(pad+W-pW-4*S,y+FS_ITEM-2*S); c.stroke();
         c.setLineDash([]); c.globalAlpha=item.sold?.35:1;
         // Row separator
-        c.strokeStyle='rgba(201,168,114,.18)'; c.lineWidth=0.4*S;
+        c.strokeStyle='rgba(201,168,114,.15)'; c.lineWidth=0.4*S;
         c.beginPath(); c.moveTo(pad,y+ITEM_H-1.5*S); c.lineTo(pad+W,y+ITEM_H-1.5*S); c.stroke();
         c.globalAlpha=1; y+=ITEM_H;
       });
