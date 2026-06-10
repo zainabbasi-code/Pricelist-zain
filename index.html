@@ -1,4 +1,4 @@
-<html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 30px; --note-color: #7a6a88; --note-style: italic; --bg: #f6f1eb; --bg2: #ede8e0; --surf: #ffffff; --surf2: #f0ebe3; --surf3: #e8e2d8; --cream: #1a1510; --cream2: #3a2e20; --muted: #8a7a65; --line: #ddd5c8; --line2: #ccc5b8; --accent: #8a2e52; --new: #1a6e48; --glass-header: rgba(246,241,235,.92); --glass-filter: rgba(246,241,235,.97); --glass-info: rgba(237,232,224,.85);"><head>
+<html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 30px; --note-color: #7a6a88; --note-style: italic; --bg: #f6f1eb; --bg2: #ede8e0; --surf: #ffffff; --surf2: #f0ebe3; --surf3: #e8e2d8; --cream: #1a1510; --cream2: #3a2e20; --muted: #8a7a65; --line: #ddd5c8; --line2: #ccc5b8; --accent: #8a2e52; --new: #1a6e48; --glass-header: rgba(246,241,235,.92); --glass-filter: rgba(246,241,235,.97); --glass-info: rgba(237,232,224,.85); --cat-title-color: #8a3020;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zain Abbasi · Decant Price List</title>
@@ -43,6 +43,9 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 
 /* FILTER BAR */
 .filter-bar{position:sticky;top:68px;z-index:90;background:var(--glass-filter);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05);padding:0 28px}
+.browse-hint{max-width:1320px;margin:0 auto;padding:11px 28px 0;display:flex;align-items:center;gap:9px;color:var(--muted);font-size:12px;letter-spacing:.15px}
+.browse-hint-icon{width:28px;height:28px;border-radius:50%;background:rgba(201,168,114,.1);border:1px solid rgba(201,168,114,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:13px}
+.browse-hint em{font-style:normal;color:var(--cream2);font-weight:600}
 .filter-inner{max-width:1320px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 0;flex-wrap:wrap}
 .tabs{display:flex;gap:1px;flex-wrap:wrap}
 .tab{padding:7px 15px;border-radius:7px;font-size:12.5px;font-weight:500;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:.18s ease;font-family:var(--sans);letter-spacing:.1px}
@@ -69,7 +72,7 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 /* CATALOG */
 .cat-section{margin-bottom:56px}
 .cat-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.06)}
-.cat-title{font-family:var(--serif);font-size:var(--cat-title-size,28px);font-weight:600;letter-spacing:.3px;color:var(--cream)}
+.cat-title{font-family:var(--serif);font-size:var(--cat-title-size,28px);font-weight:600;letter-spacing:.3px;color:var(--cat-title-color,var(--cream))}
 .cat-note{font-size:10.5px;color:var(--muted);letter-spacing:.3px}
 .cat-count{font-size:11px;color:var(--muted);margin-left:auto;font-weight:400}
 .brand-group{margin-bottom:32px}
@@ -88,9 +91,9 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 .badge-sold{background:transparent;border:1px solid rgba(255,255,255,.1);color:var(--muted)}
 .badge-hot{background:rgba(220,120,20,.18);border:1px solid rgba(220,120,20,.3);color:#e0a038}
 .sizes{display:flex;gap:4px;flex-shrink:0}
-.sz-btn{padding:4px 12px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid rgba(255,255,255,.09);background:transparent;color:var(--cream2);cursor:pointer;transition:.15s ease;font-family:var(--sans);white-space:nowrap;display:flex;flex-direction:column;align-items:center;line-height:1.25}
-.sz-btn:hover{border-color:rgba(201,168,114,.38);color:var(--gold-l);background:rgba(201,168,114,.04)}
-.sz-btn.selected{background:rgba(201,168,114,.1);border-color:rgba(201,168,114,.42);color:var(--gold-l)}
+.sz-btn{padding:5px 13px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:var(--cream2);cursor:pointer;transition:.15s ease;font-family:var(--sans);white-space:nowrap;display:flex;flex-direction:column;align-items:center;line-height:1.25;box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.sz-btn:hover{border-color:rgba(201,168,114,.55);color:var(--gold-l);background:rgba(201,168,114,.09);transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.22)}
+.sz-btn.selected{background:rgba(201,168,114,.13);border-color:rgba(201,168,114,.5);color:var(--gold-l);box-shadow:0 1px 4px rgba(0,0,0,.18)}
 .sz-btn.selected::after{content:'✓';font-size:9px;color:var(--gold);margin-top:1px}
 .sz-btn span{font-size:8.5px;font-weight:400;color:inherit;opacity:.6}
 .sz-btn.selected span{opacity:1}
@@ -268,9 +271,9 @@ body.compact .cat-section{margin-bottom:48px}
 .e-seg button:hover{color:var(--cream2);border-color:var(--gold-d)}
 .e-seg button.on{background:var(--surf3);border-color:var(--gold-d);color:var(--gold);font-weight:700}
 .e-swatches{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0}
-.e-swatch{width:26px;height:26px;border-radius:7px;cursor:pointer;border:2px solid transparent;flex:none;transition:.15s}
-.e-swatch:hover{transform:scale(1.12)}
-.e-swatch.on{border-color:var(--cream);box-shadow:0 0 0 2px var(--surf2) inset}
+.e-swatch,.e-cat-title-swatch{width:26px;height:26px;border-radius:7px;cursor:pointer;border:2px solid transparent;flex:none;transition:.15s;position:relative}
+.e-swatch:hover,.e-cat-title-swatch:hover{transform:scale(1.12)}
+.e-swatch.on,.e-cat-title-swatch.on{border-color:var(--cream);box-shadow:0 0 0 2px var(--surf2) inset}
 .e-export-row{display:flex;gap:8px;flex-wrap:wrap}
 .e-export-row .e-btn{flex:1;justify-content:center;min-width:140px}
 .e-date-row{display:flex;gap:6px;align-items:center;margin-top:5px}
@@ -435,7 +438,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 
 <div class="info-bar">
   <div class="info-inner">
-    <span id="info-updated">📅 Updated 8 Jun 2026</span><span class="info-sep">·</span>
+    <span id="info-updated">📅 Updated 10 Jun 2026</span><span class="info-sep">·</span>
     <span>📍 Pickup: <span id="info-pickup">Mill Park 3082</span></span><span class="info-sep">·</span>
     <span>📦 Post: <span id="info-postage">$5 untracked / $10 tracked</span></span><span class="info-sep">·</span>
     <span>✦ <span id="info-note">Labelled glass atomiser bottles</span></span><span class="info-sep">·</span>
@@ -454,6 +457,11 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <input id="search" type="search" placeholder="Search fragrances or brands…" oninput="renderCatalog()">
     </div>
   </div>
+</div>
+
+<div class="browse-hint">
+  <div class="browse-hint-icon">✦</div>
+  <span>Browse the collection and <em>tap any size button</em> to add it to your order — then send your list through to confirm.</span>
 </div>
 
 <div class="main-grid">
@@ -1613,7 +1621,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 </a>
 
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Scroll to top" class="show">↑</button>
-<button id="scroll-bottom" onclick="window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})" title="Scroll to bottom" aria-label="Scroll to bottom" class="show">↓</button>
+<button id="scroll-bottom" onclick="window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'})" title="Scroll to bottom" aria-label="Scroll to bottom" class="">↓</button>
 
 <!-- Undo Delete Toast -->
 <div id="undo-toast" class="">
@@ -1647,7 +1655,7 @@ Total: $89</div>
   </div>
 </div>
 
-<div id="toast" class="">All images downloaded!</div>
+<div id="toast" class=""></div>
 
 <!-- Site Footer -->
 <footer class="site-footer">
@@ -4898,6 +4906,24 @@ Total: $89</div>
           <span id="cat-size-val" style="font-size:12px;color:var(--cream2);width:34px;text-align:right">30px</span>
         </div>
 
+        <div class="e-subhead">Category Title Colour</div>
+        <div class="e-swatches" id="cat-title-swatches">
+          <div class="e-cat-title-swatch" data-color="reset" title="Follow theme (default)" style="background:linear-gradient(135deg,var(--cream) 50%,var(--gold) 50%)" onclick="setCatTitleColor('reset',this)"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);font-weight:700">A</span></div>
+          <div class="e-cat-title-swatch" data-color="#c9a872" title="Gold" style="background:#c9a872" onclick="setCatTitleColor('#c9a872',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#e8c99a" title="Light Gold" style="background:#e8c99a" onclick="setCatTitleColor('#e8c99a',this)"></div>
+          <div class="e-cat-title-swatch on" data-color="#8a3020" title="Burgundy" style="background:#8a3020" onclick="setCatTitleColor('#8a3020',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#be123c" title="Crimson" style="background:#be123c" onclick="setCatTitleColor('#be123c',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#d97706" title="Amber" style="background:#d97706" onclick="setCatTitleColor('#d97706',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#0f5132" title="Emerald" style="background:#0f5132" onclick="setCatTitleColor('#0f5132',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#0b1f3a" title="Navy" style="background:#0b1f3a" onclick="setCatTitleColor('#0b1f3a',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#6d244f" title="Plum" style="background:#6d244f" onclick="setCatTitleColor('#6d244f',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#374151" title="Charcoal" style="background:#374151" onclick="setCatTitleColor('#374151',this)"></div>
+          <div class="e-cat-title-swatch" data-color="#f0e6d0" title="Cream" style="background:#f0e6d0;border:1px solid #999" onclick="setCatTitleColor('#f0e6d0',this)"></div>
+          <div class="e-cat-title-swatch" data-color="custom" title="Custom colour" style="background:var(--surf3);display:flex;align-items:center;justify-content:center;font-size:13px">
+            <input type="color" id="es-cat-title-color" value="#c9a872" oninput="setCatTitleColor(this.value,null)" style="position:absolute;opacity:0;width:26px;height:26px;cursor:pointer">✎
+          </div>
+        </div>
+
         <!-- NOTES -->
         <div class="e-subhead">Note Text Colour</div>
         <div style="display:flex;align-items:center;gap:10px">
@@ -5035,7 +5061,7 @@ const WHATSAPP = '61481957543';
 const EDITOR_PASS = 'zain2026';
 
 //##SETTINGS_BEGIN##
-const DEFAULT_SETTINGS={"title":"Zain Abbasi","subtitle":"Fragrance Decants","lastUpdated":"8 Jun 2026","pickup":"Mill Park 3082","postageUntracked":5,"postageTracked":10,"minimum":25,"brandColor":"#c9a872","brandStyle":"caps","priceFormat":"pipe","brandSize":17,"catTitleSize":30,"noteColor":"#7a6a88","noteStyle":"italic","theme":"light","orderPrefix":"Hey, here's my order:","orderSuffix":"","infoNote":"Labelled glass atomiser bottles","how1":"Send a list of what you want.","how2":"Pick your size: 5ml or 10ml.","how3":"Confirm pickup or postage.","how4":"Payment details after order confirmation.","orderPostageNote":"Tracked post recommended. Untracked at buyer's risk."};
+const DEFAULT_SETTINGS={"title":"Zain Abbasi","subtitle":"Fragrance Decants","lastUpdated":"10 Jun 2026","pickup":"Mill Park 3082","postageUntracked":5,"postageTracked":10,"minimum":25,"brandColor":"#c9a872","brandStyle":"caps","priceFormat":"pipe","brandSize":17,"catTitleSize":30,"catTitleColor":"#8a3020","noteColor":"#7a6a88","noteStyle":"italic","theme":"light","orderPrefix":"Hey, here's my order:","orderSuffix":"","infoNote":"Labelled glass atomiser bottles","how1":"Send a list of what you want.","how2":"Pick your size: 5ml or 10ml.","how3":"Confirm pickup or postage.","how4":"Payment details after order confirmation.","orderPostageNote":"Tracked post recommended. Untracked at buyer's risk."};
 //##SETTINGS_END##
 
 // Load settings from localStorage
@@ -5058,6 +5084,8 @@ function applySettings(){
   root.style.setProperty('--brand-size',(SETTINGS.brandSize||16)+'px');
   // Category title + note
   root.style.setProperty('--cat-title-size',(SETTINGS.catTitleSize||28)+'px');
+  if(SETTINGS.catTitleColor) root.style.setProperty('--cat-title-color',SETTINGS.catTitleColor);
+  else root.style.removeProperty('--cat-title-color');
   root.style.setProperty('--note-color',SETTINGS.noteColor||'#7a6a88');
   root.style.setProperty('--note-style',SETTINGS.noteStyle||'italic');
   // Apply theme
@@ -5095,6 +5123,13 @@ function setBrandStyle(style,btn){
 function setBrandSize(size){setSetting('brandSize',size);}
 
 function setCatTitleSize(size){setSetting('catTitleSize',size);}
+function setCatTitleColor(color,el){
+  setSetting('catTitleColor',color==='reset'?'':color);
+  document.querySelectorAll('.e-cat-title-swatch').forEach(s=>s.classList.remove('on'));
+  if(el) el.classList.add('on');
+  const picker=document.getElementById('es-cat-title-color');
+  if(picker&&color!=='custom'&&color!=='reset') picker.value=color;
+}
 
 function setNoteColor(color){setSetting('noteColor',color);}
 
