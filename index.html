@@ -326,6 +326,8 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 .e-table tr:last-child td{border-bottom:none}
 .e-table tr:hover td{background:rgba(255,255,255,.025)}
 .e-table .td-brand{font-weight:600;color:var(--gold);white-space:nowrap}
+.e-cat-hdr-row td{background:rgba(201,168,114,.13);color:var(--cream);font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:7px 10px;border-top:1px solid rgba(201,168,114,.2)}
+.e-brand-hdr-row td{background:rgba(255,255,255,.025);color:var(--gold);font-weight:600;font-size:12px;padding:5px 10px 5px 20px;border-bottom:1px solid rgba(201,168,114,.08);font-style:italic}
 .e-table .td-name{font-weight:500;color:var(--cream);min-width:150px}
 .e-table .td-price{font-family:monospace;white-space:nowrap;color:var(--gold-l)}
 .e-table .td-note{font-size:11.5px;font-style:italic;color:var(--muted);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -5239,6 +5241,13 @@ function populateSettingsInputs(){
     s.classList.toggle('on',s.dataset.color===SETTINGS.brandColor);
   });
   const picker=document.getElementById('es-brand-color');if(picker) picker.value=SETTINGS.brandColor;
+  // Cat title colour swatch
+  document.querySelectorAll('.e-cat-title-swatch[data-color]').forEach(s=>{
+    const cur=SETTINGS.catTitleColor||'reset';
+    s.classList.toggle('on',s.dataset.color===cur||(!SETTINGS.catTitleColor&&s.dataset.color==='reset'));
+  });
+  const ctPicker=document.getElementById('es-cat-title-color');
+  if(ctPicker&&SETTINGS.catTitleColor) ctPicker.value=SETTINGS.catTitleColor;
   // Brand style seg
   document.querySelectorAll('#brand-style-seg button').forEach((b,i)=>{
     const styles=['bold','normal','light','italic','caps'];
@@ -5342,12 +5351,13 @@ function getSizes(p){
 function setSort(val){selSort=val;renderCatalog();}
 function sortProducts(arr){
   const a=[...arr];
-  if(selSort==='price-asc') return a.sort((x,y)=>x.p5-y.p5);
-  if(selSort==='price-desc') return a.sort((x,y)=>y.p5-x.p5);
+  const actP5=p=>p.saleP5&&p.saleP5>0?p.saleP5:p.p5;
+  if(selSort==='price-asc') return a.sort((x,y)=>actP5(x)-actP5(y));
+  if(selSort==='price-desc') return a.sort((x,y)=>actP5(y)-actP5(x));
   if(selSort==='name-az') return a.sort((x,y)=>x.name.localeCompare(y.name));
   if(selSort==='new-first') return a.sort((x,y)=>(y.badge==='NEW'?1:0)-(x.badge==='NEW'?1:0));
   if(selSort==='in-stock') return a.sort((x,y)=>(x.sold?1:0)-(y.sold?1:0));
-  return a; // default
+  return a;
 }
 
 function inCart(productId,size){return cart.find(c=>c.productId===productId&&c.size===size)}
@@ -5528,7 +5538,9 @@ function renderItemFlat(p){
   const saleBadge=onSale?'<span class="badge badge-sale">SALE</span>':'';
   const badgeTxt2={'HOT':'⭐ Popular','NEW':'NEW','LIMITED':'LIMITED'};
   const otherBadge=p.badge&&!p.sold?`<span class="badge badge-${p.badge.toLowerCase()}">${badgeTxt2[p.badge]||p.badge}</span>`:'';
-  const badges=(soldBadge||saleBadge||otherBadge)?`<div class="item-badges">${saleBadge}${soldBadge}${otherBadge}</div>`:'';
+  const isAlmostGone=!p.sold&&p.note&&/^\d+\.?\d*ml\s+(left|only)/i.test(p.note);
+  const lowBadge=isAlmostGone?'<span class="badge badge-low">Almost Gone</span>':'';
+  const badges=(soldBadge||saleBadge||otherBadge||lowBadge)?`<div class="item-badges">${saleBadge}${soldBadge}${otherBadge}${lowBadge}</div>`:'';
   const showNote=p.note&&p.note!=='5ml only'&&!/^5ml\s+only$/i.test(p.note);
   const sizesHtml=p.sold?'<span class="sz-soldout">Sold Out</span>':
     sizes.map(({sz,price,origPrice})=>{
@@ -5624,8 +5636,9 @@ function formatOrderText(){
   const sub=getSubtotal(),dlv=DELIVERY[selDlv],total=sub+dlv.cost;
   const lines=cart.map((c,i)=>{
     const p=getProduct(c.productId);
+    if(!p) return null;
     return `${i+1}. ${p.brand} – ${p.name} (${c.size})${c.qty>1?` ×${c.qty}`:''} – $${c.price*c.qty}`;
-  });
+  }).filter(Boolean);
   const prefix=(SETTINGS.orderPrefix||"Hi Zain, here's my order:");
   const suffix=(SETTINGS.orderSuffix||'').trim();
   let msg=prefix+'\n\n';
@@ -5702,12 +5715,37 @@ function renderEditorTable(){
     return true;
   });
   document.getElementById('editor-stat').textContent=`${items.length} of ${PRODUCTS.length} items`;
-  document.getElementById('editor-tbody').innerHTML=items.map((p,i)=>{
+
+  // Sort by category order → brand A–Z → name A–Z
+  const catOrder=Object.fromEntries(CATS.map((c,i)=>[c.key,i]));
+  items=[...items].sort((a,b)=>{
+    const cd=(catOrder[a.cat]??99)-(catOrder[b.cat]??99);
+    if(cd!==0) return cd;
+    const bd=a.brand.localeCompare(b.brand);
+    if(bd!==0) return bd;
+    return a.name.localeCompare(b.name);
+  });
+
+  const badgeLabel={'HOT':'⭐ Popular','NEW':'NEW','LIMITED':'LIMITED'};
+  let html='', lastCat='', lastBrand='';
+
+  items.forEach(p=>{
     const globalIdx=PRODUCTS.findIndex(x=>x.id===p.id);
     const isFirst=globalIdx===0, isLast=globalIdx===PRODUCTS.length-1;
     const catLabel=CATS.find(c=>c.key===p.cat)?.label||p.cat;
-    const badgeLabel={'HOT':'⭐ Popular','NEW':'NEW','LIMITED':'LIMITED'};
-    return `
+
+    // Category header row when category changes
+    if(p.cat!==lastCat){
+      lastCat=p.cat; lastBrand='';
+      html+=`<tr class="e-cat-hdr-row"><td colspan="10">${catLabel}</td></tr>`;
+    }
+    // Brand sub-header row when brand changes
+    if(p.brand!==lastBrand){
+      lastBrand=p.brand;
+      html+=`<tr class="e-brand-hdr-row"><td colspan="10">${p.brand}</td></tr>`;
+    }
+
+    html+=`
     <tr class="${p.sold?'sold-row':''}" draggable="true" data-id="${p.id}"
         ondragstart="rowDragStart(event,${p.id})"
         ondragover="rowDragOver(event)"
@@ -5736,7 +5774,9 @@ function renderEditorTable(){
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(${p.id})">🗑</button>
       </td>
     </tr>`;
-  }).join('');
+  });
+
+  document.getElementById('editor-tbody').innerHTML=html;
 }
 
 function openAddForm(){
@@ -5848,7 +5888,9 @@ function inlineEditNote(id,cell){
   inp.style='width:100%;min-width:120px;background:var(--surf3);border:1px solid var(--gold-d);border-radius:6px;padding:4px 8px;color:var(--cream);font-family:var(--sans);font-size:12px;outline:none';
   cell.innerHTML=''; cell.appendChild(inp);
   inp.focus(); inp.select();
+  let cancelled=false;
   function save(){
+    if(cancelled) return;
     const val=inp.value.trim();
     const idx=PRODUCTS.findIndex(x=>x.id===id);
     if(idx!==-1){if(val) PRODUCTS[idx].note=val; else delete PRODUCTS[idx].note;}
@@ -5857,7 +5899,7 @@ function inlineEditNote(id,cell){
   inp.addEventListener('blur',save);
   inp.addEventListener('keydown',e=>{
     if(e.key==='Enter'){e.preventDefault();inp.blur();}
-    if(e.key==='Escape'){renderEditorTable();}
+    if(e.key==='Escape'){cancelled=true;renderEditorTable();}
   });
 }
 
