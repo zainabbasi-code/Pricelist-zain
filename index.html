@@ -452,7 +452,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 
 <div class="info-bar">
   <div class="info-inner">
-    <span id="info-updated">📅 Updated 13 Jun 2026</span><span class="info-sep">·</span>
+    <span id="info-updated">📅 Updated 14 Jun 2026</span><span class="info-sep">·</span>
     <span>📍 Pickup: <span id="info-pickup">Mill Park 3082</span></span><span class="info-sep">·</span>
     <span>📦 Post: <span id="info-postage">$5 untracked / $10 tracked</span></span><span class="info-sep">·</span>
     <span>✦ <span id="info-note">Labelled glass atomiser bottles</span></span><span class="info-sep">·</span>
@@ -462,7 +462,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 
 <div class="filter-bar">
   <div class="filter-inner">
-    <div class="tabs" id="tabs"><button class="tab active" data-cat="all">All</button><button class="tab " data-cat="new">✦ What's New</button><button class="tab " data-cat="sale">🏷 On Sale (26)</button><button class="tab" data-cat="wishlist">♡ Saved</button><button class="tab " data-cat="niche">Niche Fragrances</button><button class="tab " data-cat="designer">Designer Fragrances</button><button class="tab " data-cat="middle">Middle Eastern Fragrances</button></div>
+    <div class="tabs" id="tabs"><button class="tab active" data-cat="all">All</button><button class="tab " data-cat="new">✦ What's New</button><button class="tab " data-cat="sale">🏷 On Sale (26)</button><button class="tab " data-cat="wishlist">♡ Saved</button><button class="tab " data-cat="niche">Niche Fragrances</button><button class="tab " data-cat="designer">Designer Fragrances</button><button class="tab " data-cat="middle">Middle Eastern Fragrances</button></div>
     <button id="view-toggle" onclick="toggleViewDensity()" title="Toggle compact/comfortable" class="compact-on">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg> Compact</button>
     <select class="sort-select" id="sort-select" onchange="setSort(this.value)" title="Sort fragrances"><option value="default">Sort: Default</option><option value="price-asc">Price: Low → High</option><option value="price-desc">Price: High → Low</option><option value="name-az">Name: A → Z</option><option value="new-first">✦ New Items First</option><option value="in-stock">In Stock First</option></select>
@@ -484,33 +484,21 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
         <div class="cat-head">
           <span class="cat-title">Niche Fragrances</span>
           <span class="cat-note">✦ 2ml sample decants available — priced at half the 5ml rate</span>
-          <span class="cat-count">38 available</span>
+          <span class="cat-count">40 available</span>
         </div>
         
           <div class="brand-group">
             <div class="brand-label">Amouage</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(128)" title="Save for later">♡</button>
     <div class="item-info">
-      <div class="item-name">Decision</div>
-      
-    </div>
-    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(1,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(1,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(1,'10ml',55)"><span>10ml</span>$55</button></div>
-  </div><div class="item-row">
-    <div class="item-info">
-      <div class="item-name">Epic Man</div>
+      <div class="item-name">Purpose 50</div>
       
     </div>
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(2,'2ml',14)"><span>2ml</span>$14</button><button class="sz-btn " onclick="toggleSize(2,'5ml',28)"><span>5ml</span>$28</button><button class="sz-btn " onclick="toggleSize(2,'10ml',50)"><span>10ml</span>$50</button></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(128,'2ml',20)"><span>2ml</span>$20</button><button class="sz-btn " onclick="toggleSize(128,'5ml',40)"><span>5ml</span>$40</button><button class="sz-btn " onclick="toggleSize(128,'10ml',75)"><span>10ml</span>$75</button></div>
   </div><div class="item-row">
-    <div class="item-info">
-      <div class="item-name">Lustre</div>
-      
-    </div>
-    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
-    <div class="sizes"><button class="sz-btn " onclick="toggleSize(3,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(3,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(3,'10ml',55)"><span>10ml</span>$55</button></div>
-  </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(4)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Outlands</div>
       
@@ -518,6 +506,31 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(4,'2ml',19)"><span>2ml</span>$19</button><button class="sz-btn " onclick="toggleSize(4,'5ml',38)"><span>5ml</span>$38</button><button class="sz-btn " onclick="toggleSize(4,'10ml',70)"><span>10ml</span>$70</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(1)" title="Save for later">♡</button>
+    <div class="item-info">
+      <div class="item-name">Decision</div>
+      
+    </div>
+    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(1,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(1,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(1,'10ml',55)"><span>10ml</span>$55</button></div>
+  </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(2)" title="Save for later">♡</button>
+    <div class="item-info">
+      <div class="item-name">Epic Man</div>
+      
+    </div>
+    <div class="item-badges"><span class="badge badge-new">NEW</span></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(2,'2ml',14)"><span>2ml</span>$14</button><button class="sz-btn " onclick="toggleSize(2,'5ml',28)"><span>5ml</span>$28</button><button class="sz-btn " onclick="toggleSize(2,'10ml',50)"><span>10ml</span>$50</button></div>
+  </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(3)" title="Save for later">♡</button>
+    <div class="item-info">
+      <div class="item-name">Lustre</div>
+      
+    </div>
+    <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(3,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(3,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(3,'10ml',55)"><span>10ml</span>$55</button></div>
+  </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(5)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Purpose</div>
       
@@ -525,17 +538,27 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(5,'2ml',14)"><span>2ml</span>$14</button><button class="sz-btn " onclick="toggleSize(5,'5ml',28)"><span>5ml</span>$28</button><button class="sz-btn " onclick="toggleSize(5,'10ml',50)"><span>10ml</span>$50</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(6)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Reflection</div>
       
     </div>
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(6,'2ml',14)"><span>2ml</span>$14</button><button class="sz-btn " onclick="toggleSize(6,'5ml',28)"><span>5ml</span>$28</button><button class="sz-btn " onclick="toggleSize(6,'10ml',50)"><span>10ml</span>$50</button></div>
+  </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(129)" title="Save for later">♡</button>
+    <div class="item-info">
+      <div class="item-name">Timber</div>
+      
+    </div>
+    <div class="item-badges"><span class="badge badge-new">NEW</span></div>
+    <div class="sizes"><button class="sz-btn " onclick="toggleSize(129,'2ml',15)"><span>2ml</span>$15</button><button class="sz-btn " onclick="toggleSize(129,'5ml',30)"><span>5ml</span>$30</button><button class="sz-btn " onclick="toggleSize(129,'10ml',55)"><span>10ml</span>$55</button></div>
   </div>
           </div>
           <div class="brand-group">
             <div class="brand-label">Bvlgari</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(7)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Tygar</div>
       
@@ -547,6 +570,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Byredo</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(8)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Rouge Chaotique</div>
       
@@ -558,6 +582,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Creed</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(9)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Green Irish Tweed</div>
       <div class="item-subtext">Batch 2020</div>
@@ -569,6 +594,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Essential Parfums</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(10)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Bois Impérial</div>
       
@@ -580,6 +606,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Goldfield &amp; Banks</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(104)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Tale of Amber</div>
       
@@ -591,6 +618,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Initio</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(124)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Atomic Rose</div>
       <div class="item-subtext">5mls only</div>
@@ -598,6 +626,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(124,'2ml',13)"><span>2ml</span>$13</button><button class="sz-btn " onclick="toggleSize(124,'5ml',25)"><span>5ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(11)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Musk Therapy</div>
       
@@ -605,6 +634,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(11,'2ml',13)"><span>2ml</span>$13</button><button class="sz-btn " onclick="toggleSize(11,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(11,'10ml',45)"><span>10ml</span>$45</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(127)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Oud For Greatness</div>
       
@@ -616,6 +646,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Kilian</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(12)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Angels' Share</div>
       
@@ -627,6 +658,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">LV</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(13)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Meteore</div>
       
@@ -634,6 +666,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(13,'2ml',18)"><span>2ml</span>$18</button><button class="sz-btn " onclick="toggleSize(13,'5ml',35)"><span>5ml</span>$35</button><button class="sz-btn " onclick="toggleSize(13,'10ml',65)"><span>10ml</span>$65</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(14)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Rain Tea</div>
       
@@ -645,6 +678,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Maison Crivelli</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(15)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Ambre Chromatique</div>
       
@@ -652,6 +686,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(15,'2ml',17)"><span>2ml</span>$17</button><button class="sz-btn " onclick="toggleSize(15,'5ml',33)"><span>5ml</span>$33</button><button class="sz-btn " onclick="toggleSize(15,'10ml',60)"><span>10ml</span>$60</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(16)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Hibiscus Mahajad</div>
       
@@ -659,6 +694,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(16,'2ml',19)"><span>2ml</span>$19</button><button class="sz-btn " onclick="toggleSize(16,'5ml',38)"><span>5ml</span>$38</button><button class="sz-btn " onclick="toggleSize(16,'10ml',70)"><span>10ml</span>$70</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(17)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Oud Maracujá</div>
       
@@ -670,6 +706,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Maison Francis Kurkdjian</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(18)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Gentle Fluidity Silver</div>
       
@@ -677,6 +714,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(18,'2ml',14)"><span>2ml</span>$14</button><button class="sz-btn " onclick="toggleSize(18,'5ml',28)"><span>5ml</span>$28</button><button class="sz-btn " onclick="toggleSize(18,'10ml',50)"><span>10ml</span>$50</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(19)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Grand Soir</div>
       
@@ -684,6 +722,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(19,'2ml',14)"><span>2ml</span>$14</button><button class="sz-btn " onclick="toggleSize(19,'5ml',28)"><span>5ml</span>$28</button><button class="sz-btn " onclick="toggleSize(19,'10ml',50)"><span>10ml</span>$50</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(20)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Oud Satin Mood</div>
       
@@ -695,6 +734,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Maison Margiela Replica</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(21)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Jazz Club</div>
       
@@ -702,6 +742,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(21,'2ml',6)"><span>2ml</span>$6</button><button class="sz-btn " onclick="toggleSize(21,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(21,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(22)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Soul of the Forest EDP</div>
       
@@ -713,6 +754,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Mancera</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(23)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Aoud Lemon Mint</div>
       
@@ -720,6 +762,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(23,'2ml',6)"><span>2ml</span>$6</button><button class="sz-btn " onclick="toggleSize(23,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(23,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(24)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Cedrat Boise EDP</div>
       
@@ -727,6 +770,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(24,'2ml',6)"><span>2ml</span>$6</button><button class="sz-btn " onclick="toggleSize(24,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(24,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(25)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Instant Crush</div>
       
@@ -734,6 +778,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(25,'2ml',6)"><span>2ml</span>$6</button><button class="sz-btn " onclick="toggleSize(25,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(25,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(122)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Red Tobacco</div>
       <div class="item-subtext">4ml left only</div>
@@ -745,6 +790,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Montale</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(123)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Arabian Tonka</div>
       <div class="item-subtext">4ml left only</div>
@@ -756,6 +802,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">PDM</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(102)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Layton</div>
       
@@ -763,6 +810,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(102,'2ml',13)"><span>2ml</span>$13</button><button class="sz-btn " onclick="toggleSize(102,'5ml',25)"><span>5ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(103)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Carlisle</div>
       
@@ -774,6 +822,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Sospiro</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(26)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Vibrato</div>
       
@@ -785,6 +834,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Thomas Kosmala</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(106)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">No.4</div>
       
@@ -796,6 +846,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">To Summer</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(27)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">First Apple</div>
       
@@ -803,6 +854,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(27,'2ml',20)"><span>2ml</span>$20</button><button class="sz-btn " onclick="toggleSize(27,'5ml',40)"><span>5ml</span>$40</button><button class="sz-btn " onclick="toggleSize(27,'10ml',75)"><span>10ml</span>$75</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(28)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Osmanthus EDP</div>
       
@@ -814,6 +866,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Xerjoff</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(29)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Naxos</div>
       
@@ -821,6 +874,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(29,'2ml',13)"><span>2ml</span>$13</button><button class="sz-btn " onclick="toggleSize(29,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(29,'10ml',45)"><span>10ml</span>$45</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(126)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Torino 21</div>
       
@@ -838,6 +892,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Azzaro</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(30)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Wanted Forever Elixir</div>
       
@@ -849,6 +904,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Chanel</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(31)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Bleu de Chanel L'Exclusif</div>
       
@@ -860,6 +916,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Davidoff</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(32)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Cool Water Intense EDP</div>
       
@@ -871,6 +928,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Dior</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(33)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Sauvage Elixir</div>
       
@@ -882,6 +940,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Dolce &amp; Gabbana</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(34)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">The One EDP</div>
       
@@ -893,6 +952,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Giorgio Armani</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(35)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Acqua di Giò Profondo EDP</div>
       
@@ -900,6 +960,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(35,'5ml',10)"><span>5ml</span>$10</button><button class="sz-btn " onclick="toggleSize(35,'10ml',18)"><span>10ml</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(36)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Acqua di Giò Profondo Parfum</div>
       
@@ -907,6 +968,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(36,'5ml',10)"><span>5ml</span>$10</button><button class="sz-btn " onclick="toggleSize(36,'10ml',18)"><span>10ml</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(37)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Stronger With You Absolutely</div>
       
@@ -914,6 +976,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(37,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(37,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(38)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Stronger With You Intensely</div>
       
@@ -921,6 +984,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(38,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(38,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(39)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Stronger With You Powerfully</div>
       
@@ -932,6 +996,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Givenchy</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(105)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Gentlemen Prive</div>
       
@@ -943,6 +1008,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Hermès</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(40)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Terre d'Hermès Intense</div>
       
@@ -954,6 +1020,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Hugo Boss</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(41)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Boss Bottled Absolu</div>
       
@@ -961,6 +1028,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(41,'5ml',10)"><span>5ml</span>$10</button><button class="sz-btn " onclick="toggleSize(41,'10ml',18)"><span>10ml</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(42)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Boss Bottled Beyond</div>
       
@@ -968,6 +1036,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(42,'5ml',10)"><span>5ml</span>$10</button><button class="sz-btn " onclick="toggleSize(42,'10ml',18)"><span>10ml</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(43)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Boss Bottled Bold Citrus</div>
       
@@ -975,6 +1044,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(43,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(43,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(44)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Boss Bottled Elixir</div>
       
@@ -986,6 +1056,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Issey Miyake</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(45)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Le Sel d'Issey EDT</div>
       
@@ -997,6 +1068,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Jean Paul Gaultier</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(46)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Le Beau Le Parfum</div>
       
@@ -1004,6 +1076,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(46,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(46,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(47)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Le Male Elixir</div>
       
@@ -1011,6 +1084,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(47,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(47,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(48)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Le Male Le Parfum</div>
       
@@ -1022,6 +1096,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Paco Rabanne</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(49)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Invictus Victory Absolu</div>
       
@@ -1029,6 +1104,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(49,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(49,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(50)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Invictus Victory Elixir</div>
       
@@ -1040,6 +1116,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Prada</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(51)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Paradigme</div>
       
@@ -1051,6 +1128,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Ralph Lauren</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(52)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Polo 67 EDP</div>
       
@@ -1058,6 +1136,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(52,'5ml',9)"><span>5ml</span>$9</button><button class="sz-btn " onclick="toggleSize(52,'10ml',16)"><span>10ml</span>$16</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(53)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Ralph's Club EDP</div>
       
@@ -1069,6 +1148,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Valentino</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(54)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Born in Roma Coral Fantasy</div>
       
@@ -1076,6 +1156,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(54,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(54,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(55)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Born in Roma Donna Green Stravaganza</div>
       
@@ -1083,6 +1164,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(55,'5ml',8)"><span>5ml</span>$8</button><button class="sz-btn " onclick="toggleSize(55,'10ml',14)"><span>10ml</span>$14</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(56)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Born in Roma Extradose</div>
       
@@ -1094,6 +1176,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Versace</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(57)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Eros Flame</div>
       
@@ -1105,6 +1188,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Yves Saint Laurent</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(58)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Babycat Raw Bourbon</div>
       
@@ -1112,6 +1196,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(58,'5ml',25)"><span>5ml</span>$25</button><button class="sz-btn " onclick="toggleSize(58,'10ml',45)"><span>10ml</span>$45</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(59)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Libre EDT</div>
       
@@ -1119,6 +1204,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(59,'5ml',10)"><span>5ml</span>$10</button><button class="sz-btn " onclick="toggleSize(59,'10ml',18)"><span>10ml</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(60)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Libre Le Parfum</div>
       
@@ -1126,6 +1212,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(60,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(60,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(61)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">MYSLF Absolu</div>
       
@@ -1133,6 +1220,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(61,'5ml',20)"><span>5ml</span>$20</button><button class="sz-btn " onclick="toggleSize(61,'10ml',35)"><span>10ml</span>$35</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(62)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">MYSLF EDP</div>
       
@@ -1140,6 +1228,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(62,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(62,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(63)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">The Yulong</div>
       
@@ -1147,6 +1236,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(63,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(63,'10ml',25)"><span>10ml</span>$25</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(64)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Y EDP</div>
       
@@ -1164,6 +1254,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Afnan</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(65)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">9PM Elixir</div>
       <div class="item-subtext">DNA: JPG Le Male Absolu</div>
@@ -1171,6 +1262,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(65,'5ml',6)"><span>5ml</span><span class="sz-was">$7</span>$6</button><button class="sz-btn  on-sale" onclick="toggleSize(65,'10ml',11)"><span>10ml</span><span class="sz-was">$12</span>$11</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(66)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Rare Reef</div>
       <div class="item-subtext">DNA: LV Pacific Chill</div>
@@ -1178,6 +1270,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(66,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(66,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(67)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Supremacy Collector's Edition</div>
       <div class="item-subtext">DNA: Creed Absolu Aventus</div>
@@ -1185,6 +1278,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(67,'5ml',9)"><span>5ml</span>$9</button><button class="sz-btn " onclick="toggleSize(67,'10ml',16)"><span>10ml</span>$16</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(68)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Supremacy Not Only Intense</div>
       <div class="item-subtext">DNA: Creed Aventus</div>
@@ -1192,6 +1286,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(68,'5ml',9)"><span>5ml</span>$9</button><button class="sz-btn " onclick="toggleSize(68,'10ml',16)"><span>10ml</span>$16</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(111)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Supremacy Oud</div>
       <div class="item-subtext">DNA: Oud for Greatness</div>
@@ -1203,6 +1298,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Ahmed Al Maghribi</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(70)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Ignite Oud</div>
       
@@ -1210,6 +1306,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(70,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(70,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(71)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Kaaf</div>
       <div class="item-subtext">DNA: PDM Percival</div>
@@ -1217,6 +1314,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(71,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(71,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(72)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Marj</div>
       
@@ -1224,6 +1322,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(72,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(72,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(73)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Oud &amp; Roses</div>
       
@@ -1231,6 +1330,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(73,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(73,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(74)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Summer Oud</div>
       
@@ -1238,6 +1338,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(74,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(74,'10ml',20)"><span>10ml</span>$20</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(109)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">White Tiger</div>
       
@@ -1245,6 +1346,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(109,'5ml',5)"><span>5ml</span><span class="sz-was">$7</span>$5</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(110)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">O Clock</div>
       
@@ -1252,6 +1354,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(110,'5ml',5)"><span>5ml</span><span class="sz-was">$7</span>$5</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(112)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Azzure Royal</div>
       <div class="item-subtext">DNA: Blue Talisman</div>
@@ -1259,6 +1362,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(112,'5ml',6)"><span>5ml</span><span class="sz-was">$7</span>$6</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(114)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Bombay Oud</div>
       
@@ -1266,6 +1370,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(114,'5ml',9)"><span>5ml</span><span class="sz-was">$10</span>$9</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(116)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Aqua Oud</div>
       <div class="item-subtext">ADG Profumo/profondo</div>
@@ -1273,6 +1378,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(116,'5ml',5)"><span>5ml</span><span class="sz-was">$7</span>$5</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(118)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Hirfah</div>
       
@@ -1280,6 +1386,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(118,'5ml',5)"><span>5ml</span><span class="sz-was">$7</span>$5</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(119)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Blue Oud</div>
       
@@ -1287,6 +1394,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(119,'5ml',5)"><span>5ml</span><span class="sz-was">$7</span>$5</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(121)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Bin Sheikh</div>
       <div class="item-subtext">4ml left only</div>
@@ -1298,6 +1406,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Al Haramain</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(75)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Aqua Dubai</div>
       <div class="item-subtext">DNA: LV Imagination</div>
@@ -1305,6 +1414,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(75,'5ml',10)"><span>5ml</span><span class="sz-was">$12</span>$10</button><button class="sz-btn  on-sale" onclick="toggleSize(75,'10ml',18)"><span>10ml</span><span class="sz-was">$20</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(76)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Carbon Edition</div>
       <div class="item-subtext">DNA: Creed Irish Tweed</div>
@@ -1312,6 +1422,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(76,'5ml',9)"><span>5ml</span><span class="sz-was">$10</span>$9</button><button class="sz-btn  on-sale" onclick="toggleSize(76,'10ml',16)"><span>10ml</span><span class="sz-was">$18</span>$16</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(77)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Ruby Edition</div>
       <div class="item-subtext">DNA: MFK Baccarat Rouge 540</div>
@@ -1319,6 +1430,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(77,'5ml',9)"><span>5ml</span><span class="sz-was">$10</span>$9</button><button class="sz-btn  on-sale" onclick="toggleSize(77,'10ml',16)"><span>10ml</span><span class="sz-was">$18</span>$16</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(120)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Dubai Nights</div>
       <div class="item-subtext">4.5ml left only</div>
@@ -1330,6 +1442,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Armaf</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(78)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Club de Nuit Extrait</div>
       <div class="item-subtext">DNA: Creed Aventus</div>
@@ -1337,6 +1450,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(78,'5ml',10)"><span>5ml</span>$10</button><button class="sz-btn " onclick="toggleSize(78,'10ml',18)"><span>10ml</span>$18</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(79)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Club de Nuit Iconic</div>
       <div class="item-subtext">DNA: Bleu de Chanel</div>
@@ -1348,6 +1462,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Bujairami</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(97)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Non Stop</div>
       <div class="item-subtext">Pacific Chill inspired</div>
@@ -1355,6 +1470,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(97,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(97,'10ml',11)"><span>10ml</span>$11</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(98)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Psycho Symphony</div>
       <div class="item-subtext">LV Symphony inspired</div>
@@ -1362,6 +1478,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(98,'5ml',7)"><span>5ml</span>$7</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(99)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Rizz Meteore</div>
       <div class="item-subtext">LV Météore inspired</div>
@@ -1369,6 +1486,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(99,'5ml',6)"><span>5ml</span><span class="sz-was">$7</span>$6</button><button class="sz-btn  on-sale" onclick="toggleSize(99,'10ml',10)"><span>10ml</span><span class="sz-was">$11</span>$10</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(100)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Rose in Gold</div>
       <div class="item-subtext">Delina PDM inspired</div>
@@ -1376,6 +1494,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(100,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(100,'10ml',11)"><span>10ml</span>$11</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(101)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Too Damn Good</div>
       <div class="item-subtext">Bal d'Afrique Absolu inspired</div>
@@ -1387,6 +1506,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Dumont</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(107)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Nitro Red</div>
       
@@ -1394,6 +1514,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span><span class="badge badge-limited">LIMITED</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(107,'5ml',5)"><span>5ml</span><span class="sz-was">$7</span>$5</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(108)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Platinum</div>
       
@@ -1405,6 +1526,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">French Avenue</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(80)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Amber Empire</div>
       <div class="item-subtext">Blonde Amber</div>
@@ -1412,6 +1534,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(80,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(80,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(81)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Liquid Brun Limited Edition</div>
       <div class="item-subtext">DNA: PDM Althair</div>
@@ -1419,6 +1542,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(81,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(81,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(82)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Vulcan Feu</div>
       <div class="item-subtext">God of Fire</div>
@@ -1426,6 +1550,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(82,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(82,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(83)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Vulcan Sable</div>
       <div class="item-subtext">Sand Dance</div>
@@ -1437,6 +1562,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Ibraheem Al Qurash</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(113)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Spanish Tobacc</div>
       <div class="item-subtext">DNA: Megamare by Orto</div>
@@ -1448,6 +1574,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">JUNAID</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(125)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Sanaya</div>
       <div class="item-subtext">DNA: LV Imagination (Closest)</div>
@@ -1459,6 +1586,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Khadlaj</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(84)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Island Dreams</div>
       <div class="item-subtext">DNA: LV Symphony</div>
@@ -1466,6 +1594,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(84,'5ml',6)"><span>5ml</span>$6</button><button class="sz-btn " onclick="toggleSize(84,'10ml',11)"><span>10ml</span>$11</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(85)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Island Vanilla Dunes</div>
       <div class="item-subtext">DNA: PDM Althaïr</div>
@@ -1473,6 +1602,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(85,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(85,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(86)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Shiyaaka Snow</div>
       <div class="item-subtext">DNA: LV Météore</div>
@@ -1484,6 +1614,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Lattafa</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(87)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Ana Abiyedh</div>
       <div class="item-subtext">Erba Pura DNA</div>
@@ -1495,6 +1626,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Maison Asrar</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(88)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Cal Thriller 3</div>
       <div class="item-subtext">DNA: YSL 6</div>
@@ -1506,6 +1638,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Paris Corner</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(115)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Zodiac Stratos</div>
       <div class="item-subtext">DNA: YSL Y Elixir</div>
@@ -1517,6 +1650,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Rasasi</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(89)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Hawas Black</div>
       <div class="item-subtext">DNA: Hacivat</div>
@@ -1524,6 +1658,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-sale">SALE</span></div>
     <div class="sizes"><button class="sz-btn  on-sale" onclick="toggleSize(89,'5ml',6)"><span>5ml</span><span class="sz-was">$7</span>$6</button><button class="sz-btn  on-sale" onclick="toggleSize(89,'10ml',11)"><span>10ml</span><span class="sz-was">$12</span>$11</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(90)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Hawas Fire</div>
       <div class="item-subtext">DNA: Gissah Imperial Valley</div>
@@ -1531,6 +1666,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(90,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(90,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(91)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Hawas Kobra</div>
       <div class="item-subtext">DNA: LV Imagination</div>
@@ -1538,6 +1674,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(91,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(91,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(92)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Hawas Verde</div>
       <div class="item-subtext">Torino 21</div>
@@ -1545,6 +1682,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-new">NEW</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(92,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(92,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(93)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Shuhrah</div>
       
@@ -1556,6 +1694,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Rayhaan</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(94)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Aquatica</div>
       <div class="item-subtext">DNA: Creed Virgin Island Water</div>
@@ -1563,6 +1702,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
     <div class="item-badges"><span class="badge badge-hot">⭐ Popular</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(94,'5ml',7)"><span>5ml</span>$7</button><button class="sz-btn " onclick="toggleSize(94,'10ml',12)"><span>10ml</span>$12</button></div>
   </div><div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(95)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">Terra</div>
       <div class="item-subtext">DNA: Outlands</div>
@@ -1574,6 +1714,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
           <div class="brand-group">
             <div class="brand-label">Reef</div>
             <div class="item-row">
+    <button class="btn-heart " onclick="toggleWishlist(117)" title="Save for later">♡</button>
     <div class="item-info">
       <div class="item-name">33</div>
       
@@ -1683,7 +1824,7 @@ Total: $57</div>
   </div>
 </div>
 
-<div id="toast" class="">✓ Fragrance updated!</div>
+<div id="toast" class="">All images downloaded!</div>
 
 <!-- Site Footer -->
 <footer class="site-footer">
@@ -1725,7 +1866,7 @@ Total: $57</div>
     <div class="editor-sub">
       <div class="tabs" id="editor-tabs"><button class="tab active" onclick="editorSetCat(this,'all')">All</button><button class="tab " onclick="editorSetCat(this,'niche')">Niche Fragrances</button><button class="tab " onclick="editorSetCat(this,'designer')">Designer Fragrances</button><button class="tab " onclick="editorSetCat(this,'middle')">Middle Eastern Fragrances</button></div>
       <input id="editor-search" type="search" placeholder="Search…" oninput="renderEditorTable()">
-      <span class="editor-stat" id="editor-stat">125 of 125 items</span>
+      <span class="editor-stat" id="editor-stat">127 of 127 items</span>
     </div>
 
     <div class="editor-table-wrap">
@@ -1737,12 +1878,60 @@ Total: $57</div>
           <th>Note</th><th>Actions</th>
         </tr></thead>
         <tbody id="editor-tbody"><tr class="e-cat-hdr-row"><td colspan="10">Niche Fragrances</td></tr><tr class="e-brand-hdr-row"><td colspan="10">Amouage</td></tr>
+    <tr class="" draggable="true" data-id="128" ondragstart="rowDragStart(event,128)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,128)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:0.3;line-height:1.2" onclick="moveProduct(128,-1)" disabled="" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(128,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Amouage</td>
+      <td class="td-name">Purpose 50</td>
+      <td>Niche Fragrances</td>
+      <td class="td-price">$40</td>
+      <td class="td-price">$75</td>
+      <td><span class="e-badge-new">NEW</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(128,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(128)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(128)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(128)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="4" ondragstart="rowDragStart(event,4)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,4)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Amouage</td>
+      <td class="td-name">Outlands</td>
+      <td>Niche Fragrances</td>
+      <td class="td-price">$38</td>
+      <td class="td-price">$70</td>
+      <td><span class="e-badge-hot">⭐ Popular</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(4,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(4)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(4)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(4)">🗑</button>
+      </td>
+    </tr>
     <tr class="" draggable="true" data-id="1" ondragstart="rowDragStart(event,1)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,1)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
           <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
           <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:0.3;line-height:1.2" onclick="moveProduct(1,-1)" disabled="" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(1,-1)" title="Move up">↑</button>
             <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(1,1)" title="Move down">↓</button>
           </div>
         </div>
@@ -1809,30 +1998,6 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(3)">🗑</button>
       </td>
     </tr>
-    <tr class="" draggable="true" data-id="4" ondragstart="rowDragStart(event,4)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,4)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(4,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Amouage</td>
-      <td class="td-name">Outlands</td>
-      <td>Niche Fragrances</td>
-      <td class="td-price">$38</td>
-      <td class="td-price">$70</td>
-      <td><span class="e-badge-hot">⭐ Popular</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(4,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(4)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(4)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(4)">🗑</button>
-      </td>
-    </tr>
     <tr class="" draggable="true" data-id="5" ondragstart="rowDragStart(event,5)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,5)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
@@ -1880,6 +2045,30 @@ Total: $57</div>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(6)" title="Duplicate">⎘</button>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(6)">🗑</button>
       </td>
+    </tr>
+    <tr class="" draggable="true" data-id="129" ondragstart="rowDragStart(event,129)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,129)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(129,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:0.3;line-height:1.2" onclick="moveProduct(129,1)" disabled="" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Amouage</td>
+      <td class="td-name">Timber</td>
+      <td>Niche Fragrances</td>
+      <td class="td-price">$30</td>
+      <td class="td-price">$55</td>
+      <td><span class="e-badge-new">NEW</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(129,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(129)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(129)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(129)">🗑</button>
+      </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Bvlgari</td></tr>
     <tr class="" draggable="true" data-id="7" ondragstart="rowDragStart(event,7)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,7)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
@@ -1905,7 +2094,7 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(7)">🗑</button>
       </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Byredo</td></tr>
-    <tr class="" draggable="true" data-id="8" ondragstart="rowDragStart(event,8)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,8)" ondragend="rowDragEnd(event)">
+    <tr class="low-stock-row" draggable="true" data-id="8" ondragstart="rowDragStart(event,8)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,8)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
           <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
@@ -2409,7 +2598,7 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(25)">🗑</button>
       </td>
     </tr>
-    <tr class="" draggable="true" data-id="122" ondragstart="rowDragStart(event,122)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,122)" ondragend="rowDragEnd(event)">
+    <tr class="low-stock-row" draggable="true" data-id="122" ondragstart="rowDragStart(event,122)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,122)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
           <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
@@ -2433,13 +2622,13 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(122)">🗑</button>
       </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Montale</td></tr>
-    <tr class="" draggable="true" data-id="123" ondragstart="rowDragStart(event,123)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,123)" ondragend="rowDragEnd(event)">
+    <tr class="low-stock-row" draggable="true" data-id="123" ondragstart="rowDragStart(event,123)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,123)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
           <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
           <div style="display:flex;flex-direction:column;gap:2px">
             <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(123,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:0.3;line-height:1.2" onclick="moveProduct(123,1)" disabled="" title="Move down">↓</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(123,1)" title="Move down">↓</button>
           </div>
         </div>
       </td>
@@ -2457,30 +2646,6 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(123)">🗑</button>
       </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">PDM</td></tr>
-    <tr class="" draggable="true" data-id="103" ondragstart="rowDragStart(event,103)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,103)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(103,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(103,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">PDM</td>
-      <td class="td-name">Carlisle</td>
-      <td>Niche Fragrances</td>
-      <td class="td-price">$25</td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-new">NEW</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(103,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(103)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(103)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(103)">🗑</button>
-      </td>
-    </tr>
     <tr class="" draggable="true" data-id="102" ondragstart="rowDragStart(event,102)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,102)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
@@ -2503,6 +2668,30 @@ Total: $57</div>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(102)">✏ Edit</button>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(102)" title="Duplicate">⎘</button>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(102)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="103" ondragstart="rowDragStart(event,103)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,103)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(103,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(103,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">PDM</td>
+      <td class="td-name">Carlisle</td>
+      <td>Niche Fragrances</td>
+      <td class="td-price">$25</td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-new">NEW</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(103,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(103)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(103)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(103)">🗑</button>
       </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Sospiro</td></tr>
     <tr class="" draggable="true" data-id="26" ondragstart="rowDragStart(event,26)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,26)" ondragend="rowDragEnd(event)">
@@ -3633,150 +3822,6 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(111)">🗑</button>
       </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Ahmed Al Maghribi</td></tr>
-    <tr class="" draggable="true" data-id="116" ondragstart="rowDragStart(event,116)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,116)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(116,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(116,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">Aqua Oud</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="ADG Profumo/profondo" onclick="inlineEditNote(116,this)" style="cursor:pointer">ADG Profumo/profondo</td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(116)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(116)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(116)">🗑</button>
-      </td>
-    </tr>
-    <tr class="" draggable="true" data-id="112" ondragstart="rowDragStart(event,112)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,112)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(112,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(112,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">Azzure Royal</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$6</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="DNA: Blue Talisman" onclick="inlineEditNote(112,this)" style="cursor:pointer">DNA: Blue Talisman</td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(112)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(112)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(112)">🗑</button>
-      </td>
-    </tr>
-    <tr class="" draggable="true" data-id="121" ondragstart="rowDragStart(event,121)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,121)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(121,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(121,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">Bin Sheikh</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$8</span> <span style="color:#e07070;font-weight:700">$7</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="4ml left only" onclick="inlineEditNote(121,this)" style="cursor:pointer">4ml left only</td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(121)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(121)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(121)">🗑</button>
-      </td>
-    </tr>
-    <tr class="" draggable="true" data-id="119" ondragstart="rowDragStart(event,119)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,119)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(119,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(119,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">Blue Oud</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(119,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(119)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(119)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(119)">🗑</button>
-      </td>
-    </tr>
-    <tr class="" draggable="true" data-id="114" ondragstart="rowDragStart(event,114)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,114)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(114,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(114,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">Bombay Oud</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$10</span> <span style="color:#e07070;font-weight:700">$9</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(114,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(114)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(114)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(114)">🗑</button>
-      </td>
-    </tr>
-    <tr class="" draggable="true" data-id="118" ondragstart="rowDragStart(event,118)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,118)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(118,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(118,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">Hirfah</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(118,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(118)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(118)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(118)">🗑</button>
-      </td>
-    </tr>
     <tr class="" draggable="true" data-id="70" ondragstart="rowDragStart(event,70)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,70)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
@@ -3847,30 +3892,6 @@ Total: $57</div>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(72)">✏ Edit</button>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(72)" title="Duplicate">⎘</button>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(72)">🗑</button>
-      </td>
-    </tr>
-    <tr class="" draggable="true" data-id="110" ondragstart="rowDragStart(event,110)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,110)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(110,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(110,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Ahmed Al Maghribi</td>
-      <td class="td-name">O Clock</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(110,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(110)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(110)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(110)">🗑</button>
       </td>
     </tr>
     <tr class="" draggable="true" data-id="73" ondragstart="rowDragStart(event,73)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,73)" ondragend="rowDragEnd(event)">
@@ -3944,6 +3965,174 @@ Total: $57</div>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(109)" title="Duplicate">⎘</button>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(109)">🗑</button>
       </td>
+    </tr>
+    <tr class="" draggable="true" data-id="110" ondragstart="rowDragStart(event,110)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,110)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(110,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(110,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">O Clock</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(110,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(110)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(110)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(110)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="112" ondragstart="rowDragStart(event,112)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,112)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(112,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(112,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">Azzure Royal</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$6</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="DNA: Blue Talisman" onclick="inlineEditNote(112,this)" style="cursor:pointer">DNA: Blue Talisman</td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(112)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(112)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(112)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="114" ondragstart="rowDragStart(event,114)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,114)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(114,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(114,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">Bombay Oud</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$10</span> <span style="color:#e07070;font-weight:700">$9</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(114,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(114)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(114)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(114)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="116" ondragstart="rowDragStart(event,116)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,116)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(116,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(116,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">Aqua Oud</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="ADG Profumo/profondo" onclick="inlineEditNote(116,this)" style="cursor:pointer">ADG Profumo/profondo</td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(116)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(116)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(116)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="118" ondragstart="rowDragStart(event,118)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,118)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(118,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(118,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">Hirfah</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(118,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(118)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(118)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(118)">🗑</button>
+      </td>
+    </tr>
+    <tr class="" draggable="true" data-id="119" ondragstart="rowDragStart(event,119)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,119)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(119,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(119,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">Blue Oud</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$7</span> <span style="color:#e07070;font-weight:700">$5</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="Click to add a note" onclick="inlineEditNote(119,this)" style="cursor:pointer"><span style="color:var(--line2)">— add note</span></td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(119)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(119)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(119)">🗑</button>
+      </td>
+    </tr>
+    <tr class="low-stock-row" draggable="true" data-id="121" ondragstart="rowDragStart(event,121)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,121)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(121,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(121,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Ahmed Al Maghribi</td>
+      <td class="td-name">Bin Sheikh</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price"><span style="text-decoration:line-through;opacity:.45;font-size:10px">$8</span> <span style="color:#e07070;font-weight:700">$7</span></td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-sale">🏷 SALE</span> <span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="4ml left only" onclick="inlineEditNote(121,this)" style="cursor:pointer">4ml left only</td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(121)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(121)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(121)">🗑</button>
+      </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Al Haramain</td></tr>
     <tr class="" draggable="true" data-id="75" ondragstart="rowDragStart(event,75)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,75)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
@@ -3993,30 +4182,6 @@ Total: $57</div>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(76)">🗑</button>
       </td>
     </tr>
-    <tr class="" draggable="true" data-id="120" ondragstart="rowDragStart(event,120)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,120)" ondragend="rowDragEnd(event)">
-      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
-        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
-          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
-          <div style="display:flex;flex-direction:column;gap:2px">
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(120,-1)" title="Move up">↑</button>
-            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(120,1)" title="Move down">↓</button>
-          </div>
-        </div>
-      </td>
-      <td class="td-brand">Al Haramain</td>
-      <td class="td-name">Dubai Nights</td>
-      <td>Middle Eastern Fragrances</td>
-      <td class="td-price">$7</td>
-      <td class="td-price">—</td>
-      <td><span class="e-badge-limited">LIMITED</span></td>
-      <td>—</td>
-      <td class="td-note" title="4.5ml left only" onclick="inlineEditNote(120,this)" style="cursor:pointer">4.5ml left only</td>
-      <td class="td-actions">
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(120)">✏ Edit</button>
-        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(120)" title="Duplicate">⎘</button>
-        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(120)">🗑</button>
-      </td>
-    </tr>
     <tr class="" draggable="true" data-id="77" ondragstart="rowDragStart(event,77)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,77)" ondragend="rowDragEnd(event)">
       <td style="white-space:nowrap;text-align:center;padding:4px 6px">
         <div style="display:flex;align-items:center;gap:4px;justify-content:center">
@@ -4039,6 +4204,30 @@ Total: $57</div>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(77)">✏ Edit</button>
         <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(77)" title="Duplicate">⎘</button>
         <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(77)">🗑</button>
+      </td>
+    </tr>
+    <tr class="low-stock-row" draggable="true" data-id="120" ondragstart="rowDragStart(event,120)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,120)" ondragend="rowDragEnd(event)">
+      <td style="white-space:nowrap;text-align:center;padding:4px 6px">
+        <div style="display:flex;align-items:center;gap:4px;justify-content:center">
+          <span class="drag-handle-cell" title="Drag to reorder (desktop)">⠿</span>
+          <div style="display:flex;flex-direction:column;gap:2px">
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(120,-1)" title="Move up">↑</button>
+            <button class="e-btn" style="padding:2px 7px;font-size:12px;opacity:1;line-height:1.2" onclick="moveProduct(120,1)" title="Move down">↓</button>
+          </div>
+        </div>
+      </td>
+      <td class="td-brand">Al Haramain</td>
+      <td class="td-name">Dubai Nights</td>
+      <td>Middle Eastern Fragrances</td>
+      <td class="td-price">$7</td>
+      <td class="td-price">—</td>
+      <td><span class="e-badge-limited">LIMITED</span></td>
+      <td>—</td>
+      <td class="td-note" title="4.5ml left only" onclick="inlineEditNote(120,this)" style="cursor:pointer">4.5ml left only</td>
+      <td class="td-actions">
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="openEditForm(120)">✏ Edit</button>
+        <button class="e-btn" style="padding:5px 10px;font-size:12px" onclick="duplicateProduct(120)" title="Duplicate">⎘</button>
+        <button class="e-btn danger" style="padding:5px 10px;font-size:12px" onclick="deleteProduct(120)">🗑</button>
       </td>
     </tr><tr class="e-brand-hdr-row"><td colspan="10">Armaf</td></tr>
     <tr class="" draggable="true" data-id="78" ondragstart="rowDragStart(event,78)" ondragover="rowDragOver(event)" ondrop="rowDrop(event,78)" ondragend="rowDragEnd(event)">
@@ -4841,7 +5030,7 @@ Total: $57</div>
         <div id="cat-mgr-list"><div class="cat-mgr-row" id="cmr-niche">
       <span class="cat-mgr-handle" title="Drag to reorder">⠿</span>
       <input class="cat-mgr-input" value="Niche Fragrances" oninput="CATS[0].label=this.value;renderTabs();renderEditorTabs();renderCatNoteInputs();markUnsaved();renderCatalog()" title="Click to rename">
-      <span class="cat-mgr-count">38 items</span>
+      <span class="cat-mgr-count">40 items</span>
       <button class="e-btn" style="padding:4px 7px;font-size:12px;opacity:0.3" onclick="moveCat(0,-1)" disabled="" title="Move up">↑</button>
       <button class="e-btn" style="padding:4px 7px;font-size:12px;opacity:1" onclick="moveCat(0,1)" title="Move down">↓</button>
       <button class="e-btn danger" style="padding:4px 7px;font-size:11px;opacity:0.3" onclick="deleteCat('niche')" disabled="" title="Move or delete items first">🗑</button>
@@ -5053,8 +5242,8 @@ Total: $57</div>
 <!-- Edit / Add Modal -->
 <div class="emod-wrap" id="emod">
   <div class="emod">
-    <h3 id="emod-title">Edit Fragrance</h3>
-    <input type="hidden" id="emod-id" value="124">
+    <h3 id="emod-title">Add New Fragrance</h3>
+    <input type="hidden" id="emod-id" value="">
     <div class="emod-grid" style="row-gap:14px">
       <div class="emod-field emod-full">
         <label>Category</label>
@@ -5119,7 +5308,7 @@ const WHATSAPP = '61481957543';
 const EDITOR_PASS = 'zain2026';
 
 //##SETTINGS_BEGIN##
-const DEFAULT_SETTINGS={"title":"Zain A.","subtitle":"Fragrance Decants","lastUpdated":"13 Jun 2026","pickup":"Mill Park 3082","postageUntracked":5,"postageTracked":10,"minimum":25,"brandColor":"#c9a872","brandStyle":"caps","priceFormat":"pipe","brandSize":17,"catTitleSize":30,"noteColor":"#7a6a88","noteStyle":"italic","theme":"light","orderPrefix":"Here's my order:","orderSuffix":"","infoNote":"Labelled glass atomiser bottles","how1":"Send a list of what you want.","how2":"Pick your size: 5ml or 10ml.","how3":"Confirm pickup or postage.","how4":"Payment details after order confirmation.","orderPostageNote":"Tracked post recommended. Untracked at buyer's risk.","catTitleColor":"#8a3020"};
+const DEFAULT_SETTINGS={"title":"Zain A.","subtitle":"Fragrance Decants","lastUpdated":"14 Jun 2026","pickup":"Mill Park 3082","postageUntracked":5,"postageTracked":10,"minimum":25,"brandColor":"#c9a872","brandStyle":"caps","priceFormat":"pipe","brandSize":17,"catTitleSize":30,"noteColor":"#7a6a88","noteStyle":"italic","theme":"light","orderPrefix":"Here's my order:","orderSuffix":"","infoNote":"Labelled glass atomiser bottles","how1":"Send a list of what you want.","how2":"Pick your size: 5ml or 10ml.","how3":"Confirm pickup or postage.","how4":"Payment details after order confirmation.","orderPostageNote":"Tracked post recommended. Untracked at buyer's risk.","catTitleColor":"#8a3020"};
 //##SETTINGS_END##
 
 // Load settings from localStorage
@@ -5227,15 +5416,6 @@ function saveToStorage(){
   try{localStorage.setItem('za_products_v2',JSON.stringify(PRODUCTS));}catch(e){}
 }
 
-function moveProduct(id,dir){
-  const idx=PRODUCTS.findIndex(p=>p.id===id);
-  if(idx===-1) return;
-  const newIdx=idx+dir;
-  if(newIdx<0||newIdx>=PRODUCTS.length) return;
-  [PRODUCTS[idx],PRODUCTS[newIdx]]=[PRODUCTS[newIdx],PRODUCTS[idx]];
-  saveToStorage();renderEditorTable();updateAll();markUnsaved();
-}
-
 function populateSettingsInputs(){
   const get=(id,val)=>{const el=document.getElementById(id);if(el)el.value=val;};
   get('es-title',SETTINGS.title);get('es-pickup',SETTINGS.pickup);get('es-updated',SETTINGS.lastUpdated);
@@ -5290,7 +5470,7 @@ function populateSettingsInputs(){
 }
 
 //##PRODUCTS_BEGIN##
-const PRODUCTS = [{"id":1,"cat":"niche","brand":"Amouage","name":"Decision","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":2,"cat":"niche","brand":"Amouage","name":"Epic Man","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":3,"cat":"niche","brand":"Amouage","name":"Lustre","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":4,"cat":"niche","brand":"Amouage","name":"Outlands","p5":38,"p10":70,"badge":"HOT","sold":false},{"id":5,"cat":"niche","brand":"Amouage","name":"Purpose","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":6,"cat":"niche","brand":"Amouage","name":"Reflection","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":7,"cat":"niche","brand":"Bvlgari","name":"Tygar","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":8,"cat":"niche","brand":"Byredo","name":"Rouge Chaotique","p5":35,"p10":null,"badge":"LIMITED","sold":false,"note":"5ml only"},{"id":9,"cat":"niche","brand":"Creed","name":"Green Irish Tweed","p5":35,"p10":60,"badge":"HOT","sold":false,"note":"Batch 2020"},{"id":10,"cat":"niche","brand":"Essential Parfums","name":"Bois Impérial","p5":15,"p10":28,"badge":null,"sold":false},{"id":124,"cat":"niche","brand":"Initio","name":"Atomic Rose","p5":25,"p10":null,"badge":"NEW","sold":false,"note":"5mls only"},{"id":11,"cat":"niche","brand":"Initio","name":"Musk Therapy","p5":25,"p10":45,"badge":"NEW","sold":false},{"id":127,"cat":"niche","brand":"Initio","name":"Oud For Greatness","p5":25,"p10":45,"badge":"NEW","sold":false},{"id":12,"cat":"niche","brand":"Kilian","name":"Angels' Share","p5":30,"p10":55,"badge":null,"sold":false},{"id":13,"cat":"niche","brand":"LV","name":"Meteore","p5":35,"p10":65,"badge":"NEW","sold":false},{"id":14,"cat":"niche","brand":"LV","name":"Rain Tea","p5":40,"p10":75,"badge":"NEW","sold":false},{"id":15,"cat":"niche","brand":"Maison Crivelli","name":"Ambre Chromatique","p5":33,"p10":60,"badge":null,"sold":false},{"id":16,"cat":"niche","brand":"Maison Crivelli","name":"Hibiscus Mahajad","p5":38,"p10":70,"badge":"NEW","sold":false},{"id":17,"cat":"niche","brand":"Maison Crivelli","name":"Oud Maracujá","p5":35,"p10":65,"badge":null,"sold":false},{"id":18,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Gentle Fluidity Silver","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":19,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Grand Soir","p5":28,"p10":50,"badge":null,"sold":false},{"id":20,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Oud Satin Mood","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":21,"cat":"niche","brand":"Maison Margiela Replica","name":"Jazz Club","p5":12,"p10":20,"badge":null,"sold":false},{"id":22,"cat":"niche","brand":"Maison Margiela Replica","name":"Soul of the Forest EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":23,"cat":"niche","brand":"Mancera","name":"Aoud Lemon Mint","p5":12,"p10":20,"badge":null,"sold":false},{"id":24,"cat":"niche","brand":"Mancera","name":"Cedrat Boise EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":25,"cat":"niche","brand":"Mancera","name":"Instant Crush","p5":12,"p10":20,"badge":null,"sold":false},{"id":26,"cat":"niche","brand":"Sospiro","name":"Vibrato","p5":25,"p10":45,"badge":null,"sold":false},{"id":27,"cat":"niche","brand":"To Summer","name":"First Apple","p5":40,"p10":75,"badge":"NEW","sold":false},{"id":28,"cat":"niche","brand":"To Summer","name":"Osmanthus EDP","p5":20,"p10":35,"badge":"NEW","sold":false},{"id":29,"cat":"niche","brand":"Xerjoff","name":"Naxos","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":126,"cat":"niche","brand":"Xerjoff","name":"Torino 21","p5":25,"p10":45,"badge":"NEW","sold":false},{"id":30,"cat":"designer","brand":"Azzaro","name":"Wanted Forever Elixir","p5":9,"p10":16,"badge":null,"sold":false,"saleP5":8,"saleP10":14},{"id":31,"cat":"designer","brand":"Chanel","name":"Bleu de Chanel L'Exclusif","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":32,"cat":"designer","brand":"Davidoff","name":"Cool Water Intense EDP","p5":6,"p10":10,"badge":null,"sold":false},{"id":33,"cat":"designer","brand":"Dior","name":"Sauvage Elixir","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":34,"cat":"designer","brand":"Dolce & Gabbana","name":"The One EDP","p5":8,"p10":14,"badge":null,"sold":false},{"id":35,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo EDP","p5":10,"p10":18,"badge":null,"sold":false},{"id":36,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo Parfum","p5":10,"p10":18,"badge":null,"sold":false},{"id":37,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Absolutely","p5":12,"p10":20,"badge":null,"sold":false},{"id":38,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Intensely","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":39,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Powerfully","p5":12,"p10":20,"badge":"NEW","sold":false},{"id":40,"cat":"designer","brand":"Hermès","name":"Terre d'Hermès Intense","p5":14,"p10":25,"badge":"NEW","sold":false},{"id":41,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Absolu","p5":10,"p10":18,"badge":null,"sold":false},{"id":42,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Beyond","p5":10,"p10":18,"badge":"NEW","sold":false},{"id":43,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Bold Citrus","p5":7,"p10":12,"badge":"NEW","sold":false},{"id":44,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Elixir","p5":10,"p10":18,"badge":null,"sold":false},{"id":45,"cat":"designer","brand":"Issey Miyake","name":"Le Sel d'Issey EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":46,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Beau Le Parfum","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":47,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Elixir","p5":14,"p10":25,"badge":null,"sold":false},{"id":48,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":49,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Absolu","p5":14,"p10":25,"badge":"NEW","sold":false},{"id":50,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Elixir","p5":12,"p10":20,"badge":null,"sold":false},{"id":51,"cat":"designer","brand":"Prada","name":"Paradigme","p5":15,"p10":28,"badge":"HOT","sold":false},{"id":52,"cat":"designer","brand":"Ralph Lauren","name":"Polo 67 EDP","p5":9,"p10":16,"badge":null,"sold":false},{"id":53,"cat":"designer","brand":"Ralph Lauren","name":"Ralph's Club EDP","p5":8,"p10":14,"badge":null,"sold":false,"saleP5":7,"saleP10":12},{"id":54,"cat":"designer","brand":"Valentino","name":"Born in Roma Coral Fantasy","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":55,"cat":"designer","brand":"Valentino","name":"Born in Roma Donna Green Stravaganza","p5":8,"p10":14,"badge":null,"sold":false},{"id":56,"cat":"designer","brand":"Valentino","name":"Born in Roma Extradose","p5":16,"p10":28,"badge":null,"sold":false},{"id":57,"cat":"designer","brand":"Versace","name":"Eros Flame","p5":10,"p10":18,"badge":null,"sold":false},{"id":58,"cat":"designer","brand":"Yves Saint Laurent","name":"Babycat Raw Bourbon","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":59,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":60,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":61,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF Absolu","p5":20,"p10":35,"badge":"HOT","sold":false},{"id":62,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":63,"cat":"designer","brand":"Yves Saint Laurent","name":"The Yulong","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":64,"cat":"designer","brand":"Yves Saint Laurent","name":"Y EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":65,"cat":"middle","brand":"Afnan","name":"9PM Elixir","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":11,"note":"DNA: JPG Le Male Absolu"},{"id":66,"cat":"middle","brand":"Afnan","name":"Rare Reef","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Pacific Chill"},{"id":67,"cat":"middle","brand":"Afnan","name":"Supremacy Collector's Edition","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Absolu Aventus"},{"id":68,"cat":"middle","brand":"Afnan","name":"Supremacy Not Only Intense","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Aventus"},{"id":70,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Ignite Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":71,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Kaaf","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Percival"},{"id":72,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Marj","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":73,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Oud & Roses","p5":12,"p10":20,"badge":null,"sold":false},{"id":74,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Summer Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":75,"cat":"middle","brand":"Al Haramain","name":"Aqua Dubai","p5":12,"p10":20,"badge":"HOT","sold":false,"saleP5":10,"saleP10":18,"note":"DNA: LV Imagination"},{"id":76,"cat":"middle","brand":"Al Haramain","name":"Carbon Edition","p5":10,"p10":18,"badge":null,"sold":false,"saleP5":9,"saleP10":16,"note":"DNA: Creed Irish Tweed"},{"id":77,"cat":"middle","brand":"Al Haramain","name":"Ruby Edition","p5":10,"p10":18,"badge":null,"sold":false,"saleP5":9,"saleP10":16,"note":"DNA: MFK Baccarat Rouge 540"},{"id":78,"cat":"middle","brand":"Armaf","name":"Club de Nuit Extrait","p5":10,"p10":18,"badge":"HOT","sold":false,"note":"DNA: Creed Aventus"},{"id":79,"cat":"middle","brand":"Armaf","name":"Club de Nuit Iconic","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":10,"note":"DNA: Bleu de Chanel"},{"id":80,"cat":"middle","brand":"French Avenue","name":"Amber Empire","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"Blonde Amber"},{"id":81,"cat":"middle","brand":"French Avenue","name":"Liquid Brun Limited Edition","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"DNA: PDM Althair"},{"id":82,"cat":"middle","brand":"French Avenue","name":"Vulcan Feu","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"God of Fire"},{"id":83,"cat":"middle","brand":"French Avenue","name":"Vulcan Sable","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":11,"note":"Sand Dance"},{"id":84,"cat":"middle","brand":"Khadlaj","name":"Island Dreams","p5":6,"p10":11,"badge":"HOT","sold":false,"note":"DNA: LV Symphony"},{"id":85,"cat":"middle","brand":"Khadlaj","name":"Island Vanilla Dunes","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Althaïr"},{"id":86,"cat":"middle","brand":"Khadlaj","name":"Shiyaaka Snow","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Météore"},{"id":87,"cat":"middle","brand":"Lattafa","name":"Ana Abiyedh","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":5,"saleP10":10,"note":"Erba Pura DNA"},{"id":88,"cat":"middle","brand":"Maison Asrar","name":"Cal Thriller 3","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"DNA: YSL 6"},{"id":89,"cat":"middle","brand":"Rasasi","name":"Hawas Black","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":11,"note":"DNA: Hacivat"},{"id":90,"cat":"middle","brand":"Rasasi","name":"Hawas Fire","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Gissah Imperial Valley"},{"id":91,"cat":"middle","brand":"Rasasi","name":"Hawas Kobra","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: LV Imagination"},{"id":92,"cat":"middle","brand":"Rasasi","name":"Hawas Verde","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"Torino 21"},{"id":93,"cat":"middle","brand":"Rasasi","name":"Shuhrah","p5":7,"p10":12,"badge":null,"sold":false},{"id":94,"cat":"middle","brand":"Rayhaan","name":"Aquatica","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Creed Virgin Island Water"},{"id":95,"cat":"middle","brand":"Rayhaan","name":"Terra","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Outlands"},{"id":97,"cat":"middle","brand":"Bujairami","name":"Non Stop","p5":7,"p10":11,"badge":"HOT","sold":false,"note":"Pacific Chill inspired"},{"id":98,"cat":"middle","brand":"Bujairami","name":"Psycho Symphony","p5":7,"p10":null,"badge":"HOT","sold":false,"note":"LV Symphony inspired"},{"id":99,"cat":"middle","brand":"Bujairami","name":"Rizz Meteore","p5":7,"p10":11,"badge":null,"sold":false,"saleP5":6,"saleP10":10,"note":"LV Météore inspired"},{"id":100,"cat":"middle","brand":"Bujairami","name":"Rose in Gold","p5":7,"p10":11,"badge":null,"sold":false,"note":"Delina PDM inspired"},{"id":101,"cat":"middle","brand":"Bujairami","name":"Too Damn Good","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"Bal d'Afrique Absolu inspired"},{"id":102,"cat":"niche","brand":"PDM","name":"Layton","p5":25,"p10":null,"badge":"NEW","sold":false},{"id":103,"cat":"niche","brand":"PDM","name":"Carlisle","p5":25,"p10":null,"badge":"NEW","sold":false},{"id":104,"cat":"niche","brand":"Goldfield & Banks","name":"Tale of Amber","p5":20,"p10":null,"badge":"LIMITED","sold":false},{"id":105,"cat":"designer","brand":"Givenchy","name":"Gentlemen Prive","p5":12,"p10":null,"badge":"LIMITED","sold":false,"saleP5":10},{"id":107,"cat":"middle","brand":"Dumont","name":"Nitro Red","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":106,"cat":"niche","brand":"Thomas Kosmala","name":"No.4","p5":10,"p10":null,"badge":"LIMITED","sold":false},{"id":108,"cat":"middle","brand":"Dumont","name":"Platinum","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":109,"cat":"middle","brand":"Ahmed Al Maghribi","name":"White Tiger","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":110,"cat":"middle","brand":"Ahmed Al Maghribi","name":"O Clock","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":111,"cat":"middle","brand":"Afnan","name":"Supremacy Oud","p5":8,"p10":null,"badge":"LIMITED","sold":false,"saleP5":7,"note":"DNA: Oud for Greatness"},{"id":112,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Azzure Royal","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":6,"note":"DNA: Blue Talisman"},{"id":113,"cat":"middle","brand":"Ibraheem Al Qurash","name":"Spanish Tobacc","p5":7,"p10":12,"badge":"LIMITED","sold":false,"saleP5":5,"saleP10":10,"note":"DNA: Megamare by Orto"},{"id":114,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bombay Oud","p5":10,"p10":null,"badge":"LIMITED","sold":false,"saleP5":9},{"id":115,"cat":"middle","brand":"Paris Corner","name":"Zodiac Stratos","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5,"note":"DNA: YSL Y Elixir"},{"id":116,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Aqua Oud","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5,"note":"ADG Profumo/profondo"},{"id":117,"cat":"middle","brand":"Reef","name":"33","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":118,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Hirfah","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":119,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Blue Oud","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":120,"cat":"middle","brand":"Al Haramain","name":"Dubai Nights","p5":7,"p10":null,"badge":"LIMITED","sold":false,"note":"4.5ml left only"},{"id":125,"cat":"middle","brand":"JUNAID","name":"Sanaya","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"DNA: LV Imagination (Closest)"},{"id":121,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bin Sheikh","p5":8,"p10":null,"badge":"LIMITED","sold":false,"saleP5":7,"note":"4ml left only"},{"id":122,"cat":"niche","brand":"Mancera","name":"Red Tobacco","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":123,"cat":"niche","brand":"Montale","name":"Arabian Tonka","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"}];
+const PRODUCTS = [{"id":128,"cat":"niche","brand":"Amouage","name":"Purpose 50","p5":40,"p10":75,"badge":"NEW","sold":false},{"id":4,"cat":"niche","brand":"Amouage","name":"Outlands","p5":38,"p10":70,"badge":"HOT","sold":false},{"id":1,"cat":"niche","brand":"Amouage","name":"Decision","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":2,"cat":"niche","brand":"Amouage","name":"Epic Man","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":3,"cat":"niche","brand":"Amouage","name":"Lustre","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":5,"cat":"niche","brand":"Amouage","name":"Purpose","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":6,"cat":"niche","brand":"Amouage","name":"Reflection","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":7,"cat":"niche","brand":"Bvlgari","name":"Tygar","p5":28,"p10":50,"badge":"NEW","sold":false},{"id":8,"cat":"niche","brand":"Byredo","name":"Rouge Chaotique","p5":35,"p10":null,"badge":"LIMITED","sold":false,"note":"5ml only"},{"id":9,"cat":"niche","brand":"Creed","name":"Green Irish Tweed","p5":35,"p10":60,"badge":"HOT","sold":false,"note":"Batch 2020"},{"id":10,"cat":"niche","brand":"Essential Parfums","name":"Bois Impérial","p5":15,"p10":28,"badge":null,"sold":false},{"id":124,"cat":"niche","brand":"Initio","name":"Atomic Rose","p5":25,"p10":null,"badge":"NEW","sold":false,"note":"5mls only"},{"id":11,"cat":"niche","brand":"Initio","name":"Musk Therapy","p5":25,"p10":45,"badge":"NEW","sold":false},{"id":127,"cat":"niche","brand":"Initio","name":"Oud For Greatness","p5":25,"p10":45,"badge":"NEW","sold":false},{"id":12,"cat":"niche","brand":"Kilian","name":"Angels' Share","p5":30,"p10":55,"badge":null,"sold":false},{"id":13,"cat":"niche","brand":"LV","name":"Meteore","p5":35,"p10":65,"badge":"NEW","sold":false},{"id":14,"cat":"niche","brand":"LV","name":"Rain Tea","p5":40,"p10":75,"badge":"NEW","sold":false},{"id":15,"cat":"niche","brand":"Maison Crivelli","name":"Ambre Chromatique","p5":33,"p10":60,"badge":null,"sold":false},{"id":16,"cat":"niche","brand":"Maison Crivelli","name":"Hibiscus Mahajad","p5":38,"p10":70,"badge":"NEW","sold":false},{"id":17,"cat":"niche","brand":"Maison Crivelli","name":"Oud Maracujá","p5":35,"p10":65,"badge":null,"sold":false},{"id":18,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Gentle Fluidity Silver","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":19,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Grand Soir","p5":28,"p10":50,"badge":null,"sold":false},{"id":20,"cat":"niche","brand":"Maison Francis Kurkdjian","name":"Oud Satin Mood","p5":30,"p10":55,"badge":"HOT","sold":false},{"id":21,"cat":"niche","brand":"Maison Margiela Replica","name":"Jazz Club","p5":12,"p10":20,"badge":null,"sold":false},{"id":22,"cat":"niche","brand":"Maison Margiela Replica","name":"Soul of the Forest EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":23,"cat":"niche","brand":"Mancera","name":"Aoud Lemon Mint","p5":12,"p10":20,"badge":null,"sold":false},{"id":24,"cat":"niche","brand":"Mancera","name":"Cedrat Boise EDP","p5":12,"p10":20,"badge":null,"sold":false},{"id":25,"cat":"niche","brand":"Mancera","name":"Instant Crush","p5":12,"p10":20,"badge":null,"sold":false},{"id":26,"cat":"niche","brand":"Sospiro","name":"Vibrato","p5":25,"p10":45,"badge":null,"sold":false},{"id":27,"cat":"niche","brand":"To Summer","name":"First Apple","p5":40,"p10":75,"badge":"NEW","sold":false},{"id":28,"cat":"niche","brand":"To Summer","name":"Osmanthus EDP","p5":20,"p10":35,"badge":"NEW","sold":false},{"id":29,"cat":"niche","brand":"Xerjoff","name":"Naxos","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":126,"cat":"niche","brand":"Xerjoff","name":"Torino 21","p5":25,"p10":45,"badge":"NEW","sold":false},{"id":30,"cat":"designer","brand":"Azzaro","name":"Wanted Forever Elixir","p5":9,"p10":16,"badge":null,"sold":false,"saleP5":8,"saleP10":14},{"id":31,"cat":"designer","brand":"Chanel","name":"Bleu de Chanel L'Exclusif","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":32,"cat":"designer","brand":"Davidoff","name":"Cool Water Intense EDP","p5":6,"p10":10,"badge":null,"sold":false},{"id":33,"cat":"designer","brand":"Dior","name":"Sauvage Elixir","p5":28,"p10":50,"badge":"HOT","sold":false},{"id":34,"cat":"designer","brand":"Dolce & Gabbana","name":"The One EDP","p5":8,"p10":14,"badge":null,"sold":false},{"id":35,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo EDP","p5":10,"p10":18,"badge":null,"sold":false},{"id":36,"cat":"designer","brand":"Giorgio Armani","name":"Acqua di Giò Profondo Parfum","p5":10,"p10":18,"badge":null,"sold":false},{"id":37,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Absolutely","p5":12,"p10":20,"badge":null,"sold":false},{"id":38,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Intensely","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":39,"cat":"designer","brand":"Giorgio Armani","name":"Stronger With You Powerfully","p5":12,"p10":20,"badge":"NEW","sold":false},{"id":40,"cat":"designer","brand":"Hermès","name":"Terre d'Hermès Intense","p5":14,"p10":25,"badge":"NEW","sold":false},{"id":41,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Absolu","p5":10,"p10":18,"badge":null,"sold":false},{"id":42,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Beyond","p5":10,"p10":18,"badge":"NEW","sold":false},{"id":43,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Bold Citrus","p5":7,"p10":12,"badge":"NEW","sold":false},{"id":44,"cat":"designer","brand":"Hugo Boss","name":"Boss Bottled Elixir","p5":10,"p10":18,"badge":null,"sold":false},{"id":45,"cat":"designer","brand":"Issey Miyake","name":"Le Sel d'Issey EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":46,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Beau Le Parfum","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":47,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Elixir","p5":14,"p10":25,"badge":null,"sold":false},{"id":48,"cat":"designer","brand":"Jean Paul Gaultier","name":"Le Male Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":49,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Absolu","p5":14,"p10":25,"badge":"NEW","sold":false},{"id":50,"cat":"designer","brand":"Paco Rabanne","name":"Invictus Victory Elixir","p5":12,"p10":20,"badge":null,"sold":false},{"id":51,"cat":"designer","brand":"Prada","name":"Paradigme","p5":15,"p10":28,"badge":"HOT","sold":false},{"id":52,"cat":"designer","brand":"Ralph Lauren","name":"Polo 67 EDP","p5":9,"p10":16,"badge":null,"sold":false},{"id":53,"cat":"designer","brand":"Ralph Lauren","name":"Ralph's Club EDP","p5":8,"p10":14,"badge":null,"sold":false,"saleP5":7,"saleP10":12},{"id":54,"cat":"designer","brand":"Valentino","name":"Born in Roma Coral Fantasy","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":55,"cat":"designer","brand":"Valentino","name":"Born in Roma Donna Green Stravaganza","p5":8,"p10":14,"badge":null,"sold":false},{"id":56,"cat":"designer","brand":"Valentino","name":"Born in Roma Extradose","p5":16,"p10":28,"badge":null,"sold":false},{"id":57,"cat":"designer","brand":"Versace","name":"Eros Flame","p5":10,"p10":18,"badge":null,"sold":false},{"id":58,"cat":"designer","brand":"Yves Saint Laurent","name":"Babycat Raw Bourbon","p5":25,"p10":45,"badge":"HOT","sold":false},{"id":59,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre EDT","p5":10,"p10":18,"badge":null,"sold":false},{"id":60,"cat":"designer","brand":"Yves Saint Laurent","name":"Libre Le Parfum","p5":14,"p10":25,"badge":null,"sold":false},{"id":61,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF Absolu","p5":20,"p10":35,"badge":"HOT","sold":false},{"id":62,"cat":"designer","brand":"Yves Saint Laurent","name":"MYSLF EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":63,"cat":"designer","brand":"Yves Saint Laurent","name":"The Yulong","p5":14,"p10":25,"badge":"HOT","sold":false},{"id":64,"cat":"designer","brand":"Yves Saint Laurent","name":"Y EDP","p5":14,"p10":25,"badge":null,"sold":false},{"id":65,"cat":"middle","brand":"Afnan","name":"9PM Elixir","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":11,"note":"DNA: JPG Le Male Absolu"},{"id":66,"cat":"middle","brand":"Afnan","name":"Rare Reef","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Pacific Chill"},{"id":67,"cat":"middle","brand":"Afnan","name":"Supremacy Collector's Edition","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Absolu Aventus"},{"id":68,"cat":"middle","brand":"Afnan","name":"Supremacy Not Only Intense","p5":9,"p10":16,"badge":null,"sold":false,"note":"DNA: Creed Aventus"},{"id":70,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Ignite Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":71,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Kaaf","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Percival"},{"id":72,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Marj","p5":12,"p10":20,"badge":"HOT","sold":false},{"id":73,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Oud & Roses","p5":12,"p10":20,"badge":null,"sold":false},{"id":74,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Summer Oud","p5":12,"p10":20,"badge":null,"sold":false},{"id":75,"cat":"middle","brand":"Al Haramain","name":"Aqua Dubai","p5":12,"p10":20,"badge":"HOT","sold":false,"saleP5":10,"saleP10":18,"note":"DNA: LV Imagination"},{"id":76,"cat":"middle","brand":"Al Haramain","name":"Carbon Edition","p5":10,"p10":18,"badge":null,"sold":false,"saleP5":9,"saleP10":16,"note":"DNA: Creed Irish Tweed"},{"id":77,"cat":"middle","brand":"Al Haramain","name":"Ruby Edition","p5":10,"p10":18,"badge":null,"sold":false,"saleP5":9,"saleP10":16,"note":"DNA: MFK Baccarat Rouge 540"},{"id":78,"cat":"middle","brand":"Armaf","name":"Club de Nuit Extrait","p5":10,"p10":18,"badge":"HOT","sold":false,"note":"DNA: Creed Aventus"},{"id":79,"cat":"middle","brand":"Armaf","name":"Club de Nuit Iconic","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":10,"note":"DNA: Bleu de Chanel"},{"id":80,"cat":"middle","brand":"French Avenue","name":"Amber Empire","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"Blonde Amber"},{"id":81,"cat":"middle","brand":"French Avenue","name":"Liquid Brun Limited Edition","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"DNA: PDM Althair"},{"id":82,"cat":"middle","brand":"French Avenue","name":"Vulcan Feu","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"God of Fire"},{"id":83,"cat":"middle","brand":"French Avenue","name":"Vulcan Sable","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":11,"note":"Sand Dance"},{"id":84,"cat":"middle","brand":"Khadlaj","name":"Island Dreams","p5":6,"p10":11,"badge":"HOT","sold":false,"note":"DNA: LV Symphony"},{"id":85,"cat":"middle","brand":"Khadlaj","name":"Island Vanilla Dunes","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: PDM Althaïr"},{"id":86,"cat":"middle","brand":"Khadlaj","name":"Shiyaaka Snow","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: LV Météore"},{"id":87,"cat":"middle","brand":"Lattafa","name":"Ana Abiyedh","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":5,"saleP10":10,"note":"Erba Pura DNA"},{"id":88,"cat":"middle","brand":"Maison Asrar","name":"Cal Thriller 3","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"DNA: YSL 6"},{"id":89,"cat":"middle","brand":"Rasasi","name":"Hawas Black","p5":7,"p10":12,"badge":null,"sold":false,"saleP5":6,"saleP10":11,"note":"DNA: Hacivat"},{"id":90,"cat":"middle","brand":"Rasasi","name":"Hawas Fire","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Gissah Imperial Valley"},{"id":91,"cat":"middle","brand":"Rasasi","name":"Hawas Kobra","p5":7,"p10":12,"badge":null,"sold":false,"note":"DNA: LV Imagination"},{"id":92,"cat":"middle","brand":"Rasasi","name":"Hawas Verde","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"Torino 21"},{"id":93,"cat":"middle","brand":"Rasasi","name":"Shuhrah","p5":7,"p10":12,"badge":null,"sold":false},{"id":94,"cat":"middle","brand":"Rayhaan","name":"Aquatica","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Creed Virgin Island Water"},{"id":95,"cat":"middle","brand":"Rayhaan","name":"Terra","p5":7,"p10":12,"badge":"HOT","sold":false,"note":"DNA: Outlands"},{"id":97,"cat":"middle","brand":"Bujairami","name":"Non Stop","p5":7,"p10":11,"badge":"HOT","sold":false,"note":"Pacific Chill inspired"},{"id":98,"cat":"middle","brand":"Bujairami","name":"Psycho Symphony","p5":7,"p10":null,"badge":"HOT","sold":false,"note":"LV Symphony inspired"},{"id":99,"cat":"middle","brand":"Bujairami","name":"Rizz Meteore","p5":7,"p10":11,"badge":null,"sold":false,"saleP5":6,"saleP10":10,"note":"LV Météore inspired"},{"id":100,"cat":"middle","brand":"Bujairami","name":"Rose in Gold","p5":7,"p10":11,"badge":null,"sold":false,"note":"Delina PDM inspired"},{"id":101,"cat":"middle","brand":"Bujairami","name":"Too Damn Good","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"Bal d'Afrique Absolu inspired"},{"id":102,"cat":"niche","brand":"PDM","name":"Layton","p5":25,"p10":null,"badge":"NEW","sold":false},{"id":103,"cat":"niche","brand":"PDM","name":"Carlisle","p5":25,"p10":null,"badge":"NEW","sold":false},{"id":104,"cat":"niche","brand":"Goldfield & Banks","name":"Tale of Amber","p5":20,"p10":null,"badge":"LIMITED","sold":false},{"id":105,"cat":"designer","brand":"Givenchy","name":"Gentlemen Prive","p5":12,"p10":null,"badge":"LIMITED","sold":false,"saleP5":10},{"id":107,"cat":"middle","brand":"Dumont","name":"Nitro Red","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":106,"cat":"niche","brand":"Thomas Kosmala","name":"No.4","p5":10,"p10":null,"badge":"LIMITED","sold":false},{"id":108,"cat":"middle","brand":"Dumont","name":"Platinum","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":109,"cat":"middle","brand":"Ahmed Al Maghribi","name":"White Tiger","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":110,"cat":"middle","brand":"Ahmed Al Maghribi","name":"O Clock","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":111,"cat":"middle","brand":"Afnan","name":"Supremacy Oud","p5":8,"p10":null,"badge":"LIMITED","sold":false,"saleP5":7,"note":"DNA: Oud for Greatness"},{"id":112,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Azzure Royal","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":6,"note":"DNA: Blue Talisman"},{"id":113,"cat":"middle","brand":"Ibraheem Al Qurash","name":"Spanish Tobacc","p5":7,"p10":12,"badge":"LIMITED","sold":false,"saleP5":5,"saleP10":10,"note":"DNA: Megamare by Orto"},{"id":114,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bombay Oud","p5":10,"p10":null,"badge":"LIMITED","sold":false,"saleP5":9},{"id":115,"cat":"middle","brand":"Paris Corner","name":"Zodiac Stratos","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5,"note":"DNA: YSL Y Elixir"},{"id":116,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Aqua Oud","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5,"note":"ADG Profumo/profondo"},{"id":117,"cat":"middle","brand":"Reef","name":"33","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":118,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Hirfah","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":119,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Blue Oud","p5":7,"p10":null,"badge":"LIMITED","sold":false,"saleP5":5},{"id":120,"cat":"middle","brand":"Al Haramain","name":"Dubai Nights","p5":7,"p10":null,"badge":"LIMITED","sold":false,"note":"4.5ml left only"},{"id":125,"cat":"middle","brand":"JUNAID","name":"Sanaya","p5":7,"p10":12,"badge":"NEW","sold":false,"note":"DNA: LV Imagination (Closest)"},{"id":121,"cat":"middle","brand":"Ahmed Al Maghribi","name":"Bin Sheikh","p5":8,"p10":null,"badge":"LIMITED","sold":false,"saleP5":7,"note":"4ml left only"},{"id":122,"cat":"niche","brand":"Mancera","name":"Red Tobacco","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":123,"cat":"niche","brand":"Montale","name":"Arabian Tonka","p5":8,"p10":null,"badge":"LIMITED","sold":false,"note":"4ml left only"},{"id":129,"cat":"niche","brand":"Amouage","name":"Timber","p5":30,"p10":55,"badge":"NEW","sold":false}];
 //##PRODUCTS_END##
 
 // Load saved edits from localStorage — merge baked-in sale prices so a stale
@@ -5784,14 +5964,15 @@ function renderEditorTable(){
   });
   document.getElementById('editor-stat').textContent=`${items.length} of ${PRODUCTS.length} items`;
 
-  // Sort by category order → brand A–Z → name A–Z
+  // Sort by category order → brand A–Z → then keep PRODUCTS natural order within each brand
+  // (preserving natural order means ↑↓ moves are visually reflected in the table)
   const catOrder=Object.fromEntries(CATS.map((c,i)=>[c.key,i]));
   items=[...items].sort((a,b)=>{
     const cd=(catOrder[a.cat]??99)-(catOrder[b.cat]??99);
     if(cd!==0) return cd;
     const bd=a.brand.localeCompare(b.brand);
     if(bd!==0) return bd;
-    return a.name.localeCompare(b.name);
+    return PRODUCTS.findIndex(p=>p.id===a.id)-PRODUCTS.findIndex(p=>p.id===b.id);
   });
 
   const badgeLabel={'HOT':'⭐ Popular','NEW':'NEW','LIMITED':'LIMITED'};
@@ -6008,6 +6189,7 @@ function downloadHTML(){
   a.href=URL.createObjectURL(new Blob([html],{type:'text/html;charset=utf-8'}));
   a.download='ZainA_Decants.html';a.click();
   localStorage.removeItem('za_products_v2'); // clear cache — data is now baked in
+  localStorage.removeItem('za_settings_v1'); // clear settings cache — baked-in settings take effect immediately
   showToast('✓ Downloaded! Upload to Netlify to publish.',3500);
 }
 
@@ -6867,6 +7049,15 @@ function rowDragEnd(e){
   document.querySelectorAll('#editor-tbody tr').forEach(r=>{
     r.classList.remove('row-dragging');r.classList.remove('row-drag-over');
   });
+}
+function moveProduct(id,dir){
+  const idx=PRODUCTS.findIndex(p=>p.id===id);
+  if(idx===-1) return;
+  const newIdx=idx+dir;
+  if(newIdx<0||newIdx>=PRODUCTS.length) return;
+  [PRODUCTS[idx],PRODUCTS[newIdx]]=[PRODUCTS[newIdx],PRODUCTS[idx]];
+  saveToStorage();renderEditorTable();updateAll();markUnsaved();
+  showToast('✓ Order updated');
 }
 
 // ── CATEGORY MANAGER ─────────────────────────────────────────
