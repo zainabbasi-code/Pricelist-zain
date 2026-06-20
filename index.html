@@ -1,9 +1,11 @@
 <html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 19px; --note-color: #7a6a88; --note-style: italic; --bg: #0a0a0a; --bg2: #111111; --surf: #1a1a1a; --surf2: #222222; --surf3: #2c2c2c; --cream: #f0f0f0; --cream2: #c8c0b0; --muted: #686868; --line: #242424; --line2: #363636; --accent: #c8a060; --new: #2a6e40; --glass-header: rgba(10,10,10,.92); --glass-filter: rgba(10,10,10,.96); --glass-info: rgba(10,10,10,.55); --cat-title-color: #8a3020;"><head>
 <meta charset="UTF-8">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<script data-vcheck="1">
+(function(){var V='2026-06-20T04:54:12Z',k='_za_v';try{var p=localStorage.getItem(k);localStorage.setItem(k,V);if(p&&p!==V){location.replace(location.href.split('?')[0]+'?v='+V.replace(/[^0-9]/g,''));}}catch(e){}})()</script>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="build-timestamp" content="2026-06-20T04:47:17.503Z">
+<meta name="build-timestamp" content="2026-06-20T04:54:12Z">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zain A. · Decant Price List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -6049,6 +6051,8 @@ function downloadHTML(){
   const buildStamp=new Date().toISOString();
   const buildMeta=document.querySelector('meta[name="build-timestamp"]');
   if(buildMeta) buildMeta.setAttribute('content',buildStamp);
+  const vChk=document.querySelector('script[data-vcheck]');
+  if(vChk) vChk.textContent=vChk.textContent.replace(/var V='[^']*'/,"var V='"+buildStamp+"'");
 
   const scriptEl=document.getElementById('main-script');
   const origText=scriptEl.textContent;
@@ -6162,7 +6166,9 @@ function generatePDF(){
 
   const win=window.open('','_blank');
   if(!win){showToast('⚠ Please allow pop-ups for this page to generate PDFs.',4000);return;}
-  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${SETTINGS.title||'Zain A.'} &middot; Decant Price List</title>
+  win.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8">
+<script data-vcheck="1">
+(function(){var V='2026-06-20T04:54:12Z',k='_za_v';try{var p=localStorage.getItem(k);localStorage.setItem(k,V);if(p&&p!==V){location.replace(location.href.split('?')[0]+'?v='+V.replace(/[^0-9]/g,''));}}catch(e){}})()</script><title>${SETTINGS.title||'Zain A.'} &middot; Decant Price List</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       @page{size:A4;margin:0}
