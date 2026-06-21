@@ -1,9 +1,10 @@
-<html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 19px; --note-color: #7a6a88; --note-style: italic; --bg: #0a0a0a; --bg2: #111111; --surf: #1a1a1a; --surf2: #222222; --surf3: #2c2c2c; --cream: #f0f0f0; --cream2: #c8c0b0; --muted: #686868; --line: #242424; --line2: #363636; --accent: #c8a060; --new: #2a6e40; --glass-header: rgba(10,10,10,.92); --glass-filter: rgba(10,10,10,.96); --glass-info: rgba(10,10,10,.55); --cat-title-color: #8a3020;"><head>
+<html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 19px; --note-color: #7a6a88; --note-style: italic; --bg: #0a0a0a; --bg2: #111111; --surf: #1a1a1a; --surf2: #222222; --surf3: #2c2c2c; --cream: #f0f0f0; --cream2: #c8c0b0; --muted: #686868; --line: #242424; --line2: #363636; --accent: #c8a060; --new: #2a6e40; --glass-header: rgba(10,10,10,.92); --glass-filter: rgba(10,10,10,.96); --glass-info: rgba(10,10,10,.55);"><head>
 <meta charset="UTF-8">
+<script data-vcheck="1">(function(){var V='2026-06-21T03:35:06Z',k='_za_v';try{var p=localStorage.getItem(k);localStorage.setItem(k,V);if(p&&p!==V)window.location.reload();}catch(e){}})()</script>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="build-timestamp" content="2026-06-20T23:44:35.623Z">
+<meta name="build-timestamp" content="2026-06-21T03:35:06Z">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zain A. · Decant Price List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -224,7 +225,7 @@ body{font-family:var(--sans);color:var(--cream);background:var(--bg);min-height:
 #scroll-bottom{position:fixed;bottom:136px;right:24px;z-index:175;width:42px;height:42px;border-radius:50%;background:var(--surf2);border:1px solid var(--line2);color:var(--cream2);cursor:pointer;display:none;align-items:center;justify-content:center;font-size:17px;transition:.2s ease;box-shadow:0 4px 16px rgba(0,0,0,.35)}
 #scroll-bottom.show{display:flex}
 #scroll-bottom:hover{border-color:var(--gold-d);color:var(--gold-l);transform:translateY(2px)}
-@media(min-width:1081px){#scroll-bottom{bottom:70px;right:88px}}
+
 
 /* MIN ORDER PROGRESS BAR */
 #min-progress-wrap{margin-bottom:12px}
@@ -387,6 +388,87 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
   .tab{white-space:nowrap}.search-wrap{min-width:150px;max-width:200px}
   .emod-grid{grid-template-columns:1fr}.emod-full{grid-column:1}
 }
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE — phones up to 600px
+   ═══════════════════════════════════════════════════════ */
+@media(max-width:600px){
+
+  /* Header */
+  .head-inner{height:52px;padding:0 14px;gap:10px}
+  .brand-seal{width:28px;height:28px;border-radius:6px}
+  .brand-seal span{font-size:12px}
+  .brand-text h1{font-size:16px;letter-spacing:.3px}
+  .brand-text p{display:none}
+  #cust-theme-btn{width:30px;height:30px;font-size:13px;border-radius:7px}
+  #cart-btn{padding:7px 10px;border-radius:8px}
+
+  /* Info strip — two items max, no separators */
+  .header-info-strip{padding:0 14px 5px;gap:8px;font-size:9.5px}
+  .header-info-strip .info-sep{display:none}
+  .pill-min{font-size:9px;padding:1px 7px}
+
+  /* Filter bar */
+  .filter-bar{top:70px;padding:0 14px}
+  .filter-inner{padding:7px 0;gap:5px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .filter-inner::-webkit-scrollbar{display:none}
+  .tabs{flex-shrink:0}
+  .tab{padding:6px 11px;font-size:11.5px}
+  .cat-drop-btn{padding:6px 10px;font-size:11.5px;gap:4px;flex-shrink:0}
+  #cat-drop-label{max-width:72px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .opts-btn{padding:6px 8px;font-size:11.5px;flex-shrink:0}
+  .opts-btn span:not(:first-child){display:none}
+  .search-wrap{min-width:100px;max-width:150px;flex-shrink:0;margin-left:0}
+  #search{font-size:12px;padding:6px 10px 6px 28px}
+  .cat-drop-menu{left:0;right:auto}
+  .opts-menu{right:0;left:auto}
+
+  /* Catalog */
+  .main-grid{padding:18px 14px 90px}
+  .cat-section{margin-bottom:28px}
+  .cat-head{padding:12px 0 0;margin-bottom:14px}
+  .brand-group{padding-top:10px;margin-bottom:22px}
+
+  /* Brand label */
+  .brand-label{font-size:11px}
+
+  /* Item rows */
+  .item-row{padding:8px 0;gap:6px}
+  .item-name{font-size:13px}
+  .item-subtext{font-size:8.5px}
+
+  /* Size buttons */
+  .sz-btn{padding:5px 10px;font-size:11px;border-radius:5px;gap:3px}
+  .sz-btn span{font-size:10px}
+  .sizes{gap:5px}
+
+  /* Cart bottom sheet */
+  .cart-panel{max-height:88vh}
+  .cart-head{padding:16px 16px 12px}
+  .cart-body{padding:0 16px}
+
+  /* FAB */
+  .fab{width:52px;height:52px;bottom:18px;right:18px}
+  .fab-badge{font-size:10px}
+
+  /* Scroll-to-top */
+  #scroll-top{bottom:80px;right:18px;width:38px;height:38px;font-size:15px}
+
+  /* Footer */
+  .site-footer{padding:12px 14px 24px;flex-wrap:wrap;gap:8px;font-size:11px}
+}
+
+/* ═══════════════════════════════════════════════════════
+   SMALL TABLET — 601px to 768px
+   ═══════════════════════════════════════════════════════ */
+@media(min-width:601px) and (max-width:768px){
+  .head-inner{padding:0 18px}
+  .brand-text h1{font-size:19px}
+  .filter-bar{padding:0 18px;top:84px}
+  .main-grid{padding:24px 18px 90px}
+  .search-wrap{min-width:140px;max-width:200px}
+}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .cat-section{animation:fadeUp .4s ease both}
 .cat-section:nth-child(1){animation-delay:.05s}.cat-section:nth-child(2){animation-delay:.1s}
@@ -663,7 +745,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <div class="item-name">Tale of Amber</div>
       
     </div>
-    <div class="item-badges"><span class="badge badge-limited">LIMITED</span></div>
+    <div class="item-badges"></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(104,'2ml',10)"><span>2ml</span>$10</button><button class="sz-btn " onclick="toggleSize(104,'5ml',20)"><span>5ml</span>$20</button></div>
   </div>
           </div>
@@ -832,14 +914,14 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <div class="item-name">Layton</div>
       
     </div>
-    <div class="item-badges"><span class="badge badge-limited">LIMITED</span></div>
+    <div class="item-badges"></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(102,'2ml',11)"><span>2ml</span>$11</button><button class="sz-btn " onclick="toggleSize(102,'5ml',22)"><span>5ml</span>$22</button></div>
   </div><div class="item-row">
     <div class="item-info">
       <div class="item-name">Carlisle</div>
       
     </div>
-    <div class="item-badges"><span class="badge badge-limited">LIMITED</span></div>
+    <div class="item-badges"></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(103,'2ml',11)"><span>2ml</span>$11</button><button class="sz-btn " onclick="toggleSize(103,'5ml',22)"><span>5ml</span>$22</button></div>
   </div>
           </div>
@@ -861,7 +943,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
       <div class="item-name">No.4</div>
       
     </div>
-    <div class="item-badges"><span class="badge badge-limited">LIMITED</span></div>
+    <div class="item-badges"></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(106,'2ml',5)"><span>2ml</span>$5</button><button class="sz-btn " onclick="toggleSize(106,'5ml',10)"><span>5ml</span>$10</button></div>
   </div>
           </div>
@@ -6049,6 +6131,8 @@ function downloadHTML(){
   const buildStamp=new Date().toISOString();
   const buildMeta=document.querySelector('meta[name="build-timestamp"]');
   if(buildMeta) buildMeta.setAttribute('content',buildStamp);
+  const vChk=document.querySelector('script[data-vcheck]');
+  if(vChk) vChk.textContent=vChk.textContent.replace(/var V='[^']*'/,"var V='"+buildStamp+"'");
 
   const scriptEl=document.getElementById('main-script');
   const origText=scriptEl.textContent;
@@ -7152,4 +7236,4 @@ updateCustThemeActive();
 </div>
 
 
-<i0236b096-ba33-4d6e-ae08-6ecc6883d79b tabindex="1" role="region"></i0236b096-ba33-4d6e-ae08-6ecc6883d79b></body></html>
+</body></html>
