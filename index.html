@@ -1,10 +1,10 @@
 <html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 19px; --note-color: #7a6a88; --note-style: italic; --bg: #0a0a0a; --bg2: #111111; --surf: #1a1a1a; --surf2: #222222; --surf3: #2c2c2c; --cream: #f0f0f0; --cream2: #c8c0b0; --muted: #686868; --line: #242424; --line2: #363636; --accent: #c8a060; --new: #2a6e40; --glass-header: rgba(10,10,10,.92); --glass-filter: rgba(10,10,10,.96); --glass-info: rgba(10,10,10,.55); --cat-title-color: #8a3020;"><head>
 <meta charset="UTF-8">
-<script data-vcheck="1">(function(){var V='2026-07-24T13:53:29.044Z',k='_za_v';try{var p=localStorage.getItem(k);localStorage.setItem(k,V);if(p&&p!==V)window.location.reload();}catch(e){}})()</script>
+<script data-vcheck="1">(function(){var V='2026-07-24T15:00:02.350Z',k='_za_v';try{var p=localStorage.getItem(k);localStorage.setItem(k,V);if(p&&p!==V)window.location.reload();}catch(e){}})()</script>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="build-timestamp" content="2026-07-24T13:53:29.044Z">
+<meta name="build-timestamp" content="2026-07-24T15:00:02.350Z">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zain A. · Decant Price List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -569,6 +569,12 @@ body.compact #catalog .item-row{padding:8px 14px;margin-bottom:5px}
   #catalog .item-row{padding:11px 12px}
   #catalog .cat-title{font-size:calc(var(--cat-title-size,13px) + 5px)}
 }
+/* (5) Category jump bar */
+.za-jumpbar{max-width:1320px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:2px 0 10px}
+.za-jumpbar:empty{display:none}
+.za-jump-chip{padding:6px 13px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;background:rgba(255,255,255,.03);border:1px solid var(--line2);color:var(--cream2);transition:.15s;white-space:nowrap;font-family:var(--sans)}
+.za-jump-chip:hover{border-color:var(--accent,#c8a060);color:var(--cream)}
+.za-jump-chip.spy-active{background:rgba(200,160,96,.16);color:var(--accent,#c8a060);border-color:rgba(200,160,96,.5)}
 </style>
 </head>
 <body style="" class="compact">
@@ -652,6 +658,7 @@ body.compact #catalog .item-row{padding:8px 14px;margin-bottom:5px}
       <input id="search" type="search" placeholder="Search fragrances or brands…" oninput="renderCatalog()">
     </div>
   </div>
+  <div class="za-jumpbar" id="za-jumpbar" role="navigation" aria-label="Jump to category"><button class="za-jump-chip" type="button" data-target="za-sec-0">Middle Eastern</button><button class="za-jump-chip" type="button" data-target="za-sec-1">Designer</button><button class="za-jump-chip spy-active" type="button" data-target="za-sec-2">Niche</button></div>
 </div>
 
 
@@ -663,7 +670,7 @@ body.compact #catalog .item-row{padding:8px 14px;margin-bottom:5px}
       <button class="oh-close" id="oh-close" onclick="dismissHint()" aria-label="Dismiss hint">×</button>
     </div>
   </div>
-  <div id="catalog"><div class="cat-section">
+  <div id="catalog"><div class="cat-section" id="za-sec-0">
         <div class="cat-head">
           <span class="cat-title">Middle Eastern Fragrances</span>
           
@@ -1097,7 +1104,7 @@ body.compact #catalog .item-row{padding:8px 14px;margin-bottom:5px}
     <div class="item-badges"><span class="badge badge-new">New</span></div>
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(144,'5ml',12)"><span>5ml</span>$12</button><button class="sz-btn " onclick="toggleSize(144,'10ml',20)"><span>10ml</span>$20</button></div>
   </div>
-          </div></div><div class="cat-section">
+          </div></div><div class="cat-section" id="za-sec-1">
         <div class="cat-head">
           <span class="cat-title">Designer Fragrances</span>
           
@@ -1412,7 +1419,7 @@ body.compact #catalog .item-row{padding:8px 14px;margin-bottom:5px}
     
     <div class="sizes"><button class="sz-btn " onclick="toggleSize(64,'5ml',14)"><span>5ml</span>$14</button><button class="sz-btn " onclick="toggleSize(64,'10ml',25)"><span>10ml</span>$25</button></div>
   </div>
-          </div></div><div class="cat-section">
+          </div></div><div class="cat-section" id="za-sec-2">
         <div class="cat-head">
           <span class="cat-title">Niche Fragrances</span>
           
@@ -7496,6 +7503,231 @@ updateAll();
 renderTabs();
 // Restore delivery option from session if cart was restored
 if(selDlv!=='pickup') setDelivery(selDlv);
+
+/* ===== Category jump bar (idea 5): builds chips from the rendered catalog + scroll-spy ===== */
+(function(){
+  const bar=document.getElementById('za-jumpbar');
+  if(!bar) return;
+  function labelFor(sec){
+    const t=sec.querySelector('.cat-title');
+    return t?t.textContent.replace(/\s*Fragrances\s*$/i,'').trim():'';
+  }
+  function stickyOffset(){
+    const fb=document.querySelector('.filter-bar');
+    return (fb?fb.getBoundingClientRect().bottom:100)+10;
+  }
+  function jump(id){
+    const el=document.getElementById(id); if(!el) return;
+    const y=el.getBoundingClientRect().top+window.scrollY-stickyOffset();
+    window.scrollTo({top:y,behavior:'smooth'});
+  }
+  function spy(){
+    const secs=[...document.querySelectorAll('#catalog .cat-section')];
+    if(!secs.length) return;
+    const off=stickyOffset()+20; let cur=secs[0].id;
+    secs.forEach(s=>{ if(s.getBoundingClientRect().top<=off) cur=s.id; });
+    bar.querySelectorAll('.za-jump-chip').forEach(c=>c.classList.toggle('spy-active',c.dataset.target===cur));
+  }
+  function build(){
+    const secs=[...document.querySelectorAll('#catalog .cat-section')];
+    if(secs.length<2){ bar.innerHTML=''; return; }
+    secs.forEach((s,i)=>{ if(!s.id) s.id='za-sec-'+i; });
+    bar.innerHTML=secs.map(s=>`<button class="za-jump-chip" type="button" data-target="${s.id}">${labelFor(s)}</button>`).join('');
+    bar.querySelectorAll('.za-jump-chip').forEach(c=>c.addEventListener('click',()=>jump(c.dataset.target)));
+    spy();
+  }
+  const _rc=window.renderCatalog;
+  if(typeof _rc==='function'){ window.renderCatalog=function(){ const r=_rc.apply(this,arguments); build(); return r; }; }
+  window.addEventListener('scroll',spy,{passive:true});
+  window.addEventListener('resize',spy,{passive:true});
+  build();
+})();
+
+/* ===== Redesigned saved-image generators — clean/minimal, flourish header, divider prices.
+   Overrides drawCategoryCanvas / drawStoryCanvas / drawSquareCanvases. ===== */
+(function(){
+  const GOLD='#c8a060', INK='#f0ece2', INK2='#d8cfbe', MUTED='#8a8480', PAPER='#0a0a0a', TERRA='#cf6a4a', FAINT='rgba(255,255,255,.07)';
+  const dotC={NEW:'#5fb985',HOT:GOLD,LIMITED:'#d0a24a',SALE:TERRA};
+  const dotL={NEW:'NEW',HOT:'POPULAR',LIMITED:'LTD',SALE:'SALE'};
+  function brandCol(){return (typeof SETTINGS!=='undefined'&&SETTINGS.brandColor)||GOLD;}
+  function badgeKey(it){ if(it.saleP5&&it.saleP5>0) return 'SALE'; if(it.badge&&dotC[it.badge]) return it.badge; return null; }
+  function infoText(){return `Pickup ${SETTINGS.pickup}   ·   Post $${SETTINGS.postageUntracked} / $${SETTINGS.postageTracked}   ·   Min $${SETTINGS.minimum}`;}
+
+  // ---- S-scaled helpers (tall + square share these; both are 1620 wide) ----
+  function paintBG(c,PW,PH,S){c.fillStyle=PAPER;c.fillRect(0,0,PW,PH);const g=c.createRadialGradient(PW/2,0,0,PW/2,0,PW*0.9);g.addColorStop(0,'rgba(200,160,96,.10)');g.addColorStop(1,'rgba(200,160,96,0)');c.fillStyle=g;c.fillRect(0,0,PW,240*S);}
+  function headerFlourishS(c,PW,pad,S){
+    let y=pad; c.textAlign='center';
+    c.fillStyle=GOLD; c.font=`600 ${8*S}px 'Hanken Grotesk',sans-serif`;
+    c.fillText('F R A G R A N C E   D E C A N T S',PW/2,y+8*S); y+=8*S+9*S;
+    c.fillStyle=INK; c.font=`600 ${28*S}px 'Cormorant Garamond',serif`;
+    const nm=SETTINGS.title||'Zain A.'; const nw=c.measureText(nm).width; const cy=y+22*S;
+    c.fillText(nm,PW/2,y+22*S);
+    c.strokeStyle='rgba(200,160,96,.5)'; c.lineWidth=1*S;
+    const gap=16*S, rl=38*S, lx=PW/2-nw/2-gap, rx=PW/2+nw/2+gap;
+    c.beginPath();c.moveTo(lx,cy-6*S);c.lineTo(lx-rl,cy-6*S);c.stroke();
+    c.beginPath();c.moveTo(rx,cy-6*S);c.lineTo(rx+rl,cy-6*S);c.stroke();
+    c.fillStyle='rgba(200,160,96,.7)';[lx-rl-6*S,rx+rl+6*S].forEach(dx=>{c.save();c.translate(dx,cy-6*S);c.rotate(Math.PI/4);c.fillRect(-2*S,-2*S,4*S,4*S);c.restore();});
+    y+=28*S+8*S;
+    c.fillStyle=MUTED; c.font=`600 ${8*S}px 'Hanken Grotesk',sans-serif`;
+    c.fillText('DECANTS PRICE LIST  ·  5ml / 10ml',PW/2,y+8*S); y+=8*S+6*S;
+    c.fillStyle='rgba(138,132,128,.85)'; c.font=`400 ${7.5*S}px 'Hanken Grotesk',sans-serif`;
+    c.fillText('Updated '+(SETTINGS.lastUpdated||''),PW/2,y+7.5*S); y+=7.5*S+13*S;
+    c.strokeStyle='rgba(200,160,96,.4)';c.lineWidth=1*S;c.beginPath();c.moveTo(pad+40*S,y);c.lineTo(PW-pad-40*S,y);c.stroke();y+=14*S;
+    c.fillStyle=MUTED; c.font=`400 ${10*S}px 'Hanken Grotesk',sans-serif`; c.textAlign='center';
+    c.fillText(infoText(),PW/2,y+10*S);
+    return y+10*S+18*S;
+  }
+  const HDR_S=129.5; // header height in S units
+  function catHeadS(c,PW,pad,W,S,y,catDef,rightText){
+    c.textAlign='left';c.fillStyle=INK;c.font=`700 ${13*S}px 'Hanken Grotesk',sans-serif`;c.fillText((catDef.label||'').toUpperCase(),pad,y+13*S);
+    c.textAlign='right';c.fillStyle=MUTED;c.font=`400 ${9*S}px 'Hanken Grotesk',sans-serif`;c.fillText(rightText,PW-pad,y+13*S-1*S);
+    y+=13*S+11*S;c.strokeStyle='rgba(200,160,96,.35)';c.lineWidth=1*S;c.beginPath();c.moveTo(pad,y);c.lineTo(PW-pad,y);c.stroke();y+=16*S;
+    if(catDef.note){c.textAlign='left';c.fillStyle=MUTED;c.font=`italic 400 ${8.5*S}px 'Hanken Grotesk',sans-serif`;c.fillText('❖ '+catDef.note,pad,y+2*S);y+=16*S;}
+    return y;
+  }
+  function struckS(c,rightX,by,item,S){const orig=item.p10?`$${item.p5} / $${item.p10}`:`$${item.p5}`;c.font=`400 ${8*S}px 'Hanken Grotesk',sans-serif`;c.textAlign='right';const w=c.measureText(orig).width;c.fillStyle='rgba(170,170,170,.45)';c.fillText(orig,rightX,by);c.strokeStyle='rgba(170,170,170,.5)';c.lineWidth=0.6*S;c.beginPath();c.moveTo(rightX-w,by-3*S);c.lineTo(rightX,by-3*S);c.stroke();}
+  function priceS(c,x,w,y,item,S){
+    const s5=item.saleP5&&item.saleP5>0?item.saleP5:null,s10=item.saleP10&&item.saleP10>0?item.saleP10:null,a5=s5||item.p5,a10=s10||(item.p10||null),sale=!!s5,rx=x+w,by=y+11*S;
+    c.font=`700 ${11*S}px 'Hanken Grotesk',sans-serif`;c.textAlign='right';
+    if(a10==null){c.fillStyle=s5?TERRA:INK2;c.fillText('$'+a5,rx,by);if(sale)struckS(c,rx-c.measureText('$'+a5).width-8*S,by,item,S);return;}
+    c.fillStyle=s10?TERRA:INK2;c.fillText('$'+a10,rx,by);
+    const p10w=c.measureText('$'+a10).width,gap=9*S,lineX=rx-p10w-gap;
+    c.strokeStyle='rgba(160,150,170,.5)';c.lineWidth=1*S;c.beginPath();c.moveTo(lineX,by-9*S);c.lineTo(lineX,by+1*S);c.stroke();
+    c.fillStyle=s5?TERRA:INK2;c.fillText('$'+a5,lineX-gap,by);
+    if(sale){const lx=lineX-gap-c.measureText('$'+a5).width-8*S;struckS(c,lx,by,item,S);}
+  }
+  function itemS(c,x,w,y,item,S){
+    c.globalAlpha=item.sold?0.4:1;
+    c.textAlign='left';c.fillStyle=INK;c.font=`500 ${11*S}px 'Hanken Grotesk',sans-serif`;c.fillText(item.name,x,y+11*S);
+    let nx=x+c.measureText(item.name).width+7*S;
+    if(!item.sold){const bk=badgeKey(item);if(bk){c.fillStyle=dotC[bk];c.beginPath();c.arc(nx+2*S,y+7*S,2*S,0,7);c.fill();c.fillStyle='rgba(138,132,128,.95)';c.font=`700 ${6.3*S}px 'Hanken Grotesk',sans-serif`;c.fillText(dotL[bk],nx+7*S,y+9*S);nx+=7*S+c.measureText(dotL[bk]).width+6*S;}}
+    if(item.note){c.fillStyle='rgba(138,132,128,.82)';c.font=`italic 400 ${8.3*S}px 'Hanken Grotesk',sans-serif`;c.fillText(item.note,nx,y+10.3*S);}
+    if(item.sold){c.fillStyle=MUTED;c.font=`700 ${9.5*S}px 'Hanken Grotesk',sans-serif`;c.textAlign='right';c.fillText('SOLD OUT',x+w,y+11*S);}
+    else priceS(c,x,w,y,item,S);
+    c.globalAlpha=1;
+  }
+  function blockHS(n,S){return 16*S+20*S+8*S+n*22*S+14*S;}
+  function blockS(c,x,w,y,br,items,S,divider){
+    y+=16*S;c.textAlign='left';c.fillStyle=brandCol();c.font=`600 ${16.4*S}px 'Cormorant Garamond',serif`;c.fillText(br,x,y+14*S);y+=20*S+8*S;
+    items.forEach(it=>{itemS(c,x,w,y,it,S);y+=22*S;});
+    if(divider){c.strokeStyle=FAINT;c.lineWidth=1;c.beginPath();c.moveTo(x,y+7*S);c.lineTo(x+w,y+7*S);c.stroke();}
+    return y+14*S;
+  }
+  function footerS(c,PW,pad,S,PH){
+    let fy=PH-60*S+10*S;
+    c.strokeStyle='rgba(200,160,96,.3)';c.lineWidth=1*S;c.beginPath();c.moveTo(pad+40*S,fy);c.lineTo(PW-pad-40*S,fy);c.stroke();fy+=17*S;
+    c.textAlign='center';c.fillStyle=MUTED;c.font=`400 ${8*S}px 'Hanken Grotesk',sans-serif`;
+    c.fillText('DM to order   ·   Postage Australia-wide   ·   Pickup '+SETTINGS.pickup,PW/2,fy);fy+=14*S;
+    c.fillStyle='rgba(200,160,96,.55)';c.font=`600 ${8*S}px 'Cormorant Garamond',serif`;c.fillText((SETTINGS.title||'Zain A.').toUpperCase(),PW/2,fy);
+  }
+
+  // ===== TALL =====
+  window.drawCategoryCanvas=function(catDef,prods){
+    const S=3,PW=540*S,pad=30*S,W=PW-2*pad;
+    const brands=[...new Set(prods.map(p=>p.brand))].sort();
+    const blocks=brands.map(br=>({br,items:prods.filter(p=>p.brand===br)}));
+    const hdrH=HDR_S*S, catHH=40*S+(catDef.note?16*S:0), FOOT=60*S;
+    const bodyH=blocks.reduce((s,b)=>s+blockHS(b.items.length,S),0);
+    const PH=Math.round(pad+hdrH+catHH+bodyH+FOOT+pad);
+    const canvas=document.createElement('canvas');canvas.width=PW;canvas.height=PH;const c=canvas.getContext('2d');c.textBaseline='alphabetic';
+    paintBG(c,PW,PH,S);
+    let y=headerFlourishS(c,PW,pad,S);
+    y=catHeadS(c,PW,pad,W,S,y,catDef,prods.filter(p=>!p.sold).length+' available');
+    blocks.forEach((b,i)=>{y=blockS(c,pad,W,y,b.br,b.items,S,i<blocks.length-1);});
+    footerS(c,PW,pad,S,PH);
+    return canvas;
+  };
+
+  // ===== SQUARE (paginated 1620×1620) =====
+  window.drawSquareCanvases=function(catDef,prods){
+    const S=3,PW=540*S,PH=540*S,pad=30*S,W=PW-2*pad;
+    const brands=[...new Set(prods.map(p=>p.brand))].sort();
+    const hdrH=HDR_S*S, catHH=40*S+(catDef.note?16*S:0), FOOT=60*S;
+    const availH=PH-pad-hdrH-catHH-FOOT-pad;
+    const pages=[];let cur=[],curH=0;
+    brands.forEach(br=>{const h=blockHS(prods.filter(p=>p.brand===br).length,S);if(cur.length&&curH+h>availH){pages.push(cur);cur=[br];curH=h;}else{cur.push(br);curH+=h;}});
+    if(cur.length)pages.push(cur); if(!pages.length)pages.push([]);
+    return pages.map((pageBrands,pi)=>{
+      const canvas=document.createElement('canvas');canvas.width=PW;canvas.height=PH;const c=canvas.getContext('2d');c.textBaseline='alphabetic';
+      paintBG(c,PW,PH,S);
+      let y=headerFlourishS(c,PW,pad,S);
+      const rt=pages.length>1?`${pi+1} / ${pages.length}`:(prods.filter(p=>!p.sold).length+' available');
+      y=catHeadS(c,PW,pad,W,S,y,catDef,rt);
+      pageBrands.forEach((br,i)=>{y=blockS(c,pad,W,y,br,prods.filter(p=>p.brand===br),S,i<pageBrands.length-1);});
+      footerS(c,PW,pad,S,PH);
+      return canvas;
+    });
+  };
+
+  // ===== STORY (1080×dynamic, 2-column stacked) =====
+  window.drawStoryCanvas=function(catDef,prods){
+    const SCALE=2, W=1080, PAD=60, GUT=28, colW=(W-2*PAD-GUT)/2;
+    const ROWH=46, BRH=34, BRGAP=16, BRBOT=12;
+    const brands=[...new Set(prods.map(p=>p.brand))].sort();
+    const blkH=br=>BRGAP+BRH+prods.filter(p=>p.brand===br).length*ROWH+BRBOT;
+    let h0=0,h1=0;const c0=[],c1=[];
+    brands.forEach(br=>{const h=blkH(br);if(h0<=h1){c0.push(br);h0+=h;}else{c1.push(br);h1+=h;}});
+    const contentH=Math.max(h0,h1);
+    const bodyTop=264+54+(catDef.note?20:0);
+    const H=Math.max(1920,Math.round(bodyTop+contentH+210));
+    const canvas=document.createElement('canvas');canvas.width=W*SCALE;canvas.height=H*SCALE;const c=canvas.getContext('2d');c.scale(SCALE,SCALE);c.textBaseline='alphabetic';
+    const bgg=c.createLinearGradient(0,0,W,H);bgg.addColorStop(0,'#0d0b10');bgg.addColorStop(.5,'#0b0910');bgg.addColorStop(1,'#0a0a0c');c.fillStyle=bgg;c.fillRect(0,0,W,H);
+    const glow=c.createRadialGradient(W/2,0,0,W/2,0,760);glow.addColorStop(0,'rgba(200,160,96,.12)');glow.addColorStop(1,'transparent');c.fillStyle=glow;c.fillRect(0,0,W,H);
+
+    // header
+    let y=PAD;c.textAlign='center';
+    c.fillStyle=GOLD;c.font=`600 15px 'Hanken Grotesk',sans-serif`;c.fillText('F R A G R A N C E   D E C A N T S',W/2,y+15);y+=27;
+    c.fillStyle=INK;c.font=`600 58px 'Cormorant Garamond',serif`;const nm=SETTINGS.title||'Zain A.';const nw=c.measureText(nm).width;const cy=y+46;c.fillText(nm,W/2,y+46);
+    c.strokeStyle='rgba(200,160,96,.5)';c.lineWidth=1.5;const gap=26,rl=70,lx=W/2-nw/2-gap,rx=W/2+nw/2+gap;
+    c.beginPath();c.moveTo(lx,cy-14);c.lineTo(lx-rl,cy-14);c.stroke();c.beginPath();c.moveTo(rx,cy-14);c.lineTo(rx+rl,cy-14);c.stroke();
+    c.fillStyle='rgba(200,160,96,.7)';[lx-rl-10,rx+rl+10].forEach(dx=>{c.save();c.translate(dx,cy-14);c.rotate(Math.PI/4);c.fillRect(-3.5,-3.5,7,7);c.restore();});
+    y+=72;
+    c.fillStyle=MUTED;c.font=`600 14px 'Hanken Grotesk',sans-serif`;c.fillText('DECANTS PRICE LIST  ·  5ml / 10ml',W/2,y+14);y+=22;
+    c.fillStyle='rgba(138,132,128,.85)';c.font=`400 13px 'Hanken Grotesk',sans-serif`;c.fillText('Updated '+(SETTINGS.lastUpdated||''),W/2,y+13);y+=29;
+    c.strokeStyle='rgba(200,160,96,.4)';c.lineWidth=1.5;c.beginPath();c.moveTo(PAD+60,y);c.lineTo(W-PAD-60,y);c.stroke();y+=16;
+    c.fillStyle=MUTED;c.font=`400 16px 'Hanken Grotesk',sans-serif`;c.fillText(infoText(),W/2,y+16);y+=16+22;
+    // category
+    c.textAlign='left';c.fillStyle=INK;c.font=`700 24px 'Hanken Grotesk',sans-serif`;c.fillText((catDef.label||'').toUpperCase(),PAD,y+24);
+    c.textAlign='right';c.fillStyle=MUTED;c.font=`400 15px 'Hanken Grotesk',sans-serif`;c.fillText(prods.length+' available',W-PAD,y+22);
+    y+=36;c.strokeStyle='rgba(200,160,96,.35)';c.lineWidth=1.5;c.beginPath();c.moveTo(PAD,y);c.lineTo(W-PAD,y);c.stroke();y+=18;
+    if(catDef.note){c.textAlign='left';c.fillStyle=MUTED;c.font=`italic 400 15px 'Hanken Grotesk',sans-serif`;c.fillText('❖ '+catDef.note,PAD,y+2);y+=20;}
+
+    function storyItem(x,yy,item){
+      c.globalAlpha=item.sold?0.4:1;
+      c.textAlign='left';c.fillStyle=INK;c.font=`500 20px 'Hanken Grotesk',sans-serif`;c.fillText(item.name,x,yy+20);
+      let nx=x+c.measureText(item.name).width+8;
+      if(!item.sold){const bk=badgeKey(item);if(bk){c.fillStyle=dotC[bk];c.beginPath();c.arc(nx+3,yy+12,3.2,0,7);c.fill();c.fillStyle='rgba(138,132,128,.95)';c.font=`700 11px 'Hanken Grotesk',sans-serif`;c.fillText(dotL[bk],nx+11,yy+16);}}
+      const ly=yy+42;
+      if(item.note){c.fillStyle='rgba(138,132,128,.82)';c.font=`italic 400 14px 'Hanken Grotesk',sans-serif`;c.textAlign='left';c.fillText(item.note,x,ly);}
+      const s5=item.saleP5&&item.saleP5>0?item.saleP5:null,s10=item.saleP10&&item.saleP10>0?item.saleP10:null,a5=s5||item.p5,a10=s10||(item.p10||null),rx2=x+colW;
+      c.textAlign='right';
+      if(item.sold){c.fillStyle=MUTED;c.font=`700 15px 'Hanken Grotesk',sans-serif`;c.fillText('SOLD OUT',rx2,ly);c.globalAlpha=1;return;}
+      c.font=`700 19px 'Hanken Grotesk',sans-serif`;
+      if(a10==null){c.fillStyle=s5?TERRA:INK2;c.fillText('$'+a5,rx2,ly);}
+      else{c.fillStyle=s10?TERRA:INK2;c.fillText('$'+a10,rx2,ly);const p10w=c.measureText('$'+a10).width,g2=12,lineX=rx2-p10w-g2;c.strokeStyle='rgba(160,150,170,.5)';c.lineWidth=1.4;c.beginPath();c.moveTo(lineX,ly-15);c.lineTo(lineX,ly-1);c.stroke();c.fillStyle=s5?TERRA:INK2;c.fillText('$'+a5,lineX-g2,ly);}
+      c.globalAlpha=1;
+    }
+    function storyCol(brList,cx,startY){
+      let cyy=startY;
+      brList.forEach((br,i)=>{
+        cyy+=BRGAP;
+        c.textAlign='left';c.fillStyle=brandCol();c.font=`600 26px 'Cormorant Garamond',serif`;c.fillText(br,cx,cyy+22);cyy+=BRH;
+        prods.filter(p=>p.brand===br).forEach(it=>{storyItem(cx,cyy,it);cyy+=ROWH;});
+        if(i<brList.length-1){c.strokeStyle=FAINT;c.lineWidth=1;c.beginPath();c.moveTo(cx,cyy+BRBOT*0.5);c.lineTo(cx+colW,cyy+BRBOT*0.5);c.stroke();}
+        cyy+=BRBOT;
+      });
+    }
+    storyCol(c0,PAD,y); storyCol(c1,PAD+colW+GUT,y);
+
+    // footer
+    const btmY=H-150;
+    c.strokeStyle='rgba(200,160,96,.5)';c.lineWidth=1.5;c.beginPath();c.moveTo(PAD,btmY);c.lineTo(W-PAD,btmY);c.stroke();
+    c.textAlign='center';c.fillStyle=INK;c.font=`600 30px 'Cormorant Garamond',serif`;c.fillText('DM your list to order',W/2,btmY+44);
+    c.fillStyle=GOLD;c.font=`600 18px 'Hanken Grotesk',sans-serif`;c.fillText('Shipping across Australia',W/2,btmY+74);
+    c.fillStyle=MUTED;c.font=`400 15px 'Hanken Grotesk',sans-serif`;c.fillText('Pickup '+SETTINGS.pickup+'  ·  Post $'+SETTINGS.postageUntracked+' / $'+SETTINGS.postageTracked,W/2,btmY+102);
+    return canvas;
+  };
+})();
 updateCustThemeActive();
 </script>
 
