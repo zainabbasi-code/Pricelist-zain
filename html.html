@@ -1,10 +1,22 @@
 <html lang="en" style="--brand-col: #c9a872; --brand-weight: 600; --brand-style: normal; --brand-transform: uppercase; --brand-size: 17px; --cat-title-size: 19px; --note-color: #7a6a88; --note-style: italic; --bg: #0a0a0a; --bg2: #111111; --surf: #1a1a1a; --surf2: #222222; --surf3: #2c2c2c; --cream: #f0f0f0; --cream2: #c8c0b0; --muted: #686868; --line: #242424; --line2: #363636; --accent: #c8a060; --new: #2a6e40; --glass-header: rgba(10,10,10,.92); --glass-filter: rgba(10,10,10,.96); --glass-info: rgba(10,10,10,.55); --cat-title-color: #8a3020;"><head>
 <meta charset="UTF-8">
-<script data-vcheck="1">(function(){var V='2026-08-13T11:56:41.942Z',k='_za_v';try{var p=localStorage.getItem(k);localStorage.setItem(k,V);if(p&&p!==V)window.location.reload();}catch(e){}})()</script>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
 <meta name="build-timestamp" content="2026-08-13T11:56:41.942Z">
+<script data-vcheck="1">(function(){var V='2026-08-13T11:56:41.942Z';var KEY='_za_bounce';
+try{if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.unregister();});}).catch(function(){});}}catch(e){}
+try{if(window.caches&&caches.keys){caches.keys().then(function(ks){ks.forEach(function(k){caches.delete(k);});}).catch(function(){});}}catch(e){}
+var last_=0;
+function check(){
+if(Date.now()-last_<60000)return;last_=Date.now();
+var u=location.pathname+'?_cb='+Date.now()+Math.random().toString(36).slice(2);
+var o={cache:'no-store',headers:{'Range':'bytes=0-4095'}};
+fetch(u,o).then(function(r){if(!r.ok&&r.status!==206)throw 0;return r.text();}).then(function(x){
+var m=x.match(/<meta name="build-timestamp" content="([^"]+)">/);if(!m)return;var live=m[1];
+if(live===V)return;var last=null;try{last=sessionStorage.getItem(KEY);}catch(e){}
+if(last===live)return;try{sessionStorage.setItem(KEY,live);}catch(e){}
+location.replace(location.pathname+'?v='+encodeURIComponent(live)+location.hash);}).catch(function(){});}
+check();
+window.addEventListener('pageshow',function(e){if(e.persisted)check();});
+document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});})()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zain A. · Decant Price List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -552,7 +564,7 @@ table.e-table{width:100%;border-collapse:collapse;font-size:13px}
 .opts-sort-select option{background:var(--surf2)}
 
 </style>
-<style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&amp;display=swa"><style>undefined</style></head>
+</head>
 <body style="" class="compact">
 
 <header id="header">
@@ -6441,7 +6453,7 @@ function generatePDF(){
     const was10=sale10?`<span style="text-decoration:line-through;color:#999999;margin-right:1.5pt;font-weight:400">$${p.p10}</span>&thinsp;`:'';
     const c5col=sale5?'color:#b03030;':'';
     if(m) return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span>&thinsp;<span style="opacity:.55;font-weight:400">(${m[1]}ml)</span>`;
-    if(act10) return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span><span style="opacity:.45;font-weight:400"> &middot; </span><span style="font-weight:700">$${act10}</span>`;
+    if(act10) return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span><span style="opacity:.45;font-weight:400"> &middot; </span>${was10}<span style="font-weight:700;${sale10?'color:#b03030;':''}">$${act10}</span>`;
     return `${was5}<span style="font-weight:700;${c5col}">$${act5}</span>`;
   }
   function badgeStr(p){
@@ -6457,33 +6469,17 @@ function generatePDF(){
   const FIRST_CONTENT_H=196; // 266 usable – header(30) – info(22) – cat-hdr(11) – gaps(7)
   const OTHER_CONTENT_H=240; // 266 usable – run-hdr(8) – cat-hdr(11) – gaps(7)
 
-  const mainHdr=`
-    <div style="text-align:center;padding-bottom:3.5mm;margin-bottom:3.5mm;border-bottom:1.5pt solid #c9a872">
-      <div style="font-size:6pt;letter-spacing:3.5px;color:#888888;font-family:'Hanken Grotesk',sans-serif;text-transform:uppercase;margin-bottom:1.5mm">${(SETTINGS.title||'Zain A.').toUpperCase().split('').join(' ')}</div>
-      <div style="font-size:21pt;font-weight:600;color:#f0f0f0;font-family:'Cormorant Garamond',Georgia,serif;line-height:1.1;margin-bottom:1mm">Fragrance Decants</div>
-      <div style="font-size:6pt;color:#888888;font-family:'Hanken Grotesk',sans-serif;letter-spacing:.4px">5ml &middot; 10ml &middot; Updated ${SETTINGS.lastUpdated}</div>
-    </div>`;
-
-  const infoSection=`
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;margin-bottom:3.5mm">
-      <div style="border:0.5pt solid rgba(201,168,114,.3);border-radius:2pt;padding:2.5mm 3mm;background:rgba(255,255,255,.04)">
-        <div style="font-size:5.5pt;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c8a060;margin-bottom:1.5mm;font-family:'Hanken Grotesk',sans-serif">How to Order</div>
-        ${[SETTINGS.how1,SETTINGS.how2,SETTINGS.how3,SETTINGS.how4].filter(Boolean).map((s,i)=>`<p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#e0e0e0">${i+1}. ${s}</p>`).join('')}
-        <p style="font-size:6pt;font-weight:700;margin-top:.5mm;color:#c8a060;font-family:'Hanken Grotesk',sans-serif">Min. $${SETTINGS.minimum} of fragrance before postage</p>
-      </div>
-      <div style="border:0.5pt solid rgba(201,168,114,.3);border-radius:2pt;padding:2.5mm 3mm;background:rgba(255,255,255,.04)">
-        <div style="font-size:5.5pt;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#c8a060;margin-bottom:1.5mm;font-family:'Hanken Grotesk',sans-serif">Pickup &amp; Postage</div>
-        <p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#e0e0e0">&#10022; ${SETTINGS.infoNote||'All decants in labelled glass atomiser bottles.'}</p>
-        <p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#e0e0e0"><b>Pickup:</b> ${SETTINGS.pickup}</p>
-        <p style="font-size:6pt;margin-bottom:.8mm;line-height:1.4;font-family:'Hanken Grotesk',sans-serif;color:#e0e0e0"><b>Post:</b> $${SETTINGS.postageUntracked} untracked &middot; $${SETTINGS.postageTracked} tracked</p>
-        <p style="font-size:6pt;color:#c8a060;line-height:1.4;font-family:'Hanken Grotesk',sans-serif">&#10022; ${SETTINGS.orderPostageNote||"Tracked recommended. Untracked at buyer's risk."}</p>
-      </div>
-    </div>`;
-
-  const runHdr=`
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:2mm;margin-bottom:2mm;border-bottom:0.5pt solid #c9a872">
-      <span style="font-size:7pt;font-weight:600;color:#f0f0f0;font-family:'Cormorant Garamond',serif">${SETTINGS.title||'Zain A.'} &mdash; Fragrance Decants</span>
-      <span style="font-size:5.5pt;color:#888888;font-family:'Hanken Grotesk',sans-serif">Updated ${SETTINGS.lastUpdated}</span>
+  // Two-line masthead, repeated on every page.
+  const pageHdr=`
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2mm">
+      <span style="flex:1;font-size:6pt;letter-spacing:3.5px;color:#888888;font-family:'Hanken Grotesk',sans-serif;text-transform:uppercase">${(SETTINGS.title||'Zain A.').toUpperCase().split('').join(' ')}</span>
+      <span style="font-size:15pt;font-weight:600;color:#f0f0f0;font-family:'Cormorant Garamond',Georgia,serif;line-height:1;white-space:nowrap">Fragrance Decants</span>
+      <span style="flex:1;text-align:right;font-size:6pt;color:#888888;font-family:'Hanken Grotesk',sans-serif;letter-spacing:.4px;white-space:nowrap">Updated ${SETTINGS.lastUpdated}</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-top:1.2pt solid #c9a872;border-bottom:0.5pt solid rgba(201,168,114,.35);padding:1.2mm 0;margin-bottom:3mm;font-size:6pt;font-family:'Hanken Grotesk',sans-serif;color:#e0e0e0">
+      <span><b style="color:#c8a060">PICKUP</b>&ensp;${SETTINGS.pickup}</span>
+      <span><b style="color:#c8a060">POST</b>&ensp;$${SETTINGS.postageUntracked} untracked &middot; $${SETTINGS.postageTracked} tracked</span>
+      <span><b style="color:#c8a060">MIN</b>&ensp;$${SETTINGS.minimum} before postage</span>
     </div>`;
 
   const pages=CATS.map((catDef,ci)=>{
@@ -6503,12 +6499,12 @@ function generatePDF(){
           </div>`).join('')}
         </div>`;
     }).join('');
-    const topContent=ci===0?mainHdr+infoSection:runHdr;
+    const topContent=pageHdr;
     const availH=ci===0?FIRST_CONTENT_H:OTHER_CONTENT_H;
     return `<div class="page">
       ${topContent}
       <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:1.5mm;margin-bottom:2mm;border-bottom:1.2pt solid rgba(201,168,114,.5)">
-        <span style="font-size:9pt;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;font-family:'Hanken Grotesk',sans-serif;color:#f0f0f0">${catDef.label}</span>
+        <span style="font-size:12pt;font-weight:700;text-transform:uppercase;letter-spacing:3px;font-family:'Hanken Grotesk',sans-serif;color:#f0f0f0">${catDef.label}</span>
         <span style="font-size:5.5pt;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#888;font-family:'Hanken Grotesk',sans-serif">Prices: 5ml &middot; 10ml</span>
       </div>
       ${noteHtml}
@@ -6723,7 +6719,7 @@ function drawStoryCanvas(catDef,prods){
 function generateImages(){
   const ios=isIOS();
   showToast(ios?'Generating images…':'Preparing images… please wait',3000);
-  setTimeout(()=>{
+  const go=()=>setTimeout(()=>{
     const canvases=[];
     CATS.forEach((cat,idx)=>{
       const prods=PRODUCTS.filter(p=>p.cat===cat.key);
@@ -6747,218 +6743,275 @@ function generateImages(){
       _dlNext();
     }
   },400);
+  // Web fonts must be resolved before canvas can draw with them
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(go).catch(go); else go();
 }
 
+/* ── A4 PAGE IMAGE — mirrors the PDF page layout exactly ──────────────
+   1240 × 1754 px = A4 at ~150dpi. Same masthead, same info grid, same
+   category rule, same two-column brand list, same price formatting as
+   generatePDF(). Every image is self-contained (full masthead on each)
+   because categories get shared individually.                          */
 function drawCategoryCanvas(catDef,prods){
-  /* ── PHONE LAYOUT — 1620px, single column, info boxes + inline notes ── */
-  const S=3;
-  const PW=540*S;                   // 1620px — 3× scale for crisp output
-  const pad=22*S;
-  const W=PW-2*pad;
-  const GOLD='#c8a060',INK='#f0f0f0',MUTED='#888888',PAPER='#0a0a0a';
-  const BRAND_COL=SETTINGS.brandColor||'#c8a060';
+  // ── unit conversions ──────────────────────────────────────────────
+  const W=1240, H0=1754;       // A4 shape at ~150dpi
+  let H=H0;                    // may grow if a category outgrows the shrink floor
+  const MM=W/210;              // 5.9048 px per mm
+  const PT=W/210*25.4/72;      // 2.0833 px per pt
+  const CSSPX=W/(210/25.4*96); // 1.5623 px per CSS px (for letter-spacing)
 
-  // ── FONT SIZES ──
-  const FS_OVER=9*S, FS_TITLE=28*S, FS_META=8.5*S;
-  const FS_CAT=13*S, FS_BRAND=12*S;
-  const FS_ITEM=10*S, FS_NOTE=8.5*S, FS_PRICE=10*S;
-  const FS_BH=8.5*S, FS_BC=8*S, BOX_LINE=13*S;
+  const PAD_X=16*MM, PAD_Y=14*MM;      // matches .page padding 14mm 16mm
+  const CONTENT_W=W-2*PAD_X;
+  const COL_GAP=10*MM;
+  const COL_W=(CONTENT_W-COL_GAP)/2;
 
-  // ── SPACING ──
-  const BRAND_GAP=14*S, BRAND_H=18*S, ITEM_H=17*S, BRAND_BOTTOM=8*S;
-
-  // ── MEASURE CONTENT HEIGHT ──
-  const brands=[...new Set(prods.map(p=>p.brand))].sort();
-  function blockH(br){return BRAND_GAP+BRAND_H+prods.filter(p=>p.brand===br).length*ITEM_H+BRAND_BOTTOM;}
-  const contentH=brands.reduce((s,br)=>s+blockH(br),0);
-
-  // ── INFO BOX LINES ──
-  const boxGap=7*S, boxW=(W-boxGap)/2, boxPad=9*S;
-  const h2L=[
-    SETTINGS.how1||'Send a list of what you want.',
-    SETTINGS.how2||'Pick your size: 5ml or 10ml.',
-    SETTINGS.how3||'Confirm pickup or postage.',
-    SETTINGS.how4||'Payment details after confirmation.',
-    `Min order: $${SETTINGS.minimum} of fragrance`
-  ].filter(Boolean);
-  const nL=[
-    SETTINGS.infoNote||'All decants in labelled glass atomisers.',
-    'PICKUP & POSTAGE',
-    `Pickup: ${SETTINGS.pickup}`,
-    `Post: $${SETTINGS.postageUntracked} untracked / $${SETTINGS.postageTracked} tracked`,
-    '\u2756 '+(SETTINGS.orderPostageNote||'Tracked postage recommended.')
-  ];
-  const boxH=boxPad+FS_BH+6*S+Math.max(h2L.length,nL.length)*BOX_LINE+boxPad;
-
-  // ── HEIGHT CALCULATION ──
-  const hdrH=FS_OVER+6*S+FS_TITLE+6*S+FS_META+14*S+2*S+12*S;
-  const infoH=boxH+14*S;
-  const catNoteH=catDef.note?16*S:0;
-  const catHdrH=FS_CAT+8*S+2*S+12*S+catNoteH;
-  const footerH=50*S;
-  const PH=(pad+hdrH+infoH+catHdrH+contentH+footerH+pad)|0;
+  const GOLD='#c8a060', RULE='#c9a872', INK='#f0f0f0', MUTED='#888888';
+  const SANS="'Hanken Grotesk',sans-serif";
+  const SERIF="'Cormorant Garamond',Georgia,serif";
 
   const canvas=document.createElement('canvas');
-  canvas.width=PW; canvas.height=PH;
+  canvas.width=W; canvas.height=H0;
   const c=canvas.getContext('2d');
 
-  // ── BACKGROUND ──
-  c.fillStyle=PAPER; c.fillRect(0,0,PW,PH);
-  c.fillStyle='rgba(201,168,114,0.35)'; c.fillRect(0,0,PW,3*S);
-
-  let y=pad;
-
-  // ── HEADER ──
-  c.textAlign='center';
-  c.fillStyle=MUTED; c.font=`400 ${FS_OVER}px 'Hanken Grotesk',sans-serif`;
-  c.fillText((SETTINGS.title||'Zain A.').toUpperCase().split('').join(' '),PW/2,y+FS_OVER); y+=FS_OVER+6*S;
-  c.fillStyle=INK; c.font=`700 ${FS_TITLE}px 'Cormorant Garamond',serif`;
-  c.fillText('DECANTS PRICE LIST',PW/2,y+FS_TITLE); y+=FS_TITLE+6*S;
-  c.fillStyle=MUTED; c.font=`400 ${FS_META}px 'Hanken Grotesk',sans-serif`;
-  c.fillText(`5ml | 10ml decants \u00b7 Updated ${SETTINGS.lastUpdated}`,PW/2,y+FS_META); y+=FS_META+14*S;
-  c.strokeStyle=GOLD; c.lineWidth=1*S;
-  c.beginPath(); c.moveTo(pad,y); c.lineTo(PW-pad,y); c.stroke(); y+=12*S;
-
-  // ── INFO BOXES ──
-  function rr(rx,ry,rw,rh,r){
-    c.beginPath();c.moveTo(rx+r,ry);c.lineTo(rx+rw-r,ry);c.quadraticCurveTo(rx+rw,ry,rx+rw,ry+r);
-    c.lineTo(rx+rw,ry+rh-r);c.quadraticCurveTo(rx+rw,ry+rh,rx+rw-r,ry+rh);
-    c.lineTo(rx+r,ry+rh);c.quadraticCurveTo(rx,ry+rh,rx,ry+rh-r);
-    c.lineTo(rx,ry+r);c.quadraticCurveTo(rx,ry,rx+r,ry);c.closePath();
+  // ── helpers ───────────────────────────────────────────────────────
+  const font=(pt,wt,fam,it)=>`${it?'italic ':''}${wt||400} ${pt*PT}px ${fam||SANS}`;
+  function rr(x,y,w,h,r){
+    c.beginPath();
+    c.moveTo(x+r,y); c.lineTo(x+w-r,y); c.quadraticCurveTo(x+w,y,x+w,y+r);
+    c.lineTo(x+w,y+h-r); c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+    c.lineTo(x+r,y+h); c.quadraticCurveTo(x,y+h,x,y+h-r);
+    c.lineTo(x,y+r); c.quadraticCurveTo(x,y,x+r,y); c.closePath();
   }
-  const bx1=pad, bx2=pad+boxW+boxGap;
-  // Box 1: HOW TO ORDER
-  rr(bx1,y,boxW,boxH,6*S);
-  c.fillStyle='rgba(255,255,255,0.04)';c.fill();
-  c.strokeStyle='rgba(201,168,114,0.28)';c.lineWidth=0.7*S;c.stroke();
-  let by=y+boxPad;
-  c.fillStyle=BRAND_COL;c.font=`700 ${FS_BH}px 'Hanken Grotesk',sans-serif`;c.textAlign='left';
-  c.fillText('HOW TO ORDER',bx1+boxPad,by+FS_BH); by+=FS_BH+6*S;
-  h2L.forEach((line,i)=>{
-    const last=i===h2L.length-1;
-    c.fillStyle=last?BRAND_COL:INK;
-    c.font=`${last?'700':'400'} ${FS_BC}px 'Hanken Grotesk',sans-serif`;
-    c.fillText(line,bx1+boxPad,by+FS_BC); by+=BOX_LINE;
-  });
-  // Box 2: ORDER NOTES
-  rr(bx2,y,boxW,boxH,6*S);
-  c.fillStyle='rgba(255,255,255,0.04)';c.fill();
-  c.strokeStyle='rgba(201,168,114,0.28)';c.lineWidth=0.7*S;c.stroke();
-  by=y+boxPad;
-  c.fillStyle=BRAND_COL;c.font=`700 ${FS_BH}px 'Hanken Grotesk',sans-serif`;c.textAlign='left';
-  c.fillText('ORDER NOTES',bx2+boxPad,by+FS_BH); by+=FS_BH+6*S;
-  nL.forEach(line=>{
-    const bold=(line==='PICKUP & POSTAGE');
-    c.fillStyle=bold?BRAND_COL:INK;
-    c.font=`${bold?'700':'400'} ${FS_BC}px 'Hanken Grotesk',sans-serif`;
-    c.fillText(line,bx2+boxPad,by+FS_BC); by+=BOX_LINE;
-  });
-  y+=boxH+14*S;
+  function rule(x,y,w,h,col){c.fillStyle=col;c.fillRect(x,y,w,h);}
+  // dotted row separator — matches the PDF's border-bottom:.3pt dotted
+  function dots(x,y,w,col){
+    c.save();c.strokeStyle=col;c.lineWidth=Math.max(1,0.3*PT);
+    c.setLineDash([Math.max(1,0.3*PT),Math.max(1.6,1.2*PT)]);
+    c.beginPath();c.moveTo(x,y+0.5);c.lineTo(x+w,y+0.5);c.stroke();c.restore();
+  }
+  // portable letter-spacing (ctx.letterSpacing is not safe on older iOS)
+  function trackedW(t,sp){let w=0;for(const ch of t)w+=c.measureText(ch).width+sp;return w-sp;}
+  function drawTracked(t,x,y,sp,align){
+    let w=trackedW(t,sp), cx=align==='center'?x-w/2:align==='right'?x-w:x;
+    c.textAlign='left';
+    for(const ch of t){c.fillText(ch,cx,y);cx+=c.measureText(ch).width+sp;}
+    return w;
+  }
+  function ellipsize(t,max){
+    if(c.measureText(t).width<=max) return t;
+    let s=t;
+    while(s.length>1&&c.measureText(s+'…').width>max) s=s.slice(0,-1);
+    return s+'…';
+  }
 
-  // ── CATEGORY HEADING ──
-  c.fillStyle=INK;c.textAlign='left';
-  c.font=`700 ${FS_CAT}px 'Hanken Grotesk',sans-serif`;
-  c.fillText(catDef.label.toUpperCase(),pad,y+FS_CAT);
-  c.strokeStyle=INK;c.lineWidth=2*S;
-  c.beginPath();c.moveTo(pad,y+FS_CAT+5*S);c.lineTo(PW-pad,y+FS_CAT+5*S);c.stroke();
-  y+=FS_CAT+12*S;
+  // ── price + badges as styled runs (mirrors priceStr/badgeStr in PDF) ─
+  function priceRuns(p,k){
+    if(p.sold) return [{t:'Sold Out',pt:6.5*k,wt:400,col:'#aaaaaa',it:true}];
+    const m=p.note&&(p.note.match(/^(\d+\.?\d*)ml\s+left/i)||p.note.match(/[·\s](\d+\.?\d*)ml\s*$/i));
+    const sale5=p.saleP5&&p.saleP5>0?p.saleP5:null;
+    const sale10=p.saleP10&&p.saleP10>0?p.saleP10:null;
+    const act5=sale5||p.p5, act10=sale10||(p.p10||null);
+    const r=[];
+    if(sale5) r.push({t:'$'+p.p5,pt:6.5*k,wt:400,col:'#999999',strike:true,gap:1.5*PT*k});
+    r.push({t:'$'+act5,pt:6.5*k,wt:700,col:sale5?'#b03030':GOLD});
+    if(m){
+      r.push({t:' ('+m[1]+'ml)',pt:6.5*k,wt:400,col:GOLD,alpha:.55});
+    } else if(act10){
+      r.push({t:' · ',pt:6.5*k,wt:400,col:GOLD,alpha:.45});
+      if(sale10) r.push({t:'$'+p.p10,pt:6.5*k,wt:400,col:'#999999',strike:true,gap:1.5*PT*k});
+      r.push({t:'$'+act10,pt:6.5*k,wt:700,col:sale10?'#b03030':GOLD});
+    }
+    return r;
+  }
+  function runsW(runs){
+    let w=0;
+    for(const r of runs){c.font=font(r.pt,r.wt,SANS,r.it);w+=c.measureText(r.t).width+(r.gap||0);}
+    return w;
+  }
+  function drawRuns(runs,x,y){ // x = right edge
+    let cx=x-runsW(runs);
+    c.textAlign='left';
+    for(const r of runs){
+      c.font=font(r.pt,r.wt,SANS,r.it);
+      c.globalAlpha=r.alpha!=null?r.alpha:1;
+      c.fillStyle=r.col;
+      c.fillText(r.t,cx,y);
+      const w=c.measureText(r.t).width;
+      if(r.strike){c.fillRect(cx,y-r.pt*PT*0.28,w,Math.max(1,0.5*PT));}
+      c.globalAlpha=1;
+      cx+=w+(r.gap||0);
+    }
+  }
+  const BADGE_CFG={
+    SALE:{txt:'SALE',col:'#e08080',bg:'rgba(180,30,30,.25)',wt:800},
+    NEW:{txt:'New',col:'#70d090',bg:'rgba(42,110,72,.2)',wt:700},
+    LIMITED:{txt:'LTD',col:'#7a5020',bg:'#f5edde',wt:700}
+  };
+  function badgesFor(p){
+    const out=[];
+    if(p.saleP5&&p.saleP5>0) out.push(BADGE_CFG.SALE);
+    if(p.badge==='NEW') out.push(BADGE_CFG.NEW);
+    if(p.badge==='LIMITED') out.push(BADGE_CFG.LIMITED);
+    return out;
+  }
+  function badgeW(b,k){
+    c.font=font(5.5*k,b.wt,SANS);
+    return c.measureText(b.txt).width+2*2.5*PT*k+2*PT*k; // padding + margin-left
+  }
+  function drawBadge(b,x,y,k){ // x = left edge (incl. margin), y = text baseline
+    const ml=2*PT*k, padX=2.5*PT*k, padY=0.5*PT*k;
+    c.font=font(5.5*k,b.wt,SANS);
+    const tw=c.measureText(b.txt).width, fh=5.5*PT*k;
+    const bx=x+ml, bh=fh+2*padY, by=y-fh*0.78-padY;
+    c.fillStyle=b.bg; rr(bx,by,tw+2*padX,bh,2*CSSPX); c.fill();
+    c.fillStyle=b.col; c.textAlign='left'; c.fillText(b.txt,bx+padX,y);
+    return ml+tw+2*padX;
+  }
+
+  // ── brand block geometry, parameterised by shrink factor k ────────
+  const brands=[...new Set(prods.map(p=>p.brand))].sort();
+  const byBrand=br=>prods.filter(p=>p.brand===br);
+  const geo=k=>{
+    const brandLineH=8*PT*k*1.35, brandPad=0.5*MM*k, brandRule=Math.max(1,0.4*PT),
+          brandGap=0.6*MM*k, blockGap=2*MM*k,
+          itemH=6.5*PT*k*1.35+2*(0.5*MM*k), itemRule=Math.max(1,0.3*PT);
+    return {
+      brandLineH,brandPad,brandRule,brandGap,blockGap,itemH,itemRule,
+      headH:brandLineH+brandPad+brandRule+brandGap,
+      blockH:br=>brandLineH+brandPad+brandRule+brandGap+byBrand(br).length*(itemH+itemRule)+blockGap
+    };
+  };
+
+  // ── top matter: two-line masthead + category rule ─────────────────
+  //  line 1  spaced name · "Fragrance Decants" · updated date
+  //  line 2  Pickup / Post / Min, between two rules
+  const L1_H=15*PT*1.15;
+  const FACT_PAD=1.2*MM, FACT_TXT=6*PT*1.35, RULE_TOP=1.2*PT, RULE_BOT=0.5*PT;
+  const L2_H=RULE_TOP+FACT_PAD+FACT_TXT+FACT_PAD+RULE_BOT;
+  const MAST_H=L1_H+2*MM+L2_H+3*MM;
+  const CAT_H=12*PT*1.35+1.5*MM+1.2*PT+2*MM+(catDef.note?(5.5*PT*1.4+2*MM+2*MM):0);
+  const TOP_H=MAST_H+CAT_H;
+  const AVAIL_H=H0-2*PAD_Y-TOP_H;
+
+  // ── choose shrink factor + column split by MEASURED height ────────
+  function splitAt(k){
+    const g=geo(k);
+    const hs=brands.map(g.blockH);
+    const total=hs.reduce((a,b)=>a+b,0);
+    let best=0,bestScore=Infinity,acc=0;
+    for(let i=1;i<brands.length;i++){
+      acc+=hs[i-1];
+      const score=Math.max(acc,total-acc);
+      if(score<bestScore){bestScore=score;best=i;}
+    }
+    if(brands.length===1){best=1;bestScore=total;}
+    return {split:best,maxH:bestScore,g};
+  }
+  let k=1, fit=splitAt(1);
+  while(fit.maxH>AVAIL_H&&k>0.60){k=Math.round((k-0.02)*100)/100;fit=splitAt(k);}
+  // Last resort: past the 0.60 legibility floor, grow the page rather than clip
+  // products off the bottom. Only reachable with a far larger catalogue.
+  const needed=Math.ceil(2*PAD_Y+TOP_H+fit.maxH);
+  if(needed>H0){H=needed;canvas.height=H;}
+  const g=fit.g;
+  const cols=[brands.slice(0,fit.split),brands.slice(fit.split)];
+
+  // ── paint ─────────────────────────────────────────────────────────
+  c.fillStyle='#0a0a0a'; c.fillRect(0,0,W,H);
+  c.textBaseline='alphabetic';
+
+  let y=PAD_Y;
+
+  // ── masthead line 1: spaced name | Fragrance Decants | updated ────
+  const l1=y+L1_H*0.78;
+  c.font=font(6,400,SANS); c.fillStyle=MUTED;
+  drawTracked((SETTINGS.title||'Zain A.').toUpperCase().split('').join(' '),PAD_X,l1,3.5*CSSPX,'left');
+  c.font=font(15,600,SERIF); c.fillStyle=INK; c.textAlign='center';
+  c.fillText('Fragrance Decants',W/2,l1);
+  c.font=font(6,400,SANS); c.fillStyle=MUTED;
+  drawTracked('Updated '+SETTINGS.lastUpdated,PAD_X+CONTENT_W,l1,0.4*CSSPX,'right');
+  y+=L1_H+2*MM;
+
+  // ── masthead line 2: the three facts, between two rules ───────────
+  rule(PAD_X,y,CONTENT_W,RULE_TOP,RULE);
+  const fb=y+RULE_TOP+FACT_PAD+FACT_TXT*0.78;
+  const LBL_GAP=1.5*MM;
+  function fact(lbl,val,x,align){
+    c.font=font(6,700,SANS); const lw=c.measureText(lbl).width;
+    c.font=font(6,400,SANS); const vw=c.measureText(val).width;
+    const tot=lw+LBL_GAP+vw;
+    const sx=align==='center'?x-tot/2:align==='right'?x-tot:x;
+    c.textAlign='left';
+    c.font=font(6,700,SANS); c.fillStyle=GOLD; c.fillText(lbl,sx,fb);
+    c.font=font(6,400,SANS); c.fillStyle='#e0e0e0'; c.fillText(val,sx+lw+LBL_GAP,fb);
+  }
+  fact('PICKUP',SETTINGS.pickup,PAD_X,'left');
+  fact('POST','$'+SETTINGS.postageUntracked+' untracked · $'+SETTINGS.postageTracked+' tracked',W/2,'center');
+  fact('MIN','$'+SETTINGS.minimum+' before postage',PAD_X+CONTENT_W,'right');
+  rule(PAD_X,y+RULE_TOP+FACT_PAD+FACT_TXT+FACT_PAD,CONTENT_W,RULE_BOT,'rgba(201,168,114,.35)');
+  y+=L2_H+3*MM;
+
+  // category header
+  c.font=font(12,700,SANS); c.fillStyle=INK;
+  const catBase=y+12*PT*1.35*0.78;
+  drawTracked(catDef.label.toUpperCase(),PAD_X,catBase,3*CSSPX,'left');
+  c.font=font(5.5,700,SANS); c.fillStyle=MUTED;
+  drawTracked('PRICES: 5ML · 10ML',PAD_X+CONTENT_W,catBase,0.5*CSSPX,'right');
+  y+=12*PT*1.35+1.5*MM;
+  rule(PAD_X,y,CONTENT_W,1.2*PT,'rgba(201,168,114,.5)');
+  y+=1.2*PT+2*MM;
 
   if(catDef.note){
-    c.fillStyle='rgba(255,255,255,0.05)';c.fillRect(pad,y,W,14*S);
-    c.fillStyle=MUTED;c.font=`400 ${8*S}px 'Hanken Grotesk',sans-serif`;
-    c.fillText('\u2756 '+catDef.note,pad+6*S,y+10*S); y+=16*S;
+    c.fillStyle='rgba(255,255,255,.04)'; c.fillRect(PAD_X,y,CONTENT_W,5.5*PT*1.4+2*MM);
+    rule(PAD_X,y,1.5*PT,5.5*PT*1.4+2*MM,RULE);
+    c.font=font(5.5,400,SANS); c.fillStyle='#aaaaaa'; c.textAlign='left';
+    c.fillText('✦  '+catDef.note,PAD_X+2.5*MM,y+1*MM+5.5*PT*1.4*0.78);
+    y+=5.5*PT*1.4+2*MM+2*MM;
   }
 
-  // ── BRANDS & ITEMS ──
-  brands.forEach(br=>{
-    const items=prods.filter(p=>p.brand===br);
-    y+=BRAND_GAP;
-    const _bw={bold:'700',normal:'400',light:'300',italic:'600',caps:'600'}[SETTINGS.brandStyle]||'700';
-    const _bi=SETTINGS.brandStyle==='italic'?' italic':'';
-    c.fillStyle=BRAND_COL;
-    c.font=`${_bi}${_bw} ${FS_BRAND}px 'Cormorant Garamond',serif`;c.textAlign='left';
-    c.fillText(SETTINGS.brandStyle==='caps'?br.toUpperCase():br,pad,y+FS_BRAND); y+=BRAND_H;
+  // ── two columns ───────────────────────────────────────────────────
+  const listTop=y; let colEnd=listTop;
+  cols.forEach((brList,ci)=>{
+    const x=PAD_X+ci*(COL_W+COL_GAP);
+    let cy=listTop;
+    brList.forEach(br=>{
+      // brand name + hairline
+      c.font=font(8*k,700,SERIF); c.fillStyle=GOLD; c.textAlign='left';
+      c.fillText(br,x,cy+g.brandLineH*0.78);
+      cy+=g.brandLineH+g.brandPad;
+      rule(x,cy,COL_W,g.brandRule,'rgba(201,168,114,.25)');
+      cy+=g.brandRule+g.brandGap;
 
-    items.forEach(item=>{
-      c.globalAlpha=item.sold?0.35:1;
-
-      // Name
-      c.fillStyle=INK;c.font=`600 ${FS_ITEM}px 'Hanken Grotesk',sans-serif`;c.textAlign='left';
-      c.fillText(item.name,pad,y+FS_ITEM);
-      let cx2=pad+c.measureText(item.name).width;
-
-      // Badge inline
-      if(item.badge&&!item.sold){
-        const bCfg={
-          NEW:{bg:'rgba(42,110,72,.2)',fg:'#70d090',txt:'NEW'},
-          LIMITED:{bg:'#f5edde',fg:'#7a5020',txt:'LTD'},
-          HOT:{bg:'rgba(201,168,114,.12)',fg:'#c8a060',txt:'\u2605'}
-        };
-        const bc=bCfg[item.badge];
-        if(bc){
-          c.font=`700 ${6.5*S}px 'Hanken Grotesk',sans-serif`;
-          const bW=c.measureText(bc.txt).width+6*S;
-          c.fillStyle=bc.bg;c.fillRect(cx2+4*S,y+1.5*S,bW,9*S);
-          c.fillStyle=bc.fg;c.fillText(bc.txt,cx2+7*S,y+8.5*S);
-          cx2+=bW+8*S;
-        }
-      }
-
-      // Note inline in italic (skip "Xml left" notes — those go into the price string)
-      const mm=item.note&&(item.note.match(/^(\d+\.?\d*)ml\s+left/i)||item.note.match(/[·\s](\d+\.?\d*)ml\s*$/i));
-      if(item.note&&!mm){
-        c.fillStyle=MUTED;c.font=`italic 400 ${FS_NOTE}px 'Hanken Grotesk',sans-serif`;
-        const noteStr='  '+item.note;
-        c.fillText(noteStr,cx2,y+FS_ITEM);
-        cx2+=c.measureText(noteStr).width;
-      }
-
-      // Price right-aligned (with sale support)
-      const sep={pipe:' | ',slash:' / ',dot:' \u00b7 '}[SETTINGS.priceFormat]||' | ';
-      const cSale5=item.saleP5&&item.saleP5>0?item.saleP5:null;
-      const cSale10=item.saleP10&&item.saleP10>0?item.saleP10:null;
-      const act5=cSale5||item.p5, act10=cSale10||(item.p10||null);
-      let pTxt=item.sold?'SOLD OUT':mm?`$${act5} (${mm[1]}ml)`:act10?`$${act5}${sep}$${act10}`:`$${act5}`;
-      c.fillStyle=item.sold?MUTED:(cSale5?'#c03030':INK);
-      c.font=`700 ${FS_PRICE}px 'Hanken Grotesk',sans-serif`;c.textAlign='right';
-      c.fillText(pTxt,pad+W,y+FS_PRICE);
-      // Strike-through original price if on sale
-      if(cSale5&&!item.sold&&!mm){
-        const origTxt=item.p10?`$${item.p5}${sep}$${item.p10}`:`$${item.p5}`;
-        c.font=`400 ${FS_NOTE}px 'Hanken Grotesk',sans-serif`;
-        const origW=c.measureText(origTxt).width;
-        const saleW=c.measureText(pTxt).width;
-        c.fillStyle='rgba(200,200,200,.3)';
-        c.fillText(origTxt,pad+W-saleW-4*S,y+FS_PRICE);
-        c.strokeStyle='rgba(200,200,200,.4)';c.lineWidth=0.5*S;
-        c.beginPath();c.moveTo(pad+W-saleW-4*S-origW,y+FS_PRICE-3*S);c.lineTo(pad+W-saleW-4*S,y+FS_PRICE-3*S);c.stroke();
-      }
-      const pW=c.measureText(pTxt).width;
-
-      // Dotted leader
-      c.setLineDash([1.5*S,3*S]);c.strokeStyle=GOLD;c.lineWidth=0.6*S;c.globalAlpha=0.3;
-      c.beginPath();c.moveTo(cx2+5*S,y+FS_ITEM-3*S);c.lineTo(pad+W-pW-5*S,y+FS_ITEM-3*S);c.stroke();
-      c.setLineDash([]);c.globalAlpha=item.sold?0.35:1;
-
-      // Row separator
-      c.strokeStyle='rgba(201,168,114,0.2)';c.lineWidth=0.5*S;
-      c.beginPath();c.moveTo(pad,y+ITEM_H-2*S);c.lineTo(pad+W,y+ITEM_H-2*S);c.stroke();
-      c.globalAlpha=1;y+=ITEM_H;
+      byBrand(br).forEach(p=>{
+        const base=cy+g.itemH*0.72;
+        if(p.sold) c.globalAlpha=0.38;
+        // price first — it owns a fixed slot on the right
+        const runs=priceRuns(p,k);
+        drawRuns(runs,x+COL_W,base);
+        const pW=runsW(runs);
+        // name + badges, ellipsised into what's left
+        const bList=p.sold?[]:badgesFor(p);
+        c.font=font(6.5*k,400,SANS);
+        let bw=0; bList.forEach(b=>bw+=badgeW(b,k));
+        const avail=COL_W-pW-2.5*MM-2*MM-bw;
+        c.font=font(6.5*k,400,SANS); c.fillStyle='#e8e8e8'; c.textAlign='left';
+        const nm=ellipsize(p.name,Math.max(20,avail));
+        c.fillText(nm,x,base);
+        let nx=x+c.measureText(nm).width;
+        bList.forEach(b=>{nx+=drawBadge(b,nx,base,k);});
+        c.globalAlpha=1;
+        cy+=g.itemH;
+        dots(x,cy,COL_W,'rgba(201,168,114,.30)');
+        cy+=g.itemRule;
+      });
+      cy+=g.blockGap;
     });
-    y+=BRAND_BOTTOM;
+    colEnd=Math.max(colEnd,cy);
   });
 
-  // ── FOOTER ──
-  y+=16*S;
-  c.strokeStyle=GOLD;c.lineWidth=0.8*S;
-  c.beginPath();c.moveTo(pad,y);c.lineTo(PW-pad,y);c.stroke();y+=16*S;
-  c.fillStyle=MUTED;c.textAlign='center';
-  c.font=`400 ${7.5*S}px 'Hanken Grotesk',sans-serif`;
-  c.fillText('DM to order  \u00b7  Shipping across Australia  \u00b7  Pickup: '+SETTINGS.pickup,PW/2,y+7.5*S); y+=13*S;
-  c.fillStyle='rgba(201,168,114,.45)';c.textAlign='center';
-  c.font=`600 ${8*S}px 'Cormorant Garamond',serif`;
-  c.fillText((SETTINGS.title||'Zain A.').toUpperCase().split('').join(' '),PW/2,y+8*S);
-
+  canvas.__fit={shrink:k,listTop:listTop,contentBottom:colEnd,limit:H-PAD_Y,
+                overflow:+(colEnd-(H-PAD_Y)).toFixed(1),brands:brands.length,
+                items:prods.length,split:fit.split};
   return canvas;
 }
 
